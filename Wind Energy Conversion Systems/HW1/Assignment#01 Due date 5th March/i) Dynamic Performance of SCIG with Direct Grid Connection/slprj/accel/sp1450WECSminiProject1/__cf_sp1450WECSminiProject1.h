@@ -1,3 +1,0 @@
-#ifndef CF_sp1450WECSminiProject1_H__
-#define CF_sp1450WECSminiProject1_H__
-#endif
