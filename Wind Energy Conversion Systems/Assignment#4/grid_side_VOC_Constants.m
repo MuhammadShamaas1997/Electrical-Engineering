@@ -1,6 +1,6 @@
 clc
 clear
-F0=1000;
+F0=1;
 Grid_Angle_init = pi;
 iq_ref_pu = 0;
 % rectifer or inverter selection
@@ -16,8 +16,8 @@ Fb=60;
 Ibase=(Pb/3)/(690/(3^0.5));
 Zb=Vbase/Ibase;
 Omega_b=2*pi*Fb;
-XLb=Zb*Omega_b;
-XCb=1/(Omega_b*Zb);
+XLb=Zb;
+XCb=Zb;
 
 % grid-side filter inductor
 Lgrid=0.1098e-3;
@@ -28,7 +28,8 @@ Rgrid=Rgrid_pu*Zb;
 Power_loss=Rgrid_pu*Pb;
 
 %dc link
-Cdc=0.3*Zb;
+XCdc=0.3*XCb;
+Cdc=1/(Omega_b*XCdc);
 Vdc_ref=3.062;% in per unit
 Vdc_capacitor_initial=Vdc_ref*Vbase;
 
@@ -36,11 +37,11 @@ Vdc_capacitor_initial=Vdc_ref*Vbase;
 Rdc_series=0.1*Zb; % might be changed here
 
 if Rectifier_or_inverter==1 % for rectifier operation case
-    Idc=(Pb - Power_loss)/(Vdc_ref*Vbase);
-    Vdc_supply=Vdc_ref*Vbase - Idc*Rdc_series;
+    Idoc=(Pb - Power_loss)/(Vdc_ref*Vbase);
+    Vdoc_supply=Vdc_ref*Vbase - Idoc*Rdc_series;
 elseif Rectifier_or_inverter==0% for inverter operation case
-    Idc=(Pb + Power_loss)/(Vdc_ref*Vbase);
-    Vdc_supply=Vdc_ref*Vbase + Idc*Rdc_series;
+    Idoc=(Pb + Power_loss)/(Vdc_ref*Vbase);
+    Vdoc_supply=Vdc_ref*Vbase + Idoc*Rdc_series;
 end
 
 %switching frequency
@@ -48,3 +49,7 @@ Fs=2040;% 34 times fundamental frequency
 
 % sampling frqquency for controller
 Fsampling=10e3;% at least 2 times Fs recommended
+
+
+Kp=1;
+Ki=2;
