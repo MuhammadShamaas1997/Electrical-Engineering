@@ -51,5 +51,7 @@ Fs=2040;% 34 times fundamental frequency
 Fsampling=10e3;% at least 2 times Fs recommended
 
 
+% Kp=1;
+% Ki=2;
 Kp=1;
-Ki=2;
+Ki=10;
