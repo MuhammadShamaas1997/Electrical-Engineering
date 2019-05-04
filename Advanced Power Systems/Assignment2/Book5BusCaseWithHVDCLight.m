@@ -1,64 +1,110 @@
-%base case
+%HVDC Light
 clc;clear all;
 r12=0.02;
 r13=0.08;
 r14=0;
 r15=0;
+r16=0;
+r17=0;
 r23=0.06;
 r24=0.06;
 r25=0.04;
-r34=0.01;
+r26=0;
+r27=0;
+%r34=0.01;
+r34=0;
 r35=0;
+r36=0;
+r37=0;
 r45=0.08;
+r46=0;
+%r47=0.01;
+r47=0.0094;
+r56=0;
+r57=0;
+r67=0;
 
 x12=1i*0.06;
 x13=1i*0.24;
 x14=1i*0;
 x15=1i*0;
+x16=1i*0;
+x17=1i*0;
 x23=1i*0.18;
 x24=1i*0.18;
 x25=1i*0.12;
-x34=1i*0.03;
+x26=1i*0;
+x27=1i*0;
+%x34=1i*0.03;
+x34=1i*0;
 x35=1i*0;
+x36=-1i*0.753;
+x37=1i*0;
 x45=1i*0.24;
+x46=1i*0;
+% x47=-1i*0.01193;
+x47=1i*0.071;
+x56=1i*0;
+x57=1i*0;
+x67=1i*0;
 
 b12=1i*0.06;
 b13=1i*0.05;
 b14=0;
 b15=0;
+b16=0;
+b17=0;
 b23=1i*0.04;
 b24=1i*0.04;
 b25=1i*0.03;
-b34=1i*0.02;
+b26=1i*0;
+b27=1i*0;
+%b34=1i*0.02;
+b34=0;
 b35=0;
+b36=0;
+b37=0;
 b45=1i*0.05;
+b46=0;
+b47=0;
+b56=0;
+b57=0;
+b67=0;
 
-Y=[
-    (1/(r12+x12))+(b12/2)+(1/(r13+x13))+(b13/2), (-1/(r12+x12)), (-1/(r13+x13)), 0, 0;
-    (-1/(r12+x12)), (1/(r12+x12))+(b12/2)+(1/(r23+x23))+(b23/2)+(1/(r24+x24))+(b24/2)+(1/(r25+x25))+(b25/2), (-1/(r23+x23)), (-1/(r24+x24)), (-1/(r25+x25));
-    (-1/(r13+x13)), (-1/(r23+x23)), (1/(r13+x13))+(b13/2)+(1/(r23+x23))+(b23/2)+(1/(r34+x34))+(b34/2), (-1/(r34+x34)), 0;
-    0, (-1/(r24+x24)), (-1/(r34+x34)), (1/(r24+x24))+(b24/2)+(1/(r34+x34))+(b34/2)+(1/(r45+x45))+(b45/2), (-1/(r45+x45));
-    0, (-1/(r25+x25)), 0, (-1/(r45+x45)), (1/(r25+x25))+(b25/2)+(1/(r45+x45))+(b45/2);
-    ];
+n=7;
+Y=zeros(n,n);
+Y=AddLine(Y,1,2,r12,x12,b12,1);
+Y=AddLine(Y,1,3,r13,x13,b13,1);
+Y=AddLine(Y,2,3,r23,x23,b23,1);
+Y=AddLine(Y,2,4,r24,x24,b24,1);
+Y=AddLine(Y,2,5,r25,x25,b25,1);
+Y=AddLine(Y,3,6,r36,x36,b36,1);
+Y=AddLine(Y,4,5,r45,x45,b45,1);
+Y=AddLine(Y,4,7,r47,x47,b47,1);
 
 
-n=5;
-GenP=[0;0.4;0;0;0];
-GenQ=[0;0;0;0;0];
-LoadP=[0;.20;.45;.40;.60];
-LoadQ=[0;.10;.15;.05;.10];
+GenP=[0;0.8847;0;0;0;0;0.25];
+GenQ=[0;0;0;0;0;0;-.06];
+LoadP=[0;.20;.45;.40;.60;0.25;0];
+LoadQ=[0;.10;.15;.05;.10;0;0];
 NetP=GenP-LoadP;
 NetQ=GenQ-LoadQ;
-Vm=[1.06;1;1;1;1];
-Vp=[0;0;0;0;0];
+Vm=[1.036;1.029;1;1;1;1.005;1];
+Vp=[0;0;0;0;0;0;1.71*(pi/180)];
 Ym=zeros(n,n);
 Yp=zeros(n,n);
 maxiter=7;
+
+PowerMeasurements1=[];
+PowerMeasurements2=[];
+PhaseMeasurements=[];
+MagnitudeMeasurements=[];
 
 VoltageMagnitudes=[];
 VoltagePhases=[];
 BusActivePowers=[];
 BusReactivePowers=[];
+
 
 for t=1:n
     for k=1:n
@@ -127,36 +173,75 @@ for iteration=1:maxiter
     J2(2,1)=0;
     J2(3,1)=0;
     J2(4,1)=0;
+    J2(5,1)=0;
+    J2(6,1)=0;
     J4(1,1)=1;
     J4(2,1)=0;
     J4(3,1)=0;
     J4(4,1)=0;
+    J4(5,1)=0;
+    J4(6,1)=0;
     
     J=[J1 J2;J3 J4];
-    DeltaVoltage=inv(J)*DeltaPowers;
-    iteration
-    Vm
-    Vp
-    Y
-    CalcP
-    CalcQ
-    J
-    inv(J)
-    DeltaPowers
-    DeltaVoltage
+    J(1,11)=0;
+    J(2,11)=0;
+    J(3,11)=0;
+    J(4,11)=0;
+    J(5,11)=0;
+    J(6,11)=0;
+    J(7,11)=0;
+    J(8,11)=0;
+    J(9,11)=0;
+    J(10,11)=0;
+    J(11,11)=1;
+    J(12,11)=0;
     
+    DeltaVoltage=inv(J)*DeltaPowers;
+%     iteration
+%     Vm
+%     Vp
+%     Y
+%     CalcP
+%     CalcQ
+%     J
+%     inv(J)
+%     DeltaPowers
+%     DeltaVoltage
+
     VoltageMagnitudes(:,iteration)=Vm;
     VoltagePhases(:,iteration)=Vp.*(180/pi);
     BusActivePowers(:,iteration)=CalcP;
     BusReactivePowers(:,iteration)=CalcQ;
+
+
+        PowerMeasurements1(iteration)=CalcP(6,1);
+        PowerMeasurements2(iteration)=CalcQ(7,1);
+        PhaseMeasurements(iteration)=Vp(6)*(180/pi);
+        MagnitudeMeasurements(iteration)=Vm(7);
+
     
     Vp=Vp+[0; DeltaVoltage(1:n-1,1)];
-    Vm=Vm+[0;0; DeltaVoltage((n+1):(2*(n-1)),1);];
+    Vm=Vm+[0;0;0;DeltaVoltage((n+2),1);DeltaVoltage((n+3),1);0;DeltaVoltage((n+5),1)];
     GenQ(2,1)=GenQ(2,1)+DeltaVoltage(n,1);
-
+    LoadQ(6,1)=LoadQ(6,1)-DeltaVoltage(n+4,1);
 end
 
+subplot(2,2,1);
+plot(PowerMeasurements1);title('Regulated Lake-Main Real Power (-0.25 p.u.)');
+xlabel('Iteration Number');
+subplot(2,2,2);
+plot(PowerMeasurements2);title('Regulated Lake-Main Reactive Power (-0.06 p.u.)');
+xlabel('Iteration Number');
+subplot(2,2,3);
+plot(1:maxiter,PhaseMeasurements,1:maxiter,ones(maxiter,1).*Vp(7).*(180/pi));title('Voltage Phases of Converters');
+xlabel('Iteration Number');legend('Rectifier','Inverter');
+subplot(2,2,4);
+plot(1:maxiter,ones(maxiter,1).*Vm(6),1:maxiter,MagnitudeMeasurements);title('Voltage Magnitudes of Converters');
+xlabel('Iteration Number');
+axis([1 maxiter 1 1.006]);legend('Rectifier','Inverter');
 
+
+figure;
 s1=subplot(2,2,1);
 plot(1:maxiter,VoltageMagnitudes(2,:),1:maxiter,VoltageMagnitudes(3,:),1:maxiter,VoltageMagnitudes(4,:),1:maxiter,VoltageMagnitudes(5,:));
 title('Bus Voltage Magnitudes');

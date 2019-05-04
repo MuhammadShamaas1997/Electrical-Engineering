@@ -207,26 +207,28 @@ end
 
 %%
 s1=subplot(2,2,1);
+s1=subplot(2,2,1);
 plot(1:maxiter,VoltageMagnitudes(2,:),1:maxiter,VoltageMagnitudes(3,:),1:maxiter,VoltageMagnitudes(4,:),1:maxiter,VoltageMagnitudes(5,:),1:maxiter,VoltageMagnitudes(5,:),1:maxiter,VoltageMagnitudes(7,:),1:maxiter,VoltageMagnitudes(8,:),1:maxiter,VoltageMagnitudes(9,:),1:maxiter,VoltageMagnitudes(10,:),1:maxiter,VoltageMagnitudes(11,:),1:maxiter,VoltageMagnitudes(12,:),1:maxiter,VoltageMagnitudes(13,:),1:maxiter,VoltageMagnitudes(14,:));
 title('Bus Voltage Magnitudes');
 xlabel('Iteration Number');
-legend('2','3','4','5','6','7','8','9','10','11','12','13','14');
+legend({'2','3','4','5','6','7','8','9','10','11','12','13','14'},'Location','NorthEastOutside');axis([1 maxiter 0.88 1.12]);
+% legend({'cos(x)','cos(2x)','cos(3x)','cos(4x)'},'Location','northwest','NumColumns',2)
 
 subplot(2,2,2);
 plot(VoltagePhases(n,:));
 plot(1:maxiter,VoltagePhases(2,:),1:maxiter,VoltagePhases(3,:),1:maxiter,VoltagePhases(4,:),1:maxiter,VoltagePhases(5,:),1:maxiter,VoltagePhases(6,:),1:maxiter,VoltagePhases(7,:),1:maxiter,VoltagePhases(8,:),1:maxiter,VoltagePhases(9,:),1:maxiter,VoltagePhases(10,:),1:maxiter,VoltagePhases(11,:),1:maxiter,VoltagePhases(12,:),1:maxiter,VoltagePhases(13,:),1:maxiter,VoltagePhases(14,:));
 title('Bus Voltage Phases');
 xlabel('Iteration Number');
-legend('2','3','4','5','6','7','8','9','10','11','12','13','14');
+legend({'2','3','4','5','6','7','8','9','10','11','12','13','14'},'Location','NorthEastOutside');axis([1 maxiter -0.5 0.5]);
 
 subplot(2,2,3);
 plot(1:maxiter,BusActivePowers(2,:),1:maxiter,BusActivePowers(3,:),1:maxiter,BusActivePowers(4,:),1:maxiter,BusActivePowers(5,:),1:maxiter,BusActivePowers(6,:),1:maxiter,BusActivePowers(7,:),1:maxiter,BusActivePowers(8,:),1:maxiter,BusActivePowers(9,:),1:maxiter,BusActivePowers(10,:),1:maxiter,BusActivePowers(11,:),1:maxiter,BusActivePowers(12,:),1:maxiter,BusActivePowers(13,:),1:maxiter,BusActivePowers(14,:));
 title('Bus Active Powers');
 xlabel('Iteration Number');
-legend('2','3','4','5','6','7','8','9','10','11','12','13','14');
+legend({'2','3','4','5','6','7','8','9','10','11','12','13','14'},'Location','NorthEastOutside');axis([1 maxiter -1 1]);
 
 subplot(2,2,4);
 plot(1:maxiter,BusReactivePowers(2,:),1:maxiter,BusReactivePowers(3,:),1:maxiter,BusReactivePowers(4,:),1:maxiter,BusReactivePowers(5,:),1:maxiter,BusReactivePowers(6,:),1:maxiter,BusReactivePowers(7,:),1:maxiter,BusReactivePowers(8,:),1:maxiter,BusReactivePowers(9,:),1:maxiter,BusReactivePowers(10,:),1:maxiter,BusReactivePowers(11,:),1:maxiter,BusReactivePowers(12,:),1:maxiter,BusReactivePowers(13,:),1:maxiter,BusReactivePowers(14,:));
 title('Bus Reactive Powers');
 xlabel('Iteration Number');
-legend('2','3','4','5','6','7','8','9','10','11','12','13','14');
+legend({'2','3','4','5','6','7','8','9','10','11','12','13','14'},'Location','NorthEastOutside');axis([1 maxiter -1.5 1.5]);

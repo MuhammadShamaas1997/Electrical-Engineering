@@ -111,6 +111,11 @@ PowerMeasurements2=[];
 PhaseMeasurements=[];
 MagnitudeMeasurements=[];
 
+    VoltageMagnitudes=[];
+    VoltagePhases=[];
+    BusActivePowers=[];
+    BusReactivePowers=[];
+
 
 for t=1:n
     for k=1:n
@@ -208,7 +213,12 @@ for iteration=1:maxiter
         PhaseMeasurements(iteration)=Vp(n-1)*(180/pi);
         MagnitudeMeasurements(iteration)=Vm(n);
 
-    
+        VoltageMagnitudes(:,iteration)=Vm;
+        VoltagePhases(:,iteration)=Vp;
+        BusActivePowers(:,iteration)=CalcP;
+        BusReactivePowers(:,iteration)=CalcQ;
+
+        
         Vp=Vp+[0; DeltaVoltage(1:n-1,1)];
         Vm=Vm+[0;0;0;DeltaVoltage(n+2,1);DeltaVoltage(n+3,1);0;DeltaVoltage(n+5,1);0;DeltaVoltage((n+7),1);DeltaVoltage((n+8),1);DeltaVoltage((n+9),1);DeltaVoltage((n+10),1);0;DeltaVoltage((n+12),1);0;DeltaVoltage((n+14),1)];
         GenP(2,1)=CalcP(2,1)+LoadP(2,1);
@@ -224,14 +234,45 @@ end
 
 %%
 subplot(2,2,1);
-plot(PowerMeasurements1);title('Rectifier Real Power');
+plot(PowerMeasurements1);title('Regulated Branch 13-14 Real Power (-0.25 p.u.)');
 xlabel('Iteration Number');
+axis([1 maxiter -2 0]);
 subplot(2,2,2);
-plot(PowerMeasurements2);title('Inverter Reactive Power');
-xlabel('Iteration Number');
+plot(PowerMeasurements2);title('Regulated Branch 13-14 Reactive Power (-0.06 p.u.)');
+xlabel('Iteration Number');axis([1 maxiter -0.5 0]);
 subplot(2,2,3);
-plot(PhaseMeasurements);title('Rectifier Voltage Phase');
-xlabel('Iteration Number');
+plot(1:maxiter,PhaseMeasurements,1:maxiter,ones(maxiter,1).*Vp(16,1).*(180/pi));title('Voltage Phases of Converters');
+xlabel('Iteration Number');axis([1 maxiter -25 1]);legend('Rectifier','Inverter');
 subplot(2,2,4);
-plot(MagnitudeMeasurements);title('Inverter Voltage Magnitude');
+plot(1:maxiter,ones(maxiter,1).*Vm(15,1),1:maxiter,MagnitudeMeasurements);title('Voltage Magnitudes of Converters');
+xlabel('Iteration Number');legend('Rectifier','Inverter');
+
+
+figure;
+s1=subplot(2,2,1);
+plot(1:maxiter,VoltageMagnitudes(2,:),1:maxiter,VoltageMagnitudes(3,:),1:maxiter,VoltageMagnitudes(4,:),1:maxiter,VoltageMagnitudes(5,:),1:maxiter,VoltageMagnitudes(5,:),1:maxiter,VoltageMagnitudes(7,:),1:maxiter,VoltageMagnitudes(8,:),1:maxiter,VoltageMagnitudes(9,:),1:maxiter,VoltageMagnitudes(10,:),1:maxiter,VoltageMagnitudes(11,:),1:maxiter,VoltageMagnitudes(12,:),1:maxiter,VoltageMagnitudes(13,:),1:maxiter,VoltageMagnitudes(14,:));
+title('Bus Voltage Magnitudes');
 xlabel('Iteration Number');
+legend({'2','3','4','5','6','7','8','9','10','11','12','13','14'},'Location','NorthEastOutside');axis([1 maxiter 0.88 1.12]);
+% legend({'cos(x)','cos(2x)','cos(3x)','cos(4x)'},'Location','northwest','NumColumns',2)
+
+subplot(2,2,2);
+plot(VoltagePhases(n,:));
+plot(1:maxiter,VoltagePhases(2,:),1:maxiter,VoltagePhases(3,:),1:maxiter,VoltagePhases(4,:),1:maxiter,VoltagePhases(5,:),1:maxiter,VoltagePhases(6,:),1:maxiter,VoltagePhases(7,:),1:maxiter,VoltagePhases(8,:),1:maxiter,VoltagePhases(9,:),1:maxiter,VoltagePhases(10,:),1:maxiter,VoltagePhases(11,:),1:maxiter,VoltagePhases(12,:),1:maxiter,VoltagePhases(13,:),1:maxiter,VoltagePhases(14,:));
+title('Bus Voltage Phases');
+xlabel('Iteration Number');
+legend({'2','3','4','5','6','7','8','9','10','11','12','13','14'},'Location','NorthEastOutside');axis([1 maxiter -0.5 0.5]);
+
+subplot(2,2,3);
+plot(1:maxiter,BusActivePowers(2,:),1:maxiter,BusActivePowers(3,:),1:maxiter,BusActivePowers(4,:),1:maxiter,BusActivePowers(5,:),1:maxiter,BusActivePowers(6,:),1:maxiter,BusActivePowers(7,:),1:maxiter,BusActivePowers(8,:),1:maxiter,BusActivePowers(9,:),1:maxiter,BusActivePowers(10,:),1:maxiter,BusActivePowers(11,:),1:maxiter,BusActivePowers(12,:),1:maxiter,BusActivePowers(13,:),1:maxiter,BusActivePowers(14,:));
+title('Bus Active Powers');
+xlabel('Iteration Number');
+legend({'2','3','4','5','6','7','8','9','10','11','12','13','14'},'Location','NorthEastOutside');axis([1 maxiter -1 1]);
+
+subplot(2,2,4);
+plot(1:maxiter,BusReactivePowers(2,:),1:maxiter,BusReactivePowers(3,:),1:maxiter,BusReactivePowers(4,:),1:maxiter,BusReactivePowers(5,:),1:maxiter,BusReactivePowers(6,:),1:maxiter,BusReactivePowers(7,:),1:maxiter,BusReactivePowers(8,:),1:maxiter,BusReactivePowers(9,:),1:maxiter,BusReactivePowers(10,:),1:maxiter,BusReactivePowers(11,:),1:maxiter,BusReactivePowers(12,:),1:maxiter,BusReactivePowers(13,:),1:maxiter,BusReactivePowers(14,:));
+title('Bus Reactive Powers');
+xlabel('Iteration Number');
+legend({'2','3','4','5','6','7','8','9','10','11','12','13','14'},'Location','NorthEastOutside');axis([1 maxiter -1.5 1.5]);
+
+
