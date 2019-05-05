@@ -60,6 +60,9 @@ VoltagePhases=[];
 BusActivePowers=[];
 BusReactivePowers=[];
 
+BranchActivePowers=[];
+BranchReactivePowers=[];
+
 for t=1:n
     for k=1:n
         Ym(t,k)=abs(Y(t,k));
@@ -86,6 +89,8 @@ for iteration=1:maxiter
         for k=1:n
             P=P+abs(Vm(x))*abs(Y(x,k))*abs(Vm(k))*cos(phase(Y(x,k))-(Vp(x))+(Vp(k)));
             Q=Q-abs(Vm(x))*abs(Y(x,k))*abs(Vm(k))*sin(phase(Y(x,k))-(Vp(x))+(Vp(k)));
+            BranchActivePowers(x,k)=abs(Vm(x))*abs(Y(x,k))*abs(Vm(k))*cos(phase(Y(x,k))-(Vp(x))+(Vp(k)));
+            BranchReactivePowers(x,k)=-abs(Vm(x))*abs(Y(x,k))*abs(Vm(k))*sin(phase(Y(x,k))-(Vp(x))+(Vp(k)));
         end
         CalcP(x,1)=P;
         CalcQ(x,1)=Q;

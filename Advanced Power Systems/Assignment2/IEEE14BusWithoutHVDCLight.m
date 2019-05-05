@@ -27,8 +27,9 @@ bus = [
 for b=1:14
     LoadP(bus(b,1),1)=bus(b,3)/baseMVA;
     LoadQ(bus(b,1),1)=bus(b,4)/baseMVA;
-    if (b==2)||(b==3)||(b==6)||(b==8)
-        Vm(bus(b,1),1)=bus(b,8);
+    if (b==1)||(b==2)||(b==3)||(b==6)||(b==8)
+%         Vm(bus(b,1),1)=bus(b,8);
+        Vm(bus(b,1),1)=1.06;
         Vp(bus(b,1),1)=bus(b,9)*(pi/180);
     else
         Vm(bus(b,1),1)=1;
