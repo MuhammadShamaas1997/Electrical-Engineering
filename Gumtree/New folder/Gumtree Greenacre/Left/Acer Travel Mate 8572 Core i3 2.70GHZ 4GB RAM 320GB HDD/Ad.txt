@@ -1,0 +1,67 @@
+Acer Travel Mate 8572 Core i3 2.70GHZ 4GB RAM 320GB HDD
+$219.90 Negotiable
+edit price
+163 waterlooroad greenacre 2190
+
+
+------------------
+
+System Information
+
+------------------
+
+Time of this report: 4/19/2019, 07:36:11
+
+Machine name: DESKTOP-7N9B7J1
+
+Machine Id: {EC4AB34A-BF7B-4B38-8B0B-EE69F467CD71}
+
+Operating System: Windows 10 Pro 64-bit (10.0, Build 16299) (16299.rs3_release.170928-1534)
+
+Language: English (Regional Setting: English)
+
+System Manufacturer: Acer
+
+System Model: TravelMate 8572T
+
+BIOS: PhoenixBIOS 4.0 Release 6.1
+
+Processor: Intel(R) Core(TM) i3 CPU M 370 @ 2.40GHz (4 CPUs), ~2.4GHz
+
+Memory: 4096MB RAM
+
+Available OS Memory: 3764MB RAM
+
+Page File: 1269MB used, 3903MB available
+
+Windows Dir: C:\Windows
+
+DirectX Version: DirectX 12
+
+DX Setup Parameters: Not found
+
+User DPI Setting: 96 DPI (100 percent)
+
+System DPI Setting: 96 DPI (100 percent)
+
+DWM DPI Scaling: Disabled
+
+Miracast: Not Available
+
+Microsoft Graphics Hybrid: Not Supported
+
+DxDiag Version: 10.00.16299.0015 64bit Unicode
+
+
+------------
+
+DxDiag Notes
+
+------------
+
+Display Tab 1: Your PC is using the Microsoft Basic Display Adapter. For the best experience, get the latest drivers from Windows Update or from your hardware manufacturer's website. For more information search for 'Microsoft Basic Display Adapter'
+
+Sound Tab 1: No problems found.
+
+Input Tab: No problems found.
+
