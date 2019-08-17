@@ -1,0 +1,99 @@
+Lenovo Thinkpad T440S Corei5 2.49 4Gen 12GB RAM 250 GB SSD Touch
+$399 Negotiable
+edit price
+163 waterlooroad greenacre 2190
+
+
+------------------
+
+System Information
+
+------------------
+
+Time of this report: 7/26/2019, 22:46:37
+
+Machine name: DESKTOP-0C02BTK
+
+Machine Id: {B63DAD74-2A8B-48E8-B554-83F743ED252C}
+
+Operating System: Windows 10 Pro 64-bit (10.0, Build 17134) (17134.rs4_release.180410-1804)
+
+Language: English (Regional Setting: English)
+
+System Manufacturer: LENOVO
+
+System Model: 20ARCTO1WW
+
+BIOS: GJET61WW (2.11 ) (type: UEFI)
+
+Processor: Intel(R) Core(TM) i5-4300U CPU @ 1.90GHz (4 CPUs), ~2.5GHz
+
+Memory: 12288MB RAM
+
+Available OS Memory: 12168MB RAM
+
+Page File: 3204MB used, 11395MB available
+
+Windows Dir: C:\WINDOWS
+
+DirectX Version: DirectX 12
+
+DX Setup Parameters: Not found
+
+User DPI Setting: 144 DPI (150 percent)
+
+System DPI Setting: 144 DPI (150 percent)
+
+DWM DPI Scaling: UnKnown
+
+Miracast: Available, with HDCP
+
+Microsoft Graphics Hybrid: Not Supported
+
+DxDiag Version: 10.00.17134.0001 64bit Unicode
+
+
+---------------
+
+Display Devices
+
+---------------
+
+Card name: Intel(R) HD Graphics Family
+
+Manufacturer: Intel Corporation
+
+Chip type: Intel(R) HD Graphics Family
+
+DAC type: Internal
+
+Device Type: Full Device (POST)
+
+Device Key: Enum\PCI\VEN_8086&DEV_0A16&SUBSYS_220C17AA&REV_0B
+
+Device Status: 0180200A [DN_DRIVER_LOADED|DN_STARTED|DN_DISABLEABLE|DN_NT_ENUMERATOR|DN_NT_DRIVER]
+
+Device Problem Code: No Problem
+
+Driver Problem Code: Unknown
+
+Display Memory: 2160 MB
+
+Dedicated Memory: 112 MB
+
+Shared Memory: 2048 MB
+
+Current Mode: 1920 x 1080 (32 bit) (59Hz)
+
+Please contact /sms
+
+
+0405
+
+
+621
+
+
+003
+
+163 waterlooroad greenacre 2190

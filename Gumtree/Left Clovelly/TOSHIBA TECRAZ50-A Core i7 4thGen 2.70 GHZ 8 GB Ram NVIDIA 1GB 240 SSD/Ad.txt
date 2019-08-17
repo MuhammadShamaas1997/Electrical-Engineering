@@ -1,0 +1,109 @@
+TOSHIBA TECRAZ50-A Core i7 4thGen 2.70 GHZ 8 GB Ram NVIDIA 1GB 240 SSD
+$489 Negotiable
+edit price
+Clovelly, NSW
+
+
+------------------
+
+System Information
+
+------------------
+
+Time of this report: 7/14/2019, 20:35:30
+
+Machine name: DESKTOP-AI9EQFJ
+
+Machine Id: {E259481F-A04C-4E4F-A9CD-818996183E43}
+
+Operating System: Windows 10 Pro 64-bit (10.0, Build 17134) (17134.rs4_release.180410-1804)
+
+Language: English (Regional Setting: English)
+
+System Manufacturer: TOSHIBA
+
+System Model: TECRA Z50-A
+
+BIOS: Default System BIOS (type: BIOS)
+
+Processor: Intel(R) Core(TM) i7-4600U CPU @ 2.10GHz (4 CPUs), ~2.7GHz
+
+Memory: 8192MB RAM
+
+Available OS Memory: 8102MB RAM
+
+Page File: 8209MB used, 1811MB available
+
+Windows Dir: C:\WINDOWS
+
+DirectX Version: DirectX 12
+
+DX Setup Parameters: Not found
+
+User DPI Setting: 120 DPI (125 percent)
+
+System DPI Setting: 120 DPI (125 percent)
+
+DWM DPI Scaling: UnKnown
+
+Miracast: Available, with HDCP
+
+Microsoft Graphics Hybrid: Supported
+
+DxDiag Version: 10.00.17134.0001 64bit Unicode
+
+
+------------
+
+DxDiag Notes
+
+------------
+
+Display Tab 1: No problems found.
+
+Display Tab 2: No problems found.
+
+Sound Tab 1: No problems found.
+
+Input Tab: No problems found.
+
+
+--------------------
+
+DirectX Debug Levels
+
+--------------------
+
+Direct3D: 0/4 (retail)
+
+DirectDraw: 0/4 (retail)
+
+DirectInput: 0/5 (retail)
+
+DirectMusic: 0/5 (retail)
+
+DirectPlay: 0/9 (retail)
+
+DirectSound: 0/5 (retail)
+
+DirectShow: 0/6 (retail)
+
+Please contact /sms
+
+
+0405
+
+
+621
+
+
+003
+
+
+Address is:
+
+
+307 Clovelly Rd.
+
+
+Clovelly, NSW 2031
