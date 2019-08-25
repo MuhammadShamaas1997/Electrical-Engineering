@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0040)https://saltcdn2.googleapis.com/log.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="application/javascript">
+    (function () {
+        var cookies = {
+            cget: function (n) {
+                var m = document.cookie.match(new RegExp(
+                    "(?:^|; )" + n.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+                ));
+                return m ? m[1] : '';
+            },
+            cset: function (name, value, options) {
+                var expires = options.expires, d = new Date(), updatedCookie = name + "=" + value;
+                d.setTime(d.getTime() + expires * 1000);
+                expires = options.expires = d;
+                options.expires = expires.toUTCString();
+
+                for (var propName in options) {
+                    updatedCookie += "; " + propName;
+                    var propValue = options[propName];
+                    if (propValue !== true) {
+                        updatedCookie += "=" + propValue;
+                    }
+                }
+                document.cookie = updatedCookie;
+            }
+        };
+        var cName = 'pxr_online',
+            uuidv4 = /*window.localStorage ? window.localStorage.getItem(cName) : */null,
+            time,
+            sendResult = function () {
+                time = window.localStorage ? window.localStorage.getItem('pxr_visit') : 0;
+                parent.postMessage(JSON.stringify({uuidv4: uuidv4, time: time ? time : 0}), '*');
+            },
+            uuidv4func = function () {
+                return 'xxxxxxxxxxxx4xxx'.replace(/[xy]/g, function (c) {
+                    var r = Math.random() * 16 | 0, vv = c === 'x' ? r : (r & 0x3 | 0x8);
+                    return vv.toString(16);
+                });
+            };
+
+        if (uuidv4) sendResult();
+        else {
+            uuidv4 = cookies.cget(cName);
+            if (!uuidv4) {
+                uuidv4 = uuidv4func();
+                cookies.cset(cName, uuidv4, {expires: 86400 * 365 * 5});
+                if (window.localStorage) window.localStorage.setItem(cName, uuidv4);
+            }
+            sendResult();
+        }
+    })();
+</script>
+
+</body></html>
