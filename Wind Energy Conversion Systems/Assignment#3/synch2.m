@@ -16,7 +16,8 @@ Rs=24.21e-3;
 
 RL=4.2855;
 LL=8.258e-3;
-Rsnubber=1e3;
+Rsnubber=1e6;
+N=1;
 iqs=((w*7.030056*(RL+Rs))/((RL+Rs)*(RL+Rs)+w*w*(LL+Ld)*(LL+Lq)));
 iqspu=iqs/(490*sqrt(2));
 ids=((w*(LL+Lq)*iqs)/(Rs+6));
