@@ -1,25 +1,3 @@
-%clear; % Removes variables from the workspace
-%% Parameter estimates
-Ra = 0.5; % Armature resistance
-La = 2.5e-3; % Armature inductance
-kf = 0.35; % Flux constant
-J = 1e-3; % Moment of inertia
-%% Gains of the 2DOF PI current controller
-alphac = 2*pi*500; % Closed?loop bandwidth
-kpc = alphac*La; % Proportional gain
-kic = alphac^2*La; % Integral gain
-r = kpc - Ra; % Active resistance
-Umax = 140; % Saturation: upper limit
-Umin = -140; % Saturation: lower limit
-%% Gains of the 2DOF PI speed controller (for Section 4.2)
-alphas = 0.1*alphac; % Closed?loop bandwidth
-kps = alphas*La; % Proportional gain
-kis = alphas^2*La; % Integral gain
-b = kps - Ra; % Active damping
-TN = 7; % Rated torque
-Tmax = 2*TN; % Saturation: upper limit
-Tmin = -2*TN; % Saturation: lower limit
-
 %% Plotting wM, wMref, iaref, ia, TM and TMref
 subplot(3,1,1)
 plot(wM.time,wM.data); grid on; hold on;
