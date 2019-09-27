@@ -12,5 +12,5 @@ xlabel('Time (s)'); ylabel('Current (A)');
 subplot(3,1,3)
 plot(TM.time,TM.data); grid on;hold on;
 plot(TMref.time,TMref.data,'r');
-axis([0 0.5 -50 50]);
+axis([0 0.5 -20 20]);
 xlabel('Time (s)'); ylabel('Torque (Nm)');
