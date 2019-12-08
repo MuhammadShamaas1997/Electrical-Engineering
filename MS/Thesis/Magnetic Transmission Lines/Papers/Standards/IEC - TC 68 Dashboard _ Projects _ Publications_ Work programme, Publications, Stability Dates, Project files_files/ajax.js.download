@@ -1,0 +1,287 @@
+function setFSPprintDiv(fsp_item, html_item, div, appprocess, wait) {
+    var ajaxRequest = new htmldb_Get(null,
+        $v('pFlowId'),
+        'APPLICATION_PROCESS=' + appprocess,
+        $v('pFlowStepId')
+    );
+
+    //var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);	 
+
+    ajaxRequest.add(fsp_item, html_GetElement(html_item).value);
+    GetAsync(ajaxRequest, div, wait);
+}
+//ADD Refresh Page by mas on 2013-12-09
+function setFSPprintDivScript_exec(fsp_item, html_item, div, appprocess, wait, script_to_exec) {
+    var ajaxRequest = new htmldb_Get(null,
+        $v('pFlowId'),
+        'APPLICATION_PROCESS=' + appprocess,
+        $v('pFlowStepId')
+    );
+    //var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+    ajaxRequest.add(fsp_item, html_GetElement(html_item).value);
+    GetAsync(ajaxRequest, div, wait, script_to_exec);
+}
+
+//ADD Refresh Page by mas on 2013-12-09
+function setFSPprintDivScript_exec2(fsp_item, valueitem, div, appprocess, wait, script_to_exec) {
+    var ajaxRequest = new htmldb_Get(null,
+        $v('pFlowId'),
+        'APPLICATION_PROCESS=' + appprocess,
+        $v('pFlowStepId')
+    );
+    //var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+    ajaxRequest.add(fsp_item, valueitem);
+    GetAsync(ajaxRequest, div, wait, script_to_exec);
+}
+
+function setFSPprintDivValue(fsp_item, item_value, div, appprocess, wait, script_to_exec) {
+    var ajaxRequest = new htmldb_Get(null,
+        $v('pFlowId'),
+        'APPLICATION_PROCESS=' + appprocess,
+        $v('pFlowStepId')
+    );
+    //var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+    ajaxRequest.add(fsp_item, item_value);
+    GetAsync(ajaxRequest, div, wait, script_to_exec);
+}
+
+function set2FSPsprintDivValue(fsp_item1, item_value1, fsp_item2, item_value2, div, appprocess, wait, script_to_exec) {
+    /*alert (fsp_item1 + ':'+ item_value1);
+    alert (fsp_item2 + ':'+ item_value2);
+    alert ('process' + ':'+ appprocess);*/
+    var ajaxRequest = new htmldb_Get(null,
+        $v('pFlowId'),
+        'APPLICATION_PROCESS=' + appprocess,
+        $v('pFlowStepId')
+    );
+    //var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+    ajaxRequest.add(fsp_item1, item_value1);
+    ajaxRequest.add(fsp_item2, item_value2);
+
+    GetAsync(ajaxRequest, div, wait, script_to_exec);
+
+}
+
+function setFSPprintCheckBoxValue(chkbox, fsp_item, item_value, div, appprocess, wait) {
+    chkbox.disabled = true;
+    setFSPprintDivValue(fsp_item, item_value, div, appprocess, wait);
+}
+
+function setFSPValue(fsp_item, item_value, appprocess) {
+    var ajaxRequest = new htmldb_Get(null,
+        $v('pFlowId'),
+        'APPLICATION_PROCESS=' + appprocess,
+        $v('pFlowStepId')
+    );
+    //var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+    ajaxRequest.add(fsp_item, item_value);
+    GetAsync(ajaxRequest, 'errormsg', '', 'N');
+}
+
+// **************************************************************************************************
+// Mise en commentaire par AET pour ajouter le param�tre code � ex�cuter apr�s la r�ponse Ajax.
+// **************************************************************************************************
+
+/*function set2FSPsprintDivValue (fsp_item1,item_value1,fsp_item2,item_value2,div,appprocess,wait) { 
+var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+ajaxRequest.add(fsp_item1,item_value1);
+ajaxRequest.add(fsp_item2,item_value2);
+GetAsync(ajaxRequest,div,wait);
+}
+ 
+function set1plus1FSPprintDiv (fsp_item1,html_item1,fsp_item2,item_value2,div,appprocess,wait) { 
+var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+ajaxRequest.add(fsp_item1,html_GetElement(html_item1).value);
+ajaxRequest.add(fsp_item2,item_value2);
+GetAsync(ajaxRequest,div,wait);
+}*/
+
+
+
+function set1plus1FSPprintDiv(fsp_item1, html_item1, fsp_item2, item_value2, div, appprocess, wait, script_to_exec) {
+    var ajaxRequest = new htmldb_Get(null,
+        $v('pFlowId'),
+        'APPLICATION_PROCESS=' + appprocess,
+        $v('pFlowStepId')
+    );
+    //var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+    ajaxRequest.add(fsp_item1, html_GetElement(html_item1).value);
+    ajaxRequest.add(fsp_item2, item_value2);
+    GetAsync(ajaxRequest, div, wait, script_to_exec);
+}
+
+//function GetAsync(my_ajaxrequest,my_div,my_wait) {
+
+function GetAsync(my_ajaxrequest, my_div, my_wait, script_to_exec) {
+
+    try {
+        p = new XMLHttpRequest();
+    }
+    catch (e) {
+        p = new ActiveXObject("Msxml2.XMLHTTP");
+    }
+
+    try {
+        var startTime = new Date();
+        p.open("POST", my_ajaxrequest.base, true);
+        if (p) {
+            p.onreadystatechange = function () {
+
+                if (my_wait == 'Y') {
+                    if (p.readyState == 1) {
+                        html_GetElement(my_div).innerHTML = '<img src="/resources/common_images/animWait.gif">';
+                    }
+
+                    else if (p.readyState == 2) { }
+
+                    else if (p.readyState == 3) { }
+
+                    //else if (p.readyState == 4) {html_GetElement(my_div).innerHTML = p.responseText;}
+                    else if (p.readyState == 4) {
+                        html_GetElement(my_div).innerHTML = p.responseText;
+                        if (script_to_exec != undefined) {                          
+                            eval('window.top.location.reload()'); //script_to_exec)
+                        };
+                    }
+
+                    else { }
+                }
+                else {
+                      if (p.readyState == 4) { html_GetElement(my_div).innerHTML = p.responseText; if (script_to_exec != undefined) { eval(script_to_exec) }; }
+                }
+
+            }
+            p.send(my_ajaxrequest.queryString == null ? my_ajaxrequest.params : my_ajaxrequest.queryString);
+        }
+
+    } // if p
+
+    catch (e) {
+
+        return false;
+
+    }
+}
+
+function submitenter(myfield, e, p_request) {
+    var keycode;
+    if (window.event) keycode = window.event.keyCode;
+    else if (e) keycode = e.which;
+    else return true;
+    if (keycode == 13) {
+        doSubmit(p_request);
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+
+function submitEnterDiv(myfield, e, p_request, fsp_item, html_item, div, appprocess, wait) {
+    var keycode;
+    if (window.event) keycode = window.event.keyCode;
+    else if (e) keycode = e.which;
+    else return true;
+    if (keycode == 13) {
+        var ajaxRequest = new htmldb_Get(null,
+            $v('pFlowId'),
+            'APPLICATION_PROCESS=' + appprocess,
+            $v('pFlowStepId')
+        );
+        //var ajaxRequest = new htmldb_Get(null,html_GetElement('pFlowId').value,'APPLICATION_PROCESS='+appprocess,0);
+        ajaxRequest.add(fsp_item, html_GetElement(html_item).value);
+        GetAsync(ajaxRequest, div, wait);
+    }
+    else {
+        return true;
+    }
+}
+
+function oPenImag(url) {
+
+    var localwin = window.open(url, 'preview', "scrollbars=yes,width=400,height=300,directories=no,status=no,resizable=yes,menubar=yes");
+    localwin.focus();
+
+}
+
+function oPenImag1(url) {
+
+    var localwin = window.open(url, 'preview', "scrollbars=yes,width=600,height=300,directories=no,status=no,resizable=yes,menubar=yes,toolbar=yes,location=yes");
+    localwin.focus();
+
+}
+
+
+function oPenImag2(url, x, y) {
+
+    var localwin = window.open(url, 'preview', "scrollbars=no,width=" + x + ",height=" + y + ",directories=no,status=no,resizable=no,menubar=no,toolbar=no,location=no");
+    localwin.focus();
+
+}
+
+function oPenImag3(url, x, y) {
+
+    var localwin = window.open(url, 'preview', "scrollbars=yes,width=" + x + ",height=" + y + ",directories=no,status=no,resizable=no,menubar=no,toolbar=no,location=no");
+    localwin.focus();
+
+}
+
+function oPenImag4(url, x, y, scrollable) {
+    var width = screen.availWidth;
+    var height = screen.availHeight;
+    var xx = ((width - x) / 2);
+    var yy = ((height - y) / 2);
+    var localwin = window.open(url, 'preview', "scrollbars=" + scrollable + ",width=" + x + ",height=" + y + ",directories=no,status=no,resizable=no,menubar=no,toolbar=no,location=no,left=" + xx + ",top=" + yy + "");
+    localwin.focus();
+}
+function oPenBackOffice(url, x, y, scrollable, windowsname) {
+    var width = screen.availWidth;
+    var height = screen.availHeight;
+    var xx = ((width - x) / 2);
+    var yy = ((height - y) / 2);
+    var localwin = window.open(url, windowsname, "scrollbars=" + scrollable + ",width=" + x + ",height=" + y + ",directories=no,status=no,resizable=no,menubar=no,toolbar=no,location=no,left=" + xx + ",top=" + yy + "");
+    localwin.focus();
+}
+function checkboxtoarray(my_box, my_hidden) {
+    var box = my_box;
+    var hid = html_GetElement(my_hidden);
+    if (box.checked == false) {
+        hid.value = '';
+        box.checked = false;
+    }
+    else {
+        hid.value = 'Y';
+        box.checked = true;
+    }
+}
+
+function CheckDate(mydate) {
+    var dd = (mydate.substring(8));
+    var mm = (mydate.substring(5, 7));
+    var yyyy = (mydate.substring(0, 4));
+    var ok = 1;
+    var v_return = '';
+    if (((isNaN(dd)) || (dd < 1) || (dd > 31))) { ok = 0; }
+    if (((isNaN(mm)) || (mm < 1) || (mm > 12))) { ok = 0; }
+    if ((isNaN(yyyy))) { ok = 0; }
+    if (((mydate.substring(4, 5) != "-") || (mydate.substring(7, 8) != "-")) && (ok == 1)) { ok = 0; }
+    if (ok == 0) { v_return = "Date format must be YYYY-MM-DD !" }
+    else {
+        var d2 = new Date(yyyy, mm - 1, dd);
+        dd2 = d2.getDate();
+        mm2 = d2.getMonth() + 1;
+        yyyy2 = d2.getFullYear();
+        if (yyyy2 <= 100) { yyyy2 = 1900 + yyyy2 }
+        if ((dd != dd2) || (mm != mm2) || (yyyy != yyyy2)) { v_return = "Date is NOT correct !"; }
+    }
+    return v_return;
+}
+
+function cpyear() {
+    var time = new Date();
+    time.getDate();
+    var year = time.getYear();
+    if (year < 2000)    // Y2K Fix, Isaac Powell
+        year = year + 1900; // http://onyx.idbsu.edu/~ipowell
+    document.write(year);
+}   

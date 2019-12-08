@@ -1,0 +1,450 @@
+	/*
+	* Open Pop-up for RSS and Excel Extraction
+	* mas on 2011-02-09
+	*/
+	 
+	function openPopup(url)
+
+    {
+
+      var localwin=window.open(url,'preview',"scrollbars=yes,directories=no,status=no,resizable=yes,menubar=yes,toolbar=yes,location=yes");
+      localwin.focus();
+
+    } 
+	/*
+	* Replace "on" by "" or "on XYZ" by "XYZ" 
+	*/
+	function removeOn(nom)
+		{
+			if (!nom) nom="";
+			
+			var result = nom;
+			if (nom.indexOf("on ") == 0)
+			  {
+			  result = nom.replace(/on /i, "");
+			  }
+			else if (nom.indexOf("on") == 0)
+			  {
+			  result = nom.replace(/on/i, "");
+			  }
+			//alert("removeOn: " + nom + " -> " + result);
+			return result;
+		}
+
+	/*
+	* Add "on" to class
+	*/
+	function addOn(nom)
+		{
+			if (!nom) nom="";
+			var result = nom;
+			if (nom.length == 0)
+			  {
+			  result = "on";
+			  }
+			else if (nom.indexOf("on") != 0)
+			  {
+			  //result = removeOn(nom);
+			  result = "on " + result;
+			  }
+			//alert("addOn: " + nom + " -> " + result);
+			return result;
+		}
+
+	/*
+	* Montre / Cache un div
+	*/
+	function DivStatus(nom, numero, doOffset)
+		{
+			var divID = 's' + nom + numero;
+			var divID2 = 't' + nom + numero;
+			if ( document.getElementById && document.getElementById( divID ) ) // Pour les navigateurs récents
+				{
+					Pdiv = document.getElementById(divID);
+					Pdiv2 = document.getElementById(divID2);
+					if (doOffset == '1')
+					  {
+					  var isIE = getIEVersionNumber();
+					  var isIE6 = (isIE == 6);
+					  if (isIE6)
+					    {
+					    //PdivOrigin = document.getElementById("s" + nom + "1");
+					    // Apparently with this new version, IE6 bug does not appear, so remove this special case YCH 5/18/09
+					    PdivOrigin = document.getElementById("pads" + nom);
+					    }
+					  else
+					    { PdivOrigin = document.getElementById("pads" + nom); }
+					  
+					  PdivPad = document.getElementById("pads" + nom);
+					  }
+					PcH = true;
+		 		}
+			else if ( document.all && document.all[ divID ] ) // Pour les vieilles versions
+				{
+					Pdiv = document.all[ divID ];
+					Pdiv2 = document.all[ divID2 ];
+					if (doOffset == '1')
+					  {
+					  PdivOrigin = document.all["pads" + nom];
+					  PdivPad = document.all["pads" + nom];
+					  }
+					PcH = true;
+				}
+			else if ( document.layers && document.layers[ divID ] ) // Pour les très vieilles versions
+				{
+					Pdiv = document.layers[ divID ];
+					Pdiv2 = document.layers[ divID2 ];
+					if (doOffset == '1')
+					  {
+					  PdivOrigin = document.layers["pads" + nom];
+					  PdivPad = document.layers["pads" + nom];
+					  }
+					PcH = true;
+				}
+			else
+				{
+					
+					PcH = false;
+				}
+			if ( PcH )
+				{
+					// Now find the x position of the link
+					if (doOffset == '1')
+					  {
+					  var el1pos = findPosX(PdivOrigin);
+					  var el2pos = findPosX(Pdiv2);
+					  var myWidth= el2pos - el1pos;
+					  PdivPad.style.width= myWidth + "px";
+					  }
+					//alert(el1pos + ", " + el2pos + " -> " + myWidth);
+					Pdiv.className = ( Pdiv.className == 'cachediv' ) ? '' : 'cachediv';
+					//Pdiv2.className = "on";
+					Pdiv2.className = addOn(Pdiv2.className);
+				}
+		}
+		
+
+	/*
+	* Cache tous les divs ayant le même préfixe
+	*/
+	function CacheTout(nom, doOffset)
+		{	
+			var NumDiv = 1;
+			if (document.getElementById ) // Pour les navigateurs récents
+				{
+					while (document.getElementById('s' + nom + NumDiv) )
+						{
+							SetDiv = document.getElementById('s' + nom + NumDiv );
+							SetDivLink = document.getElementById('t' + nom + NumDiv );
+							//alert('s' + nom + NumDiv);
+							if ( SetDiv && SetDiv.className != 'cachediv' )
+								{
+									DivStatus(nom, NumDiv, doOffset);
+									//alert('After DivStatus ' + nom + NumDiv);
+									if (SetDivLink) 
+										{
+										SetDivLink.className = removeOn(SetDivLink.className);
+										//SetDivLink.className = "";
+										}
+								}
+							NumDiv++;
+						}
+
+				}
+			else if (document.all ) // Pour les vieilles versions
+				{
+					while (document.all['s' + nom + NumDiv ] )
+						{
+							SetDiv = document.all['s' + nom + NumDiv];
+							SetDivLink = document.all['t' + nom + NumDiv];
+							if ( SetDiv && SetDiv.className != 'cachediv' )
+								{
+									DivStatus(nom,NumDiv, doOffset);
+									SetDivLink.className = "";
+								}
+							NumDiv++;
+						}
+				}
+			else if (document.layers ) // Pour les très vieilles versions
+				{
+					while (document.layers['s' + nom + NumDiv ] )
+						{
+							SetDiv = document.layers['s' + nom + NumDiv];
+							SetDivLink = document.layers['t' + nom + NumDiv];
+							if ( SetDiv && SetDiv.className != 'cachediv' )
+								{
+									DivStatus(nom,NumDiv, doOffset);
+									SetDivLink.className = "";
+								}
+							NumDiv++;
+						}
+				}
+		}
+	
+	/*
+	* Montre tous les divs ayant le même préfixe
+	*/
+	function MontreTout(nom, doOffset)
+		{	
+			var NumDiv = 1;
+			if (document.getElementById ) // Pour les navigateurs récents
+				{
+					while (document.getElementById('s' + nom + NumDiv) )
+						{
+							SetDiv = document.getElementById('s' + nom + NumDiv );
+							if ( SetDiv && SetDiv.className != '' )
+								{
+									DivStatus(nom, NumDiv, doOffset);
+								}
+							NumDiv++;
+						}
+				}
+			else if (document.all ) // Pour les vieilles versions
+				{
+					while (document.all['s' + nom + NumDiv ] )
+						{
+							SetDiv = document.all['s' + nom + NumDiv ];
+							if ( SetDiv && SetDiv.className != '' )
+								{
+									DivStatus(nom, NumDiv, doOffset);
+								}
+							NumDiv++;
+						}
+				}
+			else if (document.layers ) // Pour les très vieilles versions
+				{
+					while (document.layers['s' + nom + NumDiv ] )
+						{
+							SetDiv = document.layers['s' + nom + NumDiv ];
+							if ( SetDiv && SetDiv.className != '' )
+								{
+									DivStatus(nom, NumDiv, doOffset);
+								}
+							NumDiv++;
+						}
+				}
+		}
+		
+	/*
+	* Inverse les divs: Cache les divs visible et montre le divs cachés :)
+	*/
+	function InverseTout(nom, doOffset)
+		{	
+			var NumDiv = 1;
+			if ( document.getElementById ) // Pour les navigateurs récents
+				{
+					while (document.getElementById('s' + nom + NumDiv ) )
+						{
+							SetDiv = document.getElementById( nom + NumDiv );
+							DivStatus(nom, NumDiv, doOffset);
+							NumDiv++;
+						}
+				}
+			else if ( document.all ) // Pour les vieilles versions
+				{
+					while (document.all[ nom + NumDiv ] )
+						{
+							SetDiv = document.all['s' + nom + NumDiv ];
+							DivStatus(nom, NumDiv, doOffset);
+							NumDiv++;
+						}
+				}
+			else if ( document.layers ) // Pour les très vieilles versions
+				{
+					while (document.layers[ nom + NumDiv ] )
+						{
+							SetDiv = document.layers['s' + nom + NumDiv ];
+							DivStatus(nom, NumDiv, doOffset);
+							NumDiv++;
+						}
+				}
+		}
+
+	/* Invert the class for "maindiv" */
+	function switchLayout()
+	{
+			if ( document.getElementById ) // Pour les navigateurs récents
+				{
+					 SetDiv = document.getElementById('maindiv');
+					 if (SetDiv.className.indexOf("Main-container-Wide") == -1)
+					   {
+					   SetDiv.className = "Main-container-Wide";
+                                           dw_setCookie( "layoutSize", "Wide", 180, "/" );
+					   }
+					 else
+					   {  
+					   SetDiv.className = "Main-container-Standard"; 
+                                           dw_setCookie( "layoutSize", "Standard", 180, "/" );
+					   }
+ 				}
+			else if ( document.all ) // Pour les vieilles versions
+				{
+					if (document.all["maindiv"] )
+						{
+						 SetDiv = document.all["maindiv"];
+        					 if (SetDiv.className.indexOf("Main-container-Wide") == -1)
+        					   {
+        					   SetDiv.className = "Main-container-Wide";
+                                                   dw_setCookie( "layoutSize", "Wide", 180, "/" );
+        					   }
+        					 else
+        					   {  
+        					   SetDiv.className = "Main-container-Standard"; 
+                                                   dw_setCookie( "layoutSize", "Standard", 180, "/" );
+        					   }
+						}
+				}
+			else if ( document.layers ) // Pour les très vieilles versions
+				{
+					if (document.layers["maindiv"] )
+						{
+						SetDiv = document.layers["maindiv"];
+        					 if (SetDiv.className.indexOf("Main-container-Wide") == -1)
+        					   {
+        					   SetDiv.className = "Main-container-Wide";
+                                                   dw_setCookie( "layoutSize", "Wide", 180, "/" );
+        					   }
+        					 else
+        					   {  
+        					   SetDiv.className = "Main-container-Standard"; 
+                                                   dw_setCookie( "layoutSize", "Standard", 180, "/" );
+        					   }
+						}
+				}
+	}
+		
+	/* Invert the class for "maindiv" */
+	/*	function getCurrentLayout()
+	{
+                var layout = dw_getCookie( "layoutSize");
+                var layoutClass = "Main-container-Standard";
+                
+                if (layout)
+                  {
+                  layoutClass = "Main-container-" + layout;
+                  }
+		if ( document.getElementById ) // Pour les navigateurs récents
+			{
+			SetDiv = document.getElementById('maindiv');
+			SetDiv.className = layoutClass;
+			}
+		else if ( document.all ) // Pour les vieilles versions
+			{
+				if (document.all["maindiv"] )
+					{
+					SetDiv = document.all["maindiv"];
+				 	SetDiv.className = layoutClass;
+					}
+			}
+		else if ( document.layers ) // Pour les très vieilles versions
+			{
+				if (document.layers["maindiv"] )
+					{
+					SetDiv = document.layers["maindiv"];
+				 	SetDiv.className = layoutClass;
+					}
+			}
+	}  */
+
+/* Find hash # and try to load the correct tab at start-up */
+	function getHash(root)
+		{
+		var curURL = unescape(location.href);
+		// Now find the last remaining of URL containing the hash #
+		var hashpos = curURL.lastIndexOf("#");
+		
+		var hash = root;
+		var tabNumber = "1";
+		if (hashpos != -1)
+		  {
+		  // Hash found! go to the correct tab
+		  tabNumber = curURL.substring(hashpos+1);
+		  CacheTout(root, 0);
+		  DivStatus(root,tabNumber, 0)
+		  }
+		}
+		
+/* Positionning sub-menus */
+
+function findPosX(obj)
+  {
+    var curleft = 0;
+    if(obj.offsetParent)
+        while(1) 
+        {
+          curleft += obj.offsetLeft;
+          if(!obj.offsetParent)
+            break;
+          obj = obj.offsetParent;
+        }
+    else if(obj.x)
+        curleft += obj.x;
+    return curleft;
+  }
+
+function myMouseOut(e, nom) {
+	if (!e) var e = window.event;
+	var tg = (window.event) ? e.srcElement : e.target;
+	//alert(tg.nodeName);
+	while (tg.id != 'top_nav')
+	{
+	//alert(tg.id);
+	tg = tg.parentNode;
+      }
+	//alert("out -> " + tg.id);
+	var reltg = (e.relatedTarget) ? e.relatedTarget : e.toElement;
+	while (reltg != tg && reltg.nodeName != 'BODY')
+	    {
+		if (reltg!='null') {
+		 reltg= reltg.parentNode; 
+		}
+	}
+	//alert(reltg);
+	if (reltg == tg) return;
+	// Mouseout took place when mouse actually left layer
+	CacheTout(nom);
+}
+
+function getIEVersionNumber() {
+    var ua = navigator.userAgent;
+    var MSIEOffset = ua.indexOf("MSIE ");
+    
+    if (MSIEOffset == -1) {
+        return 0;
+    } else {
+        return parseFloat(ua.substring(MSIEOffset + 5, ua.indexOf(";", MSIEOffset)));
+    }
+}
+
+// Rounded corners
+/*
+$(document).ready(function() {
+$(".radius5").radius();
+$(".radiusTL5").radius();
+$(".radiusTL5").radius();
+$(".radiusTR5").radius();
+$(".radiusBL5").radius();
+$(".radius10").radius();
+$(".radiusTL10").radius();
+$(".radiusTL10").radius();
+$(".radiusTR10").radius();
+$(".radiusBL10").radius();
+$(".radiusBR10").radius();
+$(".radius20").radius();
+$(".radiusTL20").radius();
+$(".radiusTR20").radius();
+$(".radiusBL20").radius();
+$(".radiusBR20").radius();
+});	   */
+
+
+//  Function to unscramble an email address; changes link in an
+//              anchor into a "mailto:" link
+//
+function mailsend(mail,p1,p2,p3,p4) { 
+  mail.href = "mailto:" + p2 + p3 + "\@" + p4 + p1; 
+  return true; 
+}  // end function mailsend()
+
+//
+

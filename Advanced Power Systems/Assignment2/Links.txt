@@ -1,3 +1,0 @@
-http://labs.ece.uw.edu/pstca/
-http://labs.ece.uw.edu/pstca/pf14/pg_tca14bus.htm
-https://github.com/dcode/CPSAnalysis/blob/master/ieee_bus/data/ieee14cdf.txt

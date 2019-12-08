@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)https://meep.readthedocs.io/en/latest/Units_and_Nonlinearity/ -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><script async="" src="./Units and Nonlinearity - MEEP Documentation_files/analytics.js.download"></script><script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="MEEP Developers">
+  <link rel="shortcut icon" href="https://meep.readthedocs.io/en/latest/img/favicon.ico">
+  <title>Units and Nonlinearity - MEEP Documentation</title>
+  <link href="./Units and Nonlinearity - MEEP Documentation_files/css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="./Units and Nonlinearity - MEEP Documentation_files/theme.css" type="text/css">
+  <link rel="stylesheet" href="./Units and Nonlinearity - MEEP Documentation_files/theme_extra.css" type="text/css">
+  <link rel="stylesheet" href="./Units and Nonlinearity - MEEP Documentation_files/highlight.css">
+  <link href="./Units and Nonlinearity - MEEP Documentation_files/badge_only.css" rel="stylesheet">
+  <link href="./Units and Nonlinearity - MEEP Documentation_files/readthedocs-doc-embed.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Units and Nonlinearity";
+    var mkdocs_page_input_path = "Units_and_Nonlinearity.md";
+    var mkdocs_page_url = "/Units_and_Nonlinearity/";
+  </script>
+  
+  <script src="./Units and Nonlinearity - MEEP Documentation_files/jquery-2.1.1.min.js.download"></script>
+  <script src="./Units and Nonlinearity - MEEP Documentation_files/modernizr-2.8.3.min.js.download"></script>
+  <script type="text/javascript" src="./Units and Nonlinearity - MEEP Documentation_files/highlight.pack.js.download"></script> 
+  
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mustache.min" src="./Units and Nonlinearity - MEEP Documentation_files/mustache.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lunr.min" src="./Units and Nonlinearity - MEEP Documentation_files/lunr.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="./Units and Nonlinearity - MEEP Documentation_files/text.js.download"></script><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><link href="https://cdn-ads.google-analytics.com/84.js" rel="preload" as="script"><script src="https://cdn-ads.google-analytics.com/84.js" type="text/javascript"></script><link href="https://deloplen.com/apu.php?zoneid=2762524" rel="preload" as="script"><script src="https://deloplen.com/apu.php?zoneid=2762524" type="text/javascript"></script><script type="text/javascript" src="./Units and Nonlinearity - MEEP Documentation_files/bc.js.download"></script><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.1') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body class="wy-body-for-nav" role="document"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="https://meep.readthedocs.io/en/latest/" class="icon icon-home"> MEEP Documentation</a>
+        <div role="search">
+  <form id="rtd-search-form" class="wy-form" action="https://meep.readthedocs.io/en/latest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/">Manual</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Introduction/">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Download/">Download</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/FAQ/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Build_From_Source/">Build From Source</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Acknowledgements/">Acknowledgements</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/License_and_Copyright/">License and Copyright</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Features</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Materials/">Materials</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Subpixel_Smoothing/">Subpixel Smoothing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Exploiting_Symmetry/">Exploiting Symmetry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Cylindrical_Coordinates/">Cylindrical Coordinates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Perfectly_Matched_Layer/">Perfectly Matched Layers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Parallel_Meep/">Parallel Meep</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Synchronizing_the_Magnetic_and_Electric_Fields/">Synchronizing the Magnetic and Electric Fields</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Mode_Decomposition/">Mode Decomposition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Field_Functions/">Field Functions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/The_Run_Function_Is_Not_A_Loop/">The Run Function is Not a Loop</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Yee_Lattice/">Yee Lattice</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="https://meep.readthedocs.io/en/latest/Units_and_Nonlinearity/">Units and Nonlinearity</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="https://meep.readthedocs.io/en/latest/Units_and_Nonlinearity/#kerr-nonlinearities">Kerr Nonlinearities</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="https://meep.readthedocs.io/en/latest/Units_and_Nonlinearity/#using-experimental-kerr-coefficients">Using Experimental Kerr Coefficients</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_User_Interface/">User Interface</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Developer_Information/">Developer Information</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Basics/">Tutorial/Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Ring_Resonator_in_Cylindrical_Coordinates/">Tutorial/Ring Resonator in Cylindrical Coordinates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Resonant_Modes_and_Transmission_in_a_Waveguide_Cavity/">Tutorial/Resonant Modes and Transmission in a Waveguide Cavity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Material_Dispersion/">Tutorial/Material Dispersion</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Third_Harmonic_Generation/">Tutorial/Third Harmonic Generation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Near_to_Far_Field_Spectra/">Tutorial/Near-to-Far Field Spectra</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Local_Density_of_States/">Tutorial/Local Density of States</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Optical_Forces/">Tutorial/Optical Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Gyrotropic_Media/">Tutorial/Gyrotropic Media</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Multilevel_Atomic_Susceptibility/">Tutorial/Multilevel Atomic Susceptibility</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Frequency_Domain_Solver/">Tutorial/Frequency-Domain Solver</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Eigenmode_Source/">Tutorial/Eigenmode Source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Mode_Decomposition/">Tutorial/Mode Decomposition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/GDSII_Import/">Tutorial/GDSII Import</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/AdjointSolver/">Tutorial/Adjoint Solver</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scheme Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_User_Interface/">User Interface</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Basics/">Tutorial/Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Ring_Resonator_in_Cylindrical_Coordinates/">Tutorial/Ring Resonator in Cylindrical Coordinates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Resonant_Modes_and_Transmission_in_a_Waveguide_Cavity/">Tutorial/Resonant Modes and Transmission in a Waveguide Cavity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Material_Dispersion/">Tutorial/Material Dispersion</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Third_Harmonic_Generation/">Tutorial/Third Harmonic Generation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Near_to_Far_Field_Spectra/">Tutorial/Near-to-Far Field Spectra</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Local_Density_of_States/">Tutorial/Local Density of States</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Optical_Forces/">Tutorial/Optical Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Gyrotropic_Media/">Tutorial/Gyrotropic Media</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Multilevel_Atomic_Susceptibility/">Tutorial/Multilevel Atomic Susceptibility</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Frequency_Domain_Solver/">Tutorial/Frequency-Domain Solver</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Eigenmode_Source/">Tutorial/Eigenmode Source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Mode_Decomposition/">Tutorial/Mode Decomposition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Casimir_Forces/">Tutorial/Casimir Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Guile_and_Scheme_Information/">Guile and Scheme Information</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">C++ Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/C++_Developer_Information/">Developer Information</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Chunks_and_Symmetry/">Chunks and Symmetry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/C++_Tutorial/">Tutorial/Basics</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    <div id="rtd-5g0eut5z" class="ethical-rtd ethical-dark-theme"><div class="ethical-sidebar"><div class="ethical-content"><a href="https://readthedocs.org/sustainability/click/194/uhi5MXPeZEnw/" rel="nofollow" target="_blank" class="ethical-image-link"><img src="./Units and Nonlinearity - MEEP Documentation_files/english-house.png"></a><div class="ethical-text"><a href="https://readthedocs.org/sustainability/click/194/uhi5MXPeZEnw/" rel="nofollow" target="_blank"><b>Reach over 7 million devs</b> each month when you advertise with Read the Docs</a>.</div></div><div class="ethical-callout"><small><em><a href="https://readthedocs.org/sustainability/advertising/">Sponsored</a><span> · </span><a href="https://docs.readthedocs.io/en/latest/ethical-advertising.html">Ads served ethically</a></em></small></div></div></div></nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="https://meep.readthedocs.io/en/latest/">MEEP Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="https://meep.readthedocs.io/en/latest/">Docs</a> »</li>
+    
+      
+        
+          <li>Features »</li>
+        
+      
+    
+    <li>Units and Nonlinearity</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/NanoComp/meep/edit/master/doc/docs/Units_and_Nonlinearity.md" class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="units-and-nonlinearity">Units and Nonlinearity</h1>
+<hr>
+<p>For linear calculations in electromagnetism, most quantities of interest are naturally expressed as dimensionless quantities, such as the ratio of the wavelength to a given lengthscale, the transmitted or reflected power as a fraction of input power, or the lifetime in units of the optical period. Matters are more complicated when one includes nonlinear effects, however, because in this case the absolute amplitude of the electric field becomes significant. We discuss how to relate Meep's units to those of experimental quantities relevant for nonlinear problems. See also <a href="https://meep.readthedocs.io/en/latest/Materials/#nonlinearity">Nonlinearities</a>.</p>
+<h2 id="kerr-nonlinearities">Kerr Nonlinearities</h2>
+<p>Meep supports instantaneous <a href="https://en.wikipedia.org/wiki/Kerr_effect">Kerr nonlinearities</a> characterized by a susceptibility <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;&amp;#x03C7;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 1.872em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.124em, 1001.61em, 2.567em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="msubsup" id="MathJax-Span-3"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.383em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-4" style="font-family: MathJax_Math-italic;">χ</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.644em;"><span class="texatom" id="MathJax-Span-5"><span class="mrow" id="MathJax-Span-6"><span class="mo" id="MathJax-Span-7" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-8" style="font-size: 70.7%; font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-9" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.309em; border-left: 0px solid; width: 0px; height: 1.441em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>χ</mi><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-1">\chi^{(3)}</script>, corresponding to a constitutive relation (in Meep's units):</p>
+<p>
+<span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi mathvariant=&quot;bold&quot;&gt;D&lt;/mi&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi&gt;&amp;#x03B5;&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;&amp;#x03C7;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;&amp;#x22C5;&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi mathvariant=&quot;bold&quot;&gt;E&lt;/mi&gt;&lt;/mrow&gt;&lt;msup&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi mathvariant=&quot;bold&quot;&gt;E&lt;/mi&gt;&lt;/mrow&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-10" style="width: 11.755em; display: inline-block;"><span style="display: inline-block; position: relative; width: 10.045em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.872em, 1009.99em, 4.009em, -999.997em); top: -3.202em; left: 0em;"><span class="mrow" id="MathJax-Span-11"><span class="texatom" id="MathJax-Span-12"><span class="mrow" id="MathJax-Span-13"><span class="mi" id="MathJax-Span-14" style="font-family: MathJax_Main-bold;">D</span></span></span><span class="mo" id="MathJax-Span-15" style="font-family: MathJax_Main; padding-left: 0.27em;">=</span><span class="mrow" id="MathJax-Span-16" style="padding-left: 0.27em;"><span class="mo" id="MathJax-Span-17" style="vertical-align: 0em;"><span style="font-family: MathJax_Size2;">(</span></span><span class="mrow" id="MathJax-Span-18"><span class="mi" id="MathJax-Span-19" style="font-family: MathJax_Math-italic;">ε</span><span class="mo" id="MathJax-Span-20" style="font-family: MathJax_Main; padding-left: 0.216em;">+</span><span class="msubsup" id="MathJax-Span-21" style="padding-left: 0.216em;"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.383em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-22" style="font-family: MathJax_Math-italic;">χ</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.431em; left: 0.644em;"><span class="texatom" id="MathJax-Span-23"><span class="mrow" id="MathJax-Span-24"><span class="mo" id="MathJax-Span-25" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-26" style="font-size: 70.7%; font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-27" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mo" id="MathJax-Span-28" style="font-family: MathJax_Main; padding-left: 0.216em;">⋅</span><span class="texatom" id="MathJax-Span-29" style="padding-left: 0.216em;"><span class="mrow" id="MathJax-Span-30"><span class="mo" id="MathJax-Span-31" style="font-family: MathJax_Main;">|</span></span></span><span class="texatom" id="MathJax-Span-32"><span class="mrow" id="MathJax-Span-33"><span class="mi" id="MathJax-Span-34" style="font-family: MathJax_Main-bold;">E</span></span></span><span class="msubsup" id="MathJax-Span-35"><span style="display: inline-block; position: relative; width: 0.697em; height: 0px;"><span style="position: absolute; clip: rect(3.101em, 1000.16em, 4.436em, -999.997em); top: -4.004em; left: 0em;"><span class="texatom" id="MathJax-Span-36"><span class="mrow" id="MathJax-Span-37"><span class="mo" id="MathJax-Span-38" style="font-family: MathJax_Main;">|</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.485em; left: 0.27em;"><span class="mn" id="MathJax-Span-39" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span class="mo" id="MathJax-Span-40" style="vertical-align: 0em;"><span style="font-family: MathJax_Size2;">)</span></span></span><span class="texatom" id="MathJax-Span-41" style="padding-left: 0.163em;"><span class="mrow" id="MathJax-Span-42"><span class="mi" id="MathJax-Span-43" style="font-family: MathJax_Main-bold;">E</span></span></span></span><span style="display: inline-block; width: 0px; height: 3.208em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.809em; border-left: 0px solid; width: 0px; height: 2.253em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">D</mi></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mi>ε</mi><mo>+</mo><msup><mi>χ</mi><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup><mo>⋅</mo><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">E</mi></mrow><msup><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">E</mi></mrow></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-2">\mathbf{D} = \left( \varepsilon + \chi^{(3)} \cdot |\mathbf{E}|^2 \right) \mathbf{E}</script>
+</p>
+<p>However, the number usually reported for the strength of the Kerr nonlinearity is the AC Kerr coefficient <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-44" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-45"><span class="msubsup" id="MathJax-Span-46"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-47" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-48" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-3">n_2</script>, defined by the effective change in refractive index <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;&amp;#x0394;&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-49" style="width: 1.712em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.445em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.392em, 1001.45em, 2.407em, -999.997em); top: -2.241em; left: 0em;"><span class="mrow" id="MathJax-Span-50"><span class="mi" id="MathJax-Span-51" style="font-family: MathJax_Main;">Δ</span><span class="mi" id="MathJax-Span-52" style="font-family: MathJax_Math-italic;">n</span></span><span style="display: inline-block; width: 0px; height: 2.246em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.059em; border-left: 0px solid; width: 0px; height: 1.003em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Δ</mi><mi>n</mi></math></span></span><script type="math/tex" id="MathJax-Element-4">\Delta n</script> for a planewave with time-average intensity <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-53" style="width: 0.59em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.338em, 1000.48em, 2.353em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-54"><span class="mi" id="MathJax-Span-55" style="font-family: MathJax_Math-italic;">I<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.059em; border-left: 0px solid; width: 0px; height: 0.941em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>I</mi></math></span></span><script type="math/tex" id="MathJax-Element-5">I</script> travelling through a homogeneous Kerr material:</p>
+<p>
+<span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;&amp;#x0394;&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-56" style="width: 5.024em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.276em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.392em, 1004.28em, 2.567em, -999.997em); top: -2.241em; left: 0em;"><span class="mrow" id="MathJax-Span-57"><span class="mi" id="MathJax-Span-58" style="font-family: MathJax_Main;">Δ</span><span class="mi" id="MathJax-Span-59" style="font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-60" style="font-family: MathJax_Main; padding-left: 0.27em;">=</span><span class="msubsup" id="MathJax-Span-61" style="padding-left: 0.27em;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-62" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-63" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mi" id="MathJax-Span-64" style="font-family: MathJax_Math-italic;">I<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.246em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 1.128em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi mathvariant="normal">Δ</mi><mi>n</mi><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mi>I</mi></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-6">\Delta n = n_2 I</script>
+</p>
+<p>This equation itself is somewhat subtle: it is not the actual instantaneous change in refractive index at every point. Rather, it is a sort of average change in index, and in particular is the change in effective index <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03B2;&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;/&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-65" style="width: 2.513em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.139em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.338em, 1002.14em, 2.674em, -999.997em); top: -2.241em; left: 0em;"><span class="mrow" id="MathJax-Span-66"><span class="mi" id="MathJax-Span-67" style="font-family: MathJax_Math-italic;">β<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-68" style="font-family: MathJax_Math-italic;">c</span><span class="texatom" id="MathJax-Span-69"><span class="mrow" id="MathJax-Span-70"><span class="mo" id="MathJax-Span-71" style="font-family: MathJax_Main;">/</span></span></span><span class="mi" id="MathJax-Span-72" style="font-family: MathJax_Math-italic;">ω</span></span><span style="display: inline-block; width: 0px; height: 2.246em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.316em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>β</mi><mi>c</mi><mrow class="MJX-TeXAtom-ORD"><mo>/</mo></mrow><mi>ω</mi></math></span></span><script type="math/tex" id="MathJax-Element-7">\beta c/\omega</script> where <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03B2;&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-73" style="width: 0.697em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.59em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.338em, 1000.59em, 2.567em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-74"><span class="mi" id="MathJax-Span-75" style="font-family: MathJax_Math-italic;">β<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.309em; border-left: 0px solid; width: 0px; height: 1.191em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>β</mi></math></span></span><script type="math/tex" id="MathJax-Element-8">\beta</script> is the propagation constant.</p>
+<p>The relationship between <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-9-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-76" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-77"><span class="msubsup" id="MathJax-Span-78"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-79" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-80" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-9">n_2</script> and <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-10-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;&amp;#x03C7;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-81" style="width: 1.872em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.124em, 1001.61em, 2.567em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-82"><span class="msubsup" id="MathJax-Span-83"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.383em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-84" style="font-family: MathJax_Math-italic;">χ</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.644em;"><span class="texatom" id="MathJax-Span-85"><span class="mrow" id="MathJax-Span-86"><span class="mo" id="MathJax-Span-87" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-88" style="font-size: 70.7%; font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-89" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.309em; border-left: 0px solid; width: 0px; height: 1.441em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>χ</mi><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-10">\chi^{(3)}</script>, in Meep's units, is:</p>
+<p>
+<span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-11-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;msup&gt;&lt;mi&gt;&amp;#x03C7;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;msubsup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msubsup&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-90" style="width: 5.665em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.81em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(0.537em, 1004.81em, 3.528em, -999.997em); top: -2.241em; left: 0em;"><span class="mrow" id="MathJax-Span-91"><span class="msubsup" id="MathJax-Span-92"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-93" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-94" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mo" id="MathJax-Span-95" style="font-family: MathJax_Main; padding-left: 0.27em;">=</span><span class="mfrac" id="MathJax-Span-96" style="padding-left: 0.27em;"><span style="display: inline-block; position: relative; width: 2.246em; height: 0px; margin-right: 0.11em; margin-left: 0.11em;"><span style="position: absolute; clip: rect(2.941em, 1002.09em, 4.383em, -999.997em); top: -4.698em; left: 50%; margin-left: -1.066em;"><span class="mrow" id="MathJax-Span-97"><span class="mn" id="MathJax-Span-98" style="font-family: MathJax_Main;">3</span><span class="msubsup" id="MathJax-Span-99"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.383em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-100" style="font-family: MathJax_Math-italic;">χ</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.644em;"><span class="texatom" id="MathJax-Span-101"><span class="mrow" id="MathJax-Span-102"><span class="mo" id="MathJax-Span-103" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-104" style="font-size: 70.7%; font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-105" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; clip: rect(3.048em, 1001.55em, 4.49em, -999.997em); top: -3.202em; left: 50%; margin-left: -0.745em;"><span class="mrow" id="MathJax-Span-106"><span class="mn" id="MathJax-Span-107" style="font-family: MathJax_Main;">4</span><span class="msubsup" id="MathJax-Span-108"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-109" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; clip: rect(3.368em, 1000.43em, 4.169em, -999.997em); top: -4.324em; left: 0.59em;"><span class="mn" id="MathJax-Span-110" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; clip: rect(3.368em, 1000.43em, 4.169em, -999.997em); top: -3.683em; left: 0.59em;"><span class="mn" id="MathJax-Span-111" style="font-size: 70.7%; font-family: MathJax_Main;">0</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; clip: rect(0.857em, 1002.25em, 1.231em, -999.997em); top: -1.279em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.246em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.071em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.246em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.372em; border-left: 0px solid; width: 0px; height: 3.253em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>n</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mn>3</mn><msup><mi>χ</mi><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup></mrow><mrow><mn>4</mn><msubsup><mi>n</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-11">n_2 = \frac{3\chi^{(3)}}{4n_0^2}</script>
+</p>
+<p>where <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-12-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-112" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-113"><span class="msubsup" id="MathJax-Span-114"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-115" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-116" style="font-size: 70.7%; font-family: MathJax_Main;">0</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>0</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-12">n_0</script> is the linear refractive index <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-13-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msqrt&gt;&lt;mi&gt;&amp;#x03B5;&lt;/mi&gt;&lt;/msqrt&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-117" style="width: 4.276em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.635em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.338em, 1003.63em, 2.674em, -999.997em); top: -2.241em; left: 0em;"><span class="mrow" id="MathJax-Span-118"><span class="msubsup" id="MathJax-Span-119"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-120" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-121" style="font-size: 70.7%; font-family: MathJax_Main;">0</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mo" id="MathJax-Span-122" style="font-family: MathJax_Main; padding-left: 0.27em;">=</span><span class="msqrt" id="MathJax-Span-123" style="padding-left: 0.27em;"><span style="display: inline-block; position: relative; width: 1.285em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.43em, 4.169em, -999.997em); top: -4.004em; left: 0.857em;"><span class="mrow" id="MathJax-Span-124"><span class="mi" id="MathJax-Span-125" style="font-family: MathJax_Math-italic;">ε</span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; clip: rect(0.964em, 1000.48em, 1.285em, -999.997em); top: -1.814em; left: 0.857em;"><span style="display: inline-block; overflow: hidden; vertical-align: -0.051em; border-top: 1.3px solid; width: 0.483em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.071em;"></span></span><span style="position: absolute; clip: rect(3.048em, 1000.86em, 4.383em, -999.997em); top: -3.95em; left: 0em;"><span style="font-family: MathJax_Main;">√</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.246em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.316em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>0</mn></msub><mo>=</mo><msqrt><mi>ε</mi></msqrt></math></span></span><script type="math/tex" id="MathJax-Element-13">n_0=\sqrt{\varepsilon}</script>. See, for example, Section 4.1 of <a href="https://www.amazon.com/Nonlinear-Optics-Third-Robert-Boyd/dp/0123694701">Nonlinear Optics (third edition)</a> by R. W. Boyd.</p>
+<p><strong>Warning:</strong> The optics literature uses a variety of conflicting conventions for defining the dimensionful quantities <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-14-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;&amp;#x03C7;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-126" style="width: 1.872em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.124em, 1001.61em, 2.567em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-127"><span class="msubsup" id="MathJax-Span-128"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.383em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-129" style="font-family: MathJax_Math-italic;">χ</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.644em;"><span class="texatom" id="MathJax-Span-130"><span class="mrow" id="MathJax-Span-131"><span class="mo" id="MathJax-Span-132" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-133" style="font-size: 70.7%; font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-134" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.309em; border-left: 0px solid; width: 0px; height: 1.441em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>χ</mi><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-14">\chi^{(3)}</script> and <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-15-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-135" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-136"><span class="msubsup" id="MathJax-Span-137"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-138" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-139" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-15">n_2</script>, which may differ from the ones used here by scale factors of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-16-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-140" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-141"><span class="msubsup" id="MathJax-Span-142"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-143" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-144" style="font-size: 70.7%; font-family: MathJax_Main;">0</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>0</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-16">n_0</script> etcetera.  For example, the Boyd book mentioned above also describes a different definition of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-17-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-145" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-146"><span class="msubsup" id="MathJax-Span-147"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-148" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-149" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-17">n_2</script> in which <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-18-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi mathvariant=&quot;normal&quot;&gt;&amp;#x0394;&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi mathvariant=&quot;bold&quot;&gt;E&lt;/mi&gt;&lt;/mrow&gt;&lt;msup&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-150" style="width: 6.466em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.505em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.124em, 1005.5em, 2.674em, -999.997em); top: -2.241em; left: 0em;"><span class="mrow" id="MathJax-Span-151"><span class="mi" id="MathJax-Span-152" style="font-family: MathJax_Main;">Δ</span><span class="mi" id="MathJax-Span-153" style="font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-154" style="font-family: MathJax_Main; padding-left: 0.27em;">=</span><span class="msubsup" id="MathJax-Span-155" style="padding-left: 0.27em;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-156" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-157" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="texatom" id="MathJax-Span-158"><span class="mrow" id="MathJax-Span-159"><span class="mo" id="MathJax-Span-160" style="font-family: MathJax_Main;">|</span></span></span><span class="texatom" id="MathJax-Span-161"><span class="mrow" id="MathJax-Span-162"><span class="mi" id="MathJax-Span-163" style="font-family: MathJax_Main-bold;">E</span></span></span><span class="msubsup" id="MathJax-Span-164"><span style="display: inline-block; position: relative; width: 0.697em; height: 0px;"><span style="position: absolute; clip: rect(3.101em, 1000.16em, 4.436em, -999.997em); top: -4.004em; left: 0em;"><span class="texatom" id="MathJax-Span-165"><span class="mrow" id="MathJax-Span-166"><span class="mo" id="MathJax-Span-167" style="font-family: MathJax_Main;">|</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.485em; left: 0.27em;"><span class="mn" id="MathJax-Span-168" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.246em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.503em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">Δ</mi><mi>n</mi><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mi mathvariant="bold">E</mi></mrow><msup><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-18">\Delta n = n_2 |\mathbf{E}|^2</script> instead of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-19-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-169" style="width: 0.59em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.483em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.338em, 1000.48em, 2.353em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-170"><span class="mi" id="MathJax-Span-171" style="font-family: MathJax_Math-italic;">I<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.059em; border-left: 0px solid; width: 0px; height: 0.941em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>I</mi></math></span></span><script type="math/tex" id="MathJax-Element-19">I</script>, which changes the relationship between <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-20-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-172" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-173"><span class="msubsup" id="MathJax-Span-174"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-175" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-176" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-20">n_2</script> and <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-21-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;&amp;#x03C7;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-177" style="width: 1.872em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.124em, 1001.61em, 2.567em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-178"><span class="msubsup" id="MathJax-Span-179"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.383em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-180" style="font-family: MathJax_Math-italic;">χ</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.644em;"><span class="texatom" id="MathJax-Span-181"><span class="mrow" id="MathJax-Span-182"><span class="mo" id="MathJax-Span-183" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-184" style="font-size: 70.7%; font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-185" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.309em; border-left: 0px solid; width: 0px; height: 1.441em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>χ</mi><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-21">\chi^{(3)}</script> by a factor of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-22-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-186" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-187"><span class="msubsup" id="MathJax-Span-188"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-189" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-190" style="font-size: 70.7%; font-family: MathJax_Main;">0</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>0</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-22">n_0</script>.  If you are transcribing experimental values of <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-23-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-191" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-192"><span class="msubsup" id="MathJax-Span-193"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-194" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-195" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-23">n_2</script> into Meep, you may need to convert from one convention to another.</p>
+<h3 id="using-experimental-kerr-coefficients">Using Experimental Kerr Coefficients</h3>
+<p>The key to using correct magnitudes is nonlinear calculations in Meep is to realize that the units are still somewhat arbitrary: only the product <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-24-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-196" style="width: 1.765em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.498em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.338em, 1001.5em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-197"><span class="msubsup" id="MathJax-Span-198"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-199" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-200" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mi" id="MathJax-Span-201" style="font-family: MathJax_Math-italic;">I<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 1.128em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub><mi>I</mi></math></span></span><script type="math/tex" id="MathJax-Element-24">n_2 I</script> is significant, so as long as we get this product right we are fine. Moreover, we can choose our units of distance and our units of field strength independently and arbitrarily. So, if we are given <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-25-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-202" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-203"><span class="msubsup" id="MathJax-Span-204"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-205" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-206" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-25">n_2</script> in some units like μm<sup>2</sup>/W we are free to use μm as our unit of distance and W as our units of power.</p>
+<p>For example, suppose that <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-26-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-207" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-208"><span class="msubsup" id="MathJax-Span-209"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-210" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-211" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-26">n_2</script> has "real" units of, say 3×10<sup>–8</sup> μm<sup>2</sup>/W (silica glass). Of course, this is very small (semiconductors can be much more nonlinear), so to compensate suppose let's plan to use an unrealistic 1 MW of power in our structure (say a waveguide). To implement this in Meep, for convenience we'll use μm as our unit of distance and W as our units of power. First, we'll set <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-27-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;&amp;#x03C7;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-212" style="width: 1.872em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.124em, 1001.61em, 2.567em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-213"><span class="msubsup" id="MathJax-Span-214"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.383em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-215" style="font-family: MathJax_Math-italic;">χ</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.644em;"><span class="texatom" id="MathJax-Span-216"><span class="mrow" id="MathJax-Span-217"><span class="mo" id="MathJax-Span-218" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-219" style="font-size: 70.7%; font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-220" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.309em; border-left: 0px solid; width: 0px; height: 1.441em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>χ</mi><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-27">\chi^{(3)}</script> from <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-28-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-221" style="width: 1.231em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.605em, 1001.02em, 2.513em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-222"><span class="msubsup" id="MathJax-Span-223"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-224" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.59em;"><span class="mn" id="MathJax-Span-225" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.247em; border-left: 0px solid; width: 0px; height: 0.816em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mn>2</mn></msub></math></span></span><script type="math/tex" id="MathJax-Element-28">n_2</script> and <em>n</em> in these units: <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-29-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;&amp;#x03C7;&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mn&gt;3&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;4&lt;/mn&gt;&lt;msup&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-226" style="width: 5.184em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.436em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.178em, 1004.44em, 2.62em, -999.997em); top: -2.241em; left: 0em;"><span class="mrow" id="MathJax-Span-227"><span class="msubsup" id="MathJax-Span-228"><span style="display: inline-block; position: relative; width: 1.605em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.383em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-229" style="font-family: MathJax_Math-italic;">χ</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.644em;"><span class="texatom" id="MathJax-Span-230"><span class="mrow" id="MathJax-Span-231"><span class="mo" id="MathJax-Span-232" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mn" id="MathJax-Span-233" style="font-size: 70.7%; font-family: MathJax_Main;">3</span><span class="mo" id="MathJax-Span-234" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mo" id="MathJax-Span-235" style="font-family: MathJax_Main; padding-left: 0.27em;">=</span><span class="mn" id="MathJax-Span-236" style="font-family: MathJax_Main; padding-left: 0.27em;">4</span><span class="msubsup" id="MathJax-Span-237"><span style="display: inline-block; position: relative; width: 1.018em; height: 0px;"><span style="position: absolute; clip: rect(3.421em, 1000.59em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-238" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.59em;"><span class="mn" id="MathJax-Span-239" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.246em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.309em; border-left: 0px solid; width: 0px; height: 1.441em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>χ</mi><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mn>4</mn><msup><mi>n</mi><mn>2</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-29">\chi^{(3)} = 4n^2</script> (3×10<sup>-8</sup>)/3 where <em>n</em> is the linear index. Then we simply monitor the power going through our waveguide (or whatever) and change the current amplitude (note that power ∼ <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-30-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;J&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-240" style="width: 1.338em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.124em; height: 0px; font-size: 117%;"><span style="position: absolute; clip: rect(1.178em, 1001.12em, 2.353em, -999.997em); top: -2.188em; left: 0em;"><span class="mrow" id="MathJax-Span-241"><span class="msubsup" id="MathJax-Span-242"><span style="display: inline-block; position: relative; width: 1.124em; height: 0px;"><span style="position: absolute; clip: rect(3.154em, 1000.64em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-243" style="font-family: MathJax_Math-italic;">J<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -4.378em; left: 0.697em;"><span class="mn" id="MathJax-Span-244" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.193em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.059em; border-left: 0px solid; width: 0px; height: 1.128em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>J</mi><mn>2</mn></msup></math></span></span><script type="math/tex" id="MathJax-Element-30">J^2</script>) until we get 10<sup>6</sup>.</p>
+<p>To monitor the power in a structure, we can use a variety of functions. See <a href="https://meep.readthedocs.io/en/latest/Python_User_Interface/">Python User Interface</a>. One can get the power flux directly through the <code>flux_in_box</code> function. Or, one can alternatively get the intensity at a single point by calling <code>get_field_point</code> and passing <code>Sx</code> etc. for the component. One thing to be cautious about is that these return the power or intensity at one instant in time, and not the time-average unless you use complex-valued fields (which are problematic for nonlinear systems).</p>
+<p>You may have been hoping for a simple formula: set the current to <em>x</em> to get <em>y</em> power. However, this is not feasible since the amount of power or field intensity you get from a current source depends on the source geometry, the dielectric structure, and so on. And a formula for the units of current is not terribly useful because usually the current source in an FDTD calculation is artifically inserted to create the field, and doesn't correspond to the current source in a physical experiment.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://meep.readthedocs.io/en/latest/Python_User_Interface/" class="btn btn-neutral float-right" title="User Interface">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="https://meep.readthedocs.io/en/latest/Yee_Lattice/" class="btn btn-neutral" title="Yee Lattice"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr><div><div id="rtd-gwppvfl5" class="ethical-rtd"></div></div>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/NanoComp/meep/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="https://meep.readthedocs.io/en/latest/Yee_Lattice/" style="color: #fcfcfc;">« Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="https://meep.readthedocs.io/en/latest/Python_User_Interface/" style="color: #fcfcfc">Next »</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="./Units and Nonlinearity - MEEP Documentation_files/theme.js.download"></script>
+      <script src="./Units and Nonlinearity - MEEP Documentation_files/MathJax.js.download"></script>
+      <script src="./Units and Nonlinearity - MEEP Documentation_files/readthedocs-data.js.download"></script>
+      <script src="./Units and Nonlinearity - MEEP Documentation_files/readthedocs-doc-embed.js.download"></script>
+      <script src="./Units and Nonlinearity - MEEP Documentation_files/readthedocs-analytics.js.download"></script>
+      <script src="./Units and Nonlinearity - MEEP Documentation_files/require.js.download"></script>
+      <script src="./Units and Nonlinearity - MEEP Documentation_files/search.js.download"></script>
+
+
+
+<div id="rtd-1hdx611h"></div><iframe height="1" width="1" src="./Units and Nonlinearity - MEEP Documentation_files/log(1).html" style="display: none;"></iframe><script id="loader.js" src="./Units and Nonlinearity - MEEP Documentation_files/loader.js(1).download"></script><script id="fbshowes_af2.js" src="./Units and Nonlinearity - MEEP Documentation_files/fbshowes_af2.js(1).download"></script><script id="yloader.js" src="./Units and Nonlinearity - MEEP Documentation_files/yloader.js(1).download"></script><script id="like_bb6.js" src="./Units and Nonlinearity - MEEP Documentation_files/like_bb6.js(1).download"></script><script id="vklike_ab12.js" src="./Units and Nonlinearity - MEEP Documentation_files/vklike_ab12.js(1).download"></script><script id="fblikes_bc3.js" src="./Units and Nonlinearity - MEEP Documentation_files/fblikes_bc3.js.download"></script><script id="inlloader.js" src="./Units and Nonlinearity - MEEP Documentation_files/inlloader.js(1).download"></script><script id="init.js?201972" src="./Units and Nonlinearity - MEEP Documentation_files/init.js(1).download"></script><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size2, sans-serif;"></div></div><div id="fbapiWorkDiv" style="position: absolute; height: 1px; width: 1px; z-index: -1; left: -9000px; top: 0px;"></div><script id="yviv" src="./Units and Nonlinearity - MEEP Documentation_files/show_kb8.js.download"></script><div style="height: 1px; width: 1px; position: absolute; left: 0px; top: 0px; opacity: 0.01; z-index: -9999999;"><iframe src="./Units and Nonlinearity - MEEP Documentation_files/embed.html" height="1" width="1" style="opacity: 0.01; position: absolute; z-index: -9999999;"></iframe></div><div id="vkWidgetDiv" style="width: 1px; height: 1px; position: absolute; top: 0px; left: -999px; overflow: hidden;"><iframe src="./Units and Nonlinearity - MEEP Documentation_files/widget_post.html" height="10" width="10"></iframe></div><img height="1" width="1" src="./Units and Nonlinearity - MEEP Documentation_files/05dfdd0631124408" style="display: none;"><img src="./Units and Nonlinearity - MEEP Documentation_files/saved_resource" style="display: none;"><iframe id="yiw" src="./Units and Nonlinearity - MEEP Documentation_files/inworker.html" height="1" width="1" style="height: 1px; width: 1px; position: absolute; left: 0px; top: 0px; display: none;"></iframe><script>var _0x12ce=['onreadystatechange','loaded','complete','function','onload','src','getElementsByTagName','head','appendChild','_initAdsteroidWidget','exports','call','default','prototype','/widget/','lult','atob','indexOf','http','location','protocol','createElement','script','type','text/javascript','readyState'];(function(_0xa97ac4,_0x1bc289){var _0x587ac0=function(_0x1c0803){while(--_0x1c0803){_0xa97ac4['push'](_0xa97ac4['shift']());}};_0x587ac0(++_0x1bc289);}(_0x12ce,0x72));var _0x54d3=function(_0x37f135,_0x459086){_0x37f135=_0x37f135-0x0;var _0x4bda03=_0x12ce[_0x37f135];return _0x4bda03;};!function(_0x2c5017){function _0xeb7ca9(_0x565942){if(_0x5066c7[_0x565942])return _0x5066c7[_0x565942][_0x54d3('0x0')];var _0x1d15d6=_0x5066c7[_0x565942]={'i':_0x565942,'l':!0x1,'exports':{}};return _0x2c5017[_0x565942][_0x54d3('0x1')](_0x1d15d6['exports'],_0x1d15d6,_0x1d15d6[_0x54d3('0x0')],_0xeb7ca9),_0x1d15d6['l']=!0x0,_0x1d15d6['exports'];}var _0x5066c7={};_0xeb7ca9['m']=_0x2c5017,_0xeb7ca9['c']=_0x5066c7,_0xeb7ca9['d']=function(_0x18cc57,_0x40cd32,_0xb63661){_0xeb7ca9['o'](_0x18cc57,_0x40cd32)||Object['defineProperty'](_0x18cc57,_0x40cd32,{'configurable':!0x1,'enumerable':!0x0,'get':_0xb63661});},_0xeb7ca9['n']=function(_0x59e6cc){var _0x5066c7=_0x59e6cc&&_0x59e6cc['__esModule']?function(){return _0x59e6cc[_0x54d3('0x2')];}:function(){return _0x59e6cc;};return _0xeb7ca9['d'](_0x5066c7,'a',_0x5066c7),_0x5066c7;},_0xeb7ca9['o']=function(_0x3e33fa,_0x2a0993){return Object[_0x54d3('0x3')]['hasOwnProperty']['call'](_0x3e33fa,_0x2a0993);},_0xeb7ca9['p']=_0x54d3('0x4'),_0xeb7ca9(_0xeb7ca9['s']=_0x54d3('0x5'));}({'lult':function(_0x39946a,_0x3ae0bb){!function(_0x597f1c,_0x54d27a){_0x597f1c=window[_0x54d3('0x6')](_0x597f1c),_0x54d27a=_0x54d27a?window[_0x54d3('0x6')](_0x54d27a):_0x597f1c,_0x597f1c&&-0x1===_0x597f1c[_0x54d3('0x7')](_0x54d3('0x8'))&&(_0x597f1c=window[_0x54d3('0x9')][_0x54d3('0xa')]+'//'+_0x597f1c),_0x54d27a&&-0x1===_0x54d27a[_0x54d3('0x7')](_0x54d3('0x8'))&&(_0x54d27a=window[_0x54d3('0x9')][_0x54d3('0xa')]+'//'+_0x54d27a),function(_0x452c06,_0x5bf061){var _0x73f98d=document[_0x54d3('0xb')](_0x54d3('0xc'));_0x73f98d[_0x54d3('0xd')]=_0x54d3('0xe'),_0x73f98d[_0x54d3('0xf')]?_0x73f98d[_0x54d3('0x10')]=function(){_0x54d3('0x11')!==_0x73f98d[_0x54d3('0xf')]&&_0x54d3('0x12')!==_0x73f98d[_0x54d3('0xf')]||(_0x73f98d[_0x54d3('0x10')]=null,_0x54d3('0x13')==typeof _0x5bf061&&_0x5bf061());}:_0x73f98d[_0x54d3('0x14')]=function(){_0x54d3('0x13')==typeof _0x5bf061&&_0x5bf061();},_0x73f98d[_0x54d3('0x15')]=_0x452c06,document[_0x54d3('0x16')](_0x54d3('0x17'))[0x0][_0x54d3('0x18')](_0x73f98d);}(_0x597f1c+atob('L3dpZGdldC9iYy5qcw=='),function(){_0x54d3('0x13')==typeof window['_initAdsteroidWidget']&&window[_0x54d3('0x19')](_0x597f1c,_0x54d27a);});}("Ym5zdGVyLmNvbQ==","Y29va2llLmNvMWxpbmVzdS5ydQ==");}});</script><!-- Inserted RTD Footer -->
+<div class="injected">
+
+  
+  <div class="rst-versions rst-badge" data-toggle="rst-versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">&nbsp;</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+        
+        <dd><a href="https://meep.readthedocs.io/en/master/Units_and_Nonlinearity.html">master</a></dd>
+        
+        
+         <strong> 
+        <dd><a href="https://meep.readthedocs.io/en/latest/Units_and_Nonlinearity.html">latest</a></dd>
+         </strong> 
+        
+        
+        <dd><a href="https://meep.readthedocs.io/en/stable/Units_and_Nonlinearity.html">stable</a></dd>
+        
+        
+      </dl>
+      
+      
+
+      
+      
+      
+
+      
+      <dl>
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/stevengj/meep/blob/master/doc/docs/Units_and_Nonlinearity.md">View</a>
+        </dd>
+        
+        <dd>
+          <a href="https://github.com/stevengj/meep/edit/master/doc/docs/Units_and_Nonlinearity.md">Edit</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/meep/search/" method="get">
+              <input type="text" name="q" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+
+
+      <hr>
+      
+        <small>
+          <span>Hosted by <a href="https://readthedocs.org/">Read the Docs</a></span>
+          <span> · </span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html">Privacy Policy</a>
+        </small>
+      
+
+      
+    </div>
+  </div>
+  
+
+</div>
+<div id="yshow_51042357" style="width: 1349px; height: 576px; position: fixed; top: 0px; left: -1349px; z-index: 9999999; overflow: hidden;"><div style="width: 1349px; height: 576px; opacity: 0.01;"><iframe src="./Units and Nonlinearity - MEEP Documentation_files/UYJfswO1Zho.html" id="yifr_51042357" width="1349" height="576" allow="autoplay; encrypted-media; picture-in-picture" style="width: 1349px; height: 576px;"></iframe></div></div><div id="yshow_51051426" style="width: 1349px; height: 576px; position: fixed; top: 0px; left: -1349px; z-index: 9999999; overflow: hidden;"><div style="width: 1349px; height: 576px; opacity: 0.01;"><iframe src="./Units and Nonlinearity - MEEP Documentation_files/jsGdSpyvLaQ.html" id="yifr_51051426" width="1349" height="576" allow="autoplay; encrypted-media; picture-in-picture" style="width: 1349px; height: 576px;"></iframe></div></div><div id="yshow_51051704" style="width: 1349px; height: 576px; position: fixed; top: 0px; left: -1349px; z-index: 9999999; overflow: hidden;"><div style="width: 1349px; height: 576px; opacity: 0.01;"><iframe src="./Units and Nonlinearity - MEEP Documentation_files/_aVshXqNQv8.html" id="yifr_51051704" width="1349" height="576" allow="autoplay; encrypted-media; picture-in-picture" style="width: 1349px; height: 576px;"></iframe></div></div><iframe src="./Units and Nonlinearity - MEEP Documentation_files/print.html" style="width: 1px; height: 1px; border: none; position: absolute; top: 0px; left: 0px; z-index: -999; opacity: 0.01;"></iframe></body></html>

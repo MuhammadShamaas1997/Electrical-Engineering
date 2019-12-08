@@ -1,0 +1,1124 @@
+@charset "utf-8";
+/* CSS Update March 2017 with changes by LBM */
+/* start IEC TEMPLATE UPDATES - /css/iec-template.css */ 
+/* + + + + + + + + + + + + + + + + GENERALS + + + + + + + + + + + + + + + + + */ 
+a:link, a:visited {
+	text-decoration: none;
+	color: #0060AA !important; /* changes font color to iec blue */
+}
+/* + + + + + + + + + + + + + + + + + + NIFTY CORNERS + + + + + + + + + + + + + + + + + + */
+.rbottom {
+	display:none; /* hides this element */
+}
+.r-right {
+	background-image: none; /* removes background image */
+}
+/* + + + + + + + + + + + + + + + + TEMPLATE + + + + + + + + + + + + + + + + + + */
+html, body {
+	background-color: #fff; /* changes background color to white */
+	background-image: none; /* removes background image */
+}
+/* + + + + + + + + + + + + + + + + + + TOP + + + + + + + + + + + + + + + + + + */
+.Main-container-Standard .Top {
+	background-image: none; /* removes background image */
+}
+.Top-left {
+	background-image: none; /* removes background image */
+}
+.Top-right {
+	background-image: none; /* removes background image */
+}
+.logolink h1 {
+	color: rgb(10%,10%,10%) !important; /* changes font color to almost black */
+	font-weight: lighter;  /* reduces font weight */
+	letter-spacing: 0px; /* reduces character spacing */
+}
+/* tools - right */ 
+.top-tools-right {
+	right:-16px; /* aligns toptools links with right edge  */
+}
+.top-tools-right a.forgot:link, .top-tools-right a.forgot:visited {
+	color: #000 !important; /* changes font color to black */
+}
+.top-tools-right .spacer {
+	background-image: url(/img/update/top-tools-spacer-new.gif); /* removes grey background below separator in gif  */
+}
+.top-tools-right a.subscribe2:link, .top-tools-right a.subscribe2:visited,
+.top-tools-right a.sitemap2:link, .top-tools-right a.sitemap2:visited,
+.top-tools-right a.faq2:link, .top-tools-right a.faq2:visited,
+.top-tools-right a.contact2:link, .top-tools-right a.contact2:visited {
+	font-weight: normal !important; /* removes bold */
+	padding: 0 10px !important; /* reduces left/right padding */
+	color: #000!important; /* changes font color to black */
+	font-size: 12px;  /* reduces font size */
+	background: #ffffff !important; /* forces background color to white */
+}
+.top-tools-right a.myiec2:link, .top-tools-right a.myiec2:visited {
+	font-weight: normal !important;  /* removes bold */
+	padding: 0 10px !important; /* reduces left/right padding */
+	color: #000 !important; /* changes font color to black */
+	font-size: 12px; /* reduces font size */
+	background: #ffffff !important; /* changes background color to white */
+}
+.top-tools-right a.myiec2:hover,
+.top-tools-right a.subscribe2:hover,
+.top-tools-right a.sitemap2:hover,
+.top-tools-right a.faq2:hover,
+.top-tools-right a.contact2:hover {
+	background: #0060AA !important;  /* changes background color to iec blue */
+	color: #FFF !important; /* sets hover font color to white */
+}
+.topnav ul li span.spacer {
+	background-image: url(/img/update/top_sep.gif); /* changes background image */
+}
+.Iec-headlines {
+	color: #000!important; /* changes font color to black */
+	font-size: 14px; /* increases font size */
+	font-weight: normal; /* removes bold */
+}
+/* End of top-right navigation */
+
+/* + + + + + + + + + + + + +   NAVIGATION template + + + + + + + + + + + + + + + + + */
+.Navigation-section {
+	background-image: none !important; /* removes background image */
+	background-color: #FFF !important; /* makes background color white */
+}
+/* + + + + + + + + + + + + + + + + + TOP-NAV + + + + + + + + + + + + + + + + + + */
+.lvl-first a:link, .lvl-first a:visited, .lvl-first a:hover, .lvl-first a:focus, .lvl-first a:active {
+	font-weight: normal; /* removes bold */
+	font-size: 12px; /* increases font size */
+}
+a:hover .l1-left, .lvl-first a.on:link .l1-left, .lvl-first a.on:visited .l1-left, .lvl-first a.on:hover .l1-left {
+	background-image: none !important; /* removes background image */
+	background: #0060aa !important; /* sets background color to iec blue */
+}
+.l1-mid {
+	font-size:12px; /* increases font size */
+}
+.lvl-first a:hover .l1-mid, .lvl-first a:active .l1-mid, .lvl-first a.on:link .l1-mid, .lvl-first a.on:visited .l1-mid, .lvl-first a.on:hover .l1-mid {
+	background-image: none; /* remove background image */
+	background-color: #0060aa !important; /* set background color */
+}
+.l1-mid2 {
+	background-image: url(/img/update/top-nav-bg_cart.gif); /* changes background image */
+}
+.lvl-first a:hover .l1-mid2, .lvl-first a:active .l1-mid2, .lvl-first a.on:link .l1-mid2, .lvl-first a.on:visited .l1-mid2, .lvl-first a.on:hover .l1-mid2 {
+	background-image: url(/img/update/top-nav-bg_cart_on.gif); /* changes background image */
+}
+a:hover .l1-right, .lvl-first a.on:link .l1-right, .lvl-first a.on:visited .l1-right, .lvl-first a.on:hover .l1-right {
+	background-image: url(/img/update/top-nav-right-on.gif); /* changes background image */
+}
+/* + + + + + + + + + + + + + + + + + TOP-S NAV + + + + + + + + + + + + + + + + + + */
+.lvl-second {
+	padding-top: 4px; /* adds top padding */
+}
+.lvl-second a:link, .lvl-second a:visited {
+	line-height: 28px;  /* reduced line height */
+	font-weight: normal; /* removes bold */
+	background-image: none !important; /* removes background image */
+	background: #ffffff !important; /* sets background color to white */
+	color: #0060aa; /* changes font color to iec blue */
+}
+.lvl-second a:hover, .lvl-second a:active, .lvl-second a.on:link, .lvl-second a.on:visited, .lvl-second a.on:hover {
+	background-image: none !important; /* removes background image */
+	background: #0060aa !important; /* sets background color to iecblue */
+	border-bottom: 1px solid #005591 !important;
+	color: #ffffff !important; /* forces font color to white */
+}
+.lvl-second a.spacer:hover {
+	background-image: url(/img/update/top-snav-bg.gif) !important;  /* changes background image */
+}
+.top-snav .spacer {
+    background-image: url(/img/update/top-snav-spacer.gif); /* changes background image */
+}
+.Breadcrumbs {
+	background-image: url(/img/update/breadcrumb-left.gif); /* changes background image */
+}
+.Breadcrumbs li a {
+	background-color: #ebebeb; /* changes background color to light grey */
+	border-bottom: none; /* removes bottom border */
+	border-top: none; /* removes top border */
+	margin-top: 3px; /* adds top margin */
+}
+.Breadcrumbs a.on {
+	border-bottom: 3px solid #0060aa; /* changes bottom border color to iec blue */
+}
+/* colors cases */
+.Breadcrumbs .blue a.on {
+	border-bottom: 3px solid #0060aa; /* changes bottom border color to iec blue */
+}
+.Breadcrumbs .blue a:hover {
+	border-bottom: 3px solid #0060aa; /* changes bottom border color to iec blue */
+}
+.Breadcrumbs li.arrow {
+	background-image: url(/img/update/breadcrumb-arrow.gif); /* changes background image */
+}
+.Breadcrumbs .right {
+	background-image: url(/img/update/breadcrumb-right.gif); /* changes background image */
+	background-repeat: repeat-x!important;   /* adds background repeat */
+}
+/* + + + + + + + + + + + + + + + + + + FOOTER + + + + + + + + + + + + + + + + + + */
+.Footer {
+	background-color: transparent; /* changes background to transparent */
+	color: rgb(0,0,0); /* changes font color to black */
+   	border-top: none; /* removes top border */
+	border-bottom: #ABABAB solid 1px; /* changes bottom border color to dark grey */
+}
+.Footer a:link, .Footer a:visited {
+    	color: rgb(0,0,0); /* changes font color to black */
+}
+/* Rounded Corners */
+/* White Rounded Corners */
+b.tl, b.tr, b.bl, b.br {
+	background: none; /* removes background */
+}
+/* Grey Rounded Corners */
+b.tl-grey, b.tr-grey, b.bl-grey, b.br-grey, b.r1, b.r2, b.r3, b.r4 {
+	display: none;  /* hides display */
+	background: none; /* removes background */
+}
+/* end IEC TEMPLATE UPDATES */ 
+
+/* start IEC CONTENT UPDATES - /css/iec-contents.css */ 
+/* Generals */
+
+/* + + + + + + + + + + + + + + + + + CONTENT + + + + + + + + + + + + + + + + + + */
+/* Content heading */
+.contentheading {
+	background-image: none; /* removes background image */
+	background-color: #0060aa; /* sets background color to iec blue */
+}
+.Structure .right-pane .contentheading {
+	line-height: 40px; /* center vertically for vote results */
+	background-image: url(/img/bg_contentheading.gif) !important; /* maintain grey image for vote results */
+	background-repeat: repeat-x;  /* retains repeat-x */
+}
+.contentheading .left {
+	background-image: none; /* removes background image */
+	background-color: transparent; /* sets background color to none */
+	border-left: 1px solid white; /* adds a white left border */
+}
+.contentheading .right {
+	background-image: none; /* removes background image */
+	background-color: transparent; /* sets background color to none */
+	border-right:1px solid white; /* adds a white right border */
+}
+/* News section */
+.news {
+	background-image: none; /* removes background image */
+}
+.news li {
+	background-image: url(/img/update/blue-bullet.gif); /* changes background image */
+}
+.news-title {
+	font-weight: normal; /* removes bold */
+	white-space: normal; /* sets white space to normal */
+}
+/* + + + + + + + + + + + + + + + + + + DASHBOARD PAGES + + + + + + + + + + + + + + + + + + */
+.Dashboard h1 {
+	font-weight: normal; /* removes bold */
+	color: #0060aa; /* changes font color to iec blue */
+	font-size: 26px; /* reduces font size */
+	margin-bottom: 5px; /* adds bottom margin */
+}
+.Dashboard h1.smaller {
+	font-weight: normal; /* removes bold */
+	color: #0060aa; /* changes font color to iec blue */
+	white-space: nowrap;
+}
+td.title-description {
+	vertical-align: middle; /* change vertical alignment (accommodate TCs with long titles) */
+	height: 42px; /* maintain height (accommodate TCs with long titles) */
+	padding-bottom: 0px; /* removes bottom padding */
+}
+.Dashboard h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;  /* removes bold */
+	color: #0060aa; /* changes font color to iec blue */
+	font-size: 16px;
+	margin-bottom:5px; /* adds bottom margin */
+}
+/* Nav Dashboard */
+.dash-nav a {
+	font-weight: normal !important; /* removes bold  */
+	margin-right: 1px;  /* reduces right margin */
+}
+.dash-nav a:hover .dashlink-right, .dash-nav a.on:link .dashlink-right, .dash-nav a.on:visited .dashlink-right, .dash-nav a.on:hover .dashlink-right, .dash-nav a.lock-on:link .dashlink-right, .dash-nav a.lock-on:visited .dashlink-right, .dash-nav a.lock-on:hover .dashlink-right, .dash-nav a.lock:hover .dashlink-right, .dash-nav a.gallery-on:link .dashlink-right, .dash-nav a.gallery-on:visited .dashlink-right, .dash-nav a.gallery-on:hover .dashlink-right, .dash-nav a.gallery:hover .dashlink-right, .dash-nav a.video-on:link .dashlink-right, .dash-nav a.video-on:visited .dashlink-right, .dash-nav a.video-on:hover .dashlink-right, .dash-nav a.video:hover .dashlink-right {
+	background-image: none; /* removes background image */
+	cursor: pointer; /* sets cursor */
+}
+.dash-nav a.on:link, .dash-nav a.on:visited, .dash-nav a.on:hover, 
+.dash-nav a.lock:hover, 
+.dash-nav a.lock-on:link, .dash-nav a.lock-on:visited, .dash-nav a.lock-on:hover,
+.dash-nav a.gallery-on:link, .dash-nav a.gallery-on:visited, .dash-nav a.gallery-on:hover,
+.dash-nav a.video-on:link, .dash-nav a.video-on:visited, .dash-nav a.video-on:hover {
+	color: #0060aa !important; /* changes font color to black */
+}
+
+.dash-nav li a {
+	color:#ffffff !important; /* changes font color to white CHECK THIS */
+}
+.dash-nav li a.on {
+	color:#0060aa !important; /* changes font color to iec blue CHECK THIS */
+}
+.dashlink-left {
+	width: 1px; /* reduces width */
+	background-image: none; /* removes background image */
+}
+a:hover .dashlink-left, .dash-nav a.on:link .dashlink-left, .dash-nav a.on:visited .dashlink-left, .dash-nav a.on:hover .dashlink-left {
+	background-image: none;  /* removes background image */
+}
+.dashlink-left-first {
+	width: 0px; /* reduces width */
+	background-image: none; /* removes background image */
+}
+.dash-nav a:hover .dashlink-left-first, 
+.dash-nav a.on:link .dashlink-left-first, 
+.dash-nav a.on:visited .dashlink-left-first, .dash-nav a.on:hover .dashlink-left-first, 
+.dash-nav a.lock-on:link .dashlink-left-first, .dash-nav a.lock-on:visited .dashlink-left-first, .dash-nav a.lock-on:hover .dashlink-left-first, 
+.dash-nav a.lock-on:link .dashlink-left, .dash-nav a.lock-on:visited .dashlink-left, .dash-nav a.lock-on:hover .dashlink-left, 
+.dash-nav a.gallery-on:link .dashlink-left-first, .dash-nav a.gallery-on:visited .dashlink-left-first, .dash-nav a.gallery-on:hover .dashlink-left-first, 
+.dash-nav a.gallery-on:link .dashlink-left, .dash-nav a.gallery-on:visited .dashlink-left, .dash-nav a.gallery-on:hover .dashlink-left, 
+.dash-nav a.video-on:link .dashlink-left-first, .dash-nav a.video-on:visited .dashlink-left-first, .dash-nav a.video-on:hover .dashlink-left-first, 
+.dash-nav a.video-on:link .dashlink-left, .dash-nav a.video-on:visited .dashlink-left, .dash-nav a.video-on:hover .dashlink-left 
+{
+	background-image: none; /* removes background image */
+	width:0px; /* sets width to zero */
+}
+.dashlink-mid {
+	background-image: none; /* removes background image */
+}
+a .dashlink-mid {
+	background-image: none; /* removes background image */
+	background-color: #0060aa; /* sets background color to iecblue */
+	padding: 0px 6px 0px 6px; /* increases left/right padding  */
+}
+a:hover .dashlink-mid {
+	background-image: none;
+	color: #0066aa; /* changes font color to iecblue */
+	background-color:#fff;
+}
+a.lock .dashlink-mid {
+	background-image: url(/img/update/dashboard-onglet-off-lock-bg.gif); /* changes background image */
+}
+a.gallery .dashlink-mid {
+	background-image: url(/img/update/dashboard-onglet-off-gallery-bg.gif); /* changes background image */
+	font-weight: normal !important; /* removes bold */
+}
+a.video .dashlink-mid {
+	background-image: url(/img/update/dashboard-onglet-off-video-bg.gif); /* changes background image */
+	background-position: right 2px bottom 0px; /* adds right for background image */
+	padding: 0px 20px 0px 6px !important; /* increases left and right padding */
+	font-weight: normal !important; /* removes bold */
+}
+a.gallery-on .dashlink-mid,
+a.gallery:hover .dashlink-mid {
+	color: #0060aa; /* changes font color to iecblue */
+	font-weight: normal; /* removes bold */
+}
+a.video-on .dashlink-mid,
+a.video:hover .dashlink-mid {
+	background-position: right 2px bottom 0px; /* adds right for background image */
+	padding: 0px 20px 0px 6px !important; /* increases left and right padding */
+	color: #0060aa;  /* changes font color to iecblue */
+	font-weight: normal; /* removes bold */
+	background-color: #ffffff;  /* changes background color to white */
+}
+.dashlink-right {
+	width: 1px;  /* reduces width */
+	background-image: none; /* removes background image */
+}
+.dash-nav a:hover .dashlink-right, 
+.dash-nav a.on:link .dashlink-right, .dash-nav a.on:visited .dashlink-right, .dash-nav a.on:hover .dashlink-right, 
+.dash-nav a.lock-on:link .dashlink-right, .dash-nav a.lock-on:visited .dashlink-right, .dash-nav a.lock-on:hover .dashlink-right, 
+.dash-nav a.lock:hover .dashlink-right, 
+.dash-nav a.gallery-on:link .dashlink-right, .dash-nav a.gallery-on:visited .dashlink-right, .dash-nav a.gallery-on:hover .dashlink-right, 
+.dash-nav a.gallery:hover .dashlink-right, 
+.dash-nav a.video-on:link .dashlink-right, .dash-nav a.video-on:visited .dashlink-right, .dash-nav a.video-on:hover .dashlink-right, 
+.dash-nav a.video:hover .dashlink-right 
+{
+	background-image: none; /* removes background image */
+	font-weight: normal; /* removes bold */
+}
+/* Dash Content */
+.Dash-Container {
+	padding-bottom: 10px; /* adds padding to bottom of content area  */
+	margin-bottom: -10px; /* reducecs space between content area and footer  */
+}
+/* Dash Sub nav */
+.dash-subnav ul a:link,
+.dash-subnav ul a:visited {
+	color: #0060aa !important; /* sets font color to iec blue */
+	font-weight: normal; /* removes bold  */
+}
+.dash-subnav a:hover {
+	border-bottom: 3px solid #0060aa !important; /* reduces width and changes bottom border color to iec blue */
+	padding-bottom: 2px; /* reduce bottom padding */
+}
+.dash-subnav a.on {
+	border-bottom: 3px solid #0060aa !important; /* reduces width and changes bottom border color to iec blue */
+	padding-bottom: 2px; /* reduce bottom padding */
+}
+table {
+	border-color: #E1E1E1 !important;  /* sets table border color */
+}
+/* + + + LOGIN/LOGOUT BOX + + + */
+.loginbox {
+	padding-top: 0px; /* aligns login/logout box with EN/FR buttons  */
+}  
+
+.loginbox .box-inner {
+	background-color: #e3e3e3; /* changes background color to grayscale "cool gray" */
+	padding: 2px 7px 0px 2px; /* Adds left/right padding so button and  username are not stuck to the edge */
+}
+.loginbox-left, .greybox-left {
+	background-image: none; /* removes background image */
+	display: none; /* HIDES rounded tips... REMOVES empty space to align with right-side on split pages   */
+}
+.loginbox-right, .greybox-right {
+	background-image: none; /* removes background image */
+	display: none; /* HIDES rounded tips... REMOVES empty space to align with right-side on split pages   */
+}
+/* + + + STATS BARS + + + */
+.greybox .list {
+	background-color: #e3e3e3 !important; /* changes background color to grayscale "cool gray" */
+	height: 23px; /*increases height */
+	color: #000; /* changes font color to black */
+	overflow: hidden; /* hides overflow */
+}
+.greybox input {
+	color:white; /* changes font color to white */
+	background-color: #a4a4a4 !important; /* changes background color to dark grey */
+	font-weight: normal; /* removes bold */
+	font-size: 18px; /* increases font size */
+}
+.greybox input.list-num {
+	width: 70px !important; /* increases width */
+	height: 23px; /* increases height */
+	font-size: 16px; /* reduces font size */
+	font-weight: normal; /* removes bold */
+	background-color: #e3e3e3 !important; /* changes background color to grayscale "cool gray" */
+	color: #000; /* changes font color to black */
+}
+.dash-subnav a.bt-login:hover, .dash-subnav a.bt-logout:hover, 
+.right-tools a.bt-en:hover, .right-tools a.bt-en-on:hover, 
+.right-tools a.bt-fr:hover, .right-tools a.bt-fr-on:hover {
+	border-bottom: none 0px !important; /* removes blue bottom border on hover  */
+	padding-bottom: 0px !important; /* removes bottom padding  */
+}
+.dash-thread {
+	background-image: url(/img/update/thread-blueback.gif); /* changes background image */
+}
+.dash-thread h3 {
+	font-size: 16px; /* increases font size */
+	font-weight: normal; /* removed bold */
+}
+.dash-thread .left {
+	background-image: url(/img/update/thread-blueback-left.gif); /* changes background image */
+}
+.dash-thread .right {
+	background-image: url(/img/update/thread-blueback-right.gif); /* changes background image */
+}
+.actionlist li a.button {
+	font-weight: normal; /* removes bold */
+	text-shadow: none; /* removes text shadow */
+}
+.actionlist li a.button span {
+	font-size:12px; /* increases font size */
+	line-height: 12px; /* increases line height */
+} 
+.actionlist li a.button:hover {
+	text-shadow: none; /* removes text shadow */
+   	background-position: right 0px; /* resets background position */
+}
+.actionlist li a.button:active {
+	text-shadow: none; /* removes text shadow */
+   	background-position: right 0px; /* resets background position */
+}
+.actionlist li a.button:active span {
+    	background-position: left 0px; /* resets background position */
+}
+/* ON-TIME BUTTON */
+.actionlist li.ontime a.button {
+	background-image: none;
+	background-color: #0060aa;
+	border: #004c86 solid 1px;
+	color: #fff !important;
+	height:31px;
+}
+.actionlist li.ontime a.button span {
+	background-image: none;
+	background-color: #0060aa;
+	height:18px;
+	line-height:18px;
+} 
+.actionlist li.ontime a.button:hover {
+	color: #fff !important;
+	text-shadow: none;
+	background-image: none;
+   	background-position: right 0px;
+	background-color: #004c86;
+	border: #003863 solid 1px;
+	text-decoration: none;	
+    outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	position: absolute !important;
+	right:10px !important;
+	top:9px !important;
+	margin: 0px !important;
+	padding: 0px 6px 0px 0px !important;
+}
+.actionlist li.ontime a.button:active {
+	color: #fff;
+	text-shadow: none;
+   	background-position: right 0px;
+	background-color: #003863;
+	border: #022744 solid 1px;
+	outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	box-shadow: 0 3px 8px rgba(2, 39, 68, .4);
+}
+.actionlist li.ontime a.button:active span {
+    background-position: left 0px; /* resets background position */
+    padding: 6px 0 4px 6px; /* Choose the text position on the button */
+	width: 40px !important;
+}
+/* PLAY BUTTON */
+.actionlist li.play a.button {
+	background-image: none;
+	background-color: #0060aa;
+	border: #004c86 solid 1px;
+	color: #fff !important;
+	height:31px;
+	width: 90px !important;
+}
+.actionlist li.play a.button span {
+	background-image: none;
+	background-color: #0060aa;
+	height:18px;
+	line-height:18px;
+} 
+.actionlist li.play a.button:hover {
+	color: #fff !important;
+	text-shadow: none;
+	background-image: none;
+   	background-position: right 0px;
+	background-color: #004c86;
+	border: #003863 solid 1px;
+	text-decoration: none;	
+    outline: none; /* hide dotted outline in Firefox */	
+	width: 90px !important; /* increased width */	
+	position: absolute !important;
+	right:10px !important;
+	top:9px !important;
+	margin: 0px !important;
+	padding: 0px 6px 0px 0px !important;
+}
+.actionlist li.play a.button:active {
+	color: #fff;
+	text-shadow: none;
+   	background-position: right 0px;
+	background-color: #003863;
+	border: #022744 solid 1px;
+	outline: none; /* hide dotted outline in Firefox */	
+	width: 90px !important; /* increased width */	
+	box-shadow: 0 3px 8px rgba(2, 39, 68, .4);
+}
+.actionlist li.play a.button:active span {
+    background-position: left 0px; /* resets background position */
+    padding: 6px 0 4px 6px; /* Choose the text position on the button */
+}
+table.dashlist tr:hover th, table.dashlist tr:hover td {
+	background-color: #f4f4f4 !important; /* changes background color to very light grey */
+}
+.dash-inner-txt h2 {
+	clear: left;  /* corrects float conflict with h2 in vote results and report of comments */
+}
+a.bt-launch:link, a.bt-launch:visited {
+	background-image: none !important; /* removes background image */
+}
+a.bt-login:link {
+	border-bottom:none !important;
+}
+.Intro h2 {
+	font-weight: normal; /* remove bold */
+}
+.interview h1 {
+	color: #0060aa !important; /* changes font color to iec blue */
+}
+.interview h2 {
+	color: #0066aa !important;
+}
+.SpecialBox .whitebloc {
+	border-left: 1px solid #c9c9C9; /* changes border to solid lighter grey */
+	border-right: 1px solid #C9C9C9; /* changes border to solid lighter grey */
+	border-bottom: 1px solid #C9C9C9; /* changes border to solid lighter grey */
+}
+h1.BigGreyTitle {
+	font-weight: normal; /* removes bold */
+	color: #7A7A7A; /* changes font color to darker grey */
+}
+h2.BigGreyTitle {
+	font-weight: normal; /* removes bold */
+	color: #7A7A7A; /* changes font color to lighter grey */
+}
+/* Nav Programme */
+
+.NavProgramme{
+padding:0 0 20px 0;!important /* decreases space on the bottom of the menu */
+}
+.NavProgramme a:link, 
+.NavProgramme a:visited {
+	font-weight: normal; /* removes bold */
+	background: url(/img/update/nav-prog.jpg) no-repeat right center; /* changes background image */
+}
+.NavProgramme a:hover, 
+.NavProgramme a:focus, 
+.NavProgramme a.on {
+	color: #ffffff !important; /* forces font color white */
+	font-weight:normal;
+	background: url(/img/update/nav-prog-on.jpg) no-repeat right center; /* changes background image */
+}
+.NavProgramme a.lock:link,
+.NavProgramme a.lock:visited{
+	font-weight: normal; /* removes bold */
+	background:url(/img/update/nav-prog-lock.jpg) no-repeat right center;
+}
+.NavProgramme a.lock:hover,
+.NavProgramme a.lock.on{
+	color:#ffffff;
+	background:url(/img/update/nav-prog-lock-on.jpg) no-repeat right center;
+}
+.NavProgrammeYP a:link, 
+.NavProgrammeYP a:visited {
+	font-weight: normal; /* removes bold */
+	background: url(/img/update/nav-prog.jpg) no-repeat right center; /* changes background image */
+}
+.NavProgrammeYP a:hover, 
+.NavProgrammeYP a:focus, 
+.NavProgrammeYP a.on {
+	color: #ffffff !important; /* forces font color white */
+	font-weight: normal; /* removes bold */
+	background: url(/img/update/nav-prog-on.jpg) no-repeat right center; /* changes background image */
+}
+.NavProgrammeYP a.lock:link,
+.NavProgrammeYP a.lock:visited{
+	color: #8c8c8c; /* changes font color to darker grey */
+	font-weight: normal; /* removes bold */
+	background: url(/img/update/nav-prog-lock.jpg) no-repeat right center; /* changes background image */
+}
+.NavProgrammeYP a.lock:hover,
+.NavProgrammeYP a.lock.on {
+	color: #ffffff !important;  /* forces white font color */
+	background: url(/img/update/nav-prog-lock-on.jpg) no-repeat right center; /* changes background image */
+}
+/* Programme Intro Big Visu */
+a:link.ProgrammeBigVisu-Link, 
+a:visited.ProgrammeBigVisu-Link, 
+a:hover.ProgrammeBigVisu-Link {
+	background: url(/img/update/nav-prog-on.jpg) no-repeat right center; /* changes background image */
+	font-weight: normal; /* removes bold */
+}
+/* People List */
+a.People{
+	padding: 6px; /* reduces padding */
+}
+a.People, 
+a:link.People, 
+a:visited.People {
+	background: none; /* removes background image */
+	border: 1px solid #d6d6d6; /* adds border */
+}
+a:hover.People, 
+a:focus.People,a:active.People, 
+a.Profile-active {
+	background: url(/img/update/nc-people-bg-on.jpg) repeat-x center !important; /* changes background image */
+}
+/* Profile */
+.ProfileContent h1 {
+	font-size: 20px; /* reduces font size */
+	margin-top: 10px; /* reduces top margin */
+	margin-bottom: 10px; /* reduces bottom margin */
+}
+.ProfileContent h2 {
+	font-weight: normal !important; /* removes bold */
+	color: #0060aa !important; /* changes font color to iecblue */
+	font-size: 18px; /* increases font size */   
+}
+/* start of ProfileContent .Colvisu previously only specified in css for IE6 */ 
+.ProfileContent .ColVisu p {
+	font-size: 12px; /* sets font size to 12px */ 
+}
+.ProfileContent.ColVisu {
+	float: right; /* sets float right */ 
+	width: 275px; /* sets width */ 
+	background-color: transparent !important; /* removes background color */ 
+	margin: 20px 10px 10px 30px; /* sets margins */ 
+	border: 1px solid #ddd; /* sets border */ 
+}
+/* end of ProfileContent .Colvisu previously only specified in css for IE6 */ 
+.lightgreyshine .dash-thread h3 {
+	font-weight: normal; /* removes bold */
+	color: #333333!important; /*making text darker on the header of the table list*/
+}
+.lightgreyshine .dash-thread .left {
+	background-image: url(/img/update/thread-lightgrey-left.gif); /* changes background image */
+}
+.lightgreyshine .dash-thread .right {
+	background-image: url(/img/update/thread-lightgrey-right.gif); /* changes background image */
+}
+/*----Feedback and Share button styles----*/
+#btnFeedback {
+	background-color: #0060AA; /* changes background color to iec blue */
+}
+#btnFeedback a:link, #btnFeedback a:visited {
+	color: #ffffff !important; /* changes font color to white */
+}
+#btnShare {
+	background-color: #0060AA; /* changes background color to iec blue */
+}
+#btnFeedback:hover, #btnShare:hover {
+	background-color: #0060AA; /* changes background color to iec blue */
+}
+/* different custom css for individual pages*/
+/* + + + + + + + + + + + + + + + + HOMEPAGE ONLY + + + + + + + + + + + + + + + + + */ 
+/* #Page Styles - /new/stylesheets/layout.css changes
+================================================== */
+.homewrapper h2 {
+	font-size: 21px; /* reduces font size */
+	line-height: 26px; /* reduces line height */
+	margin-bottom: 10px;
+}
+/* #Page Styles
+================================================== */
+.homewrapper .myButton {
+	/* changes background color to iec blue */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0066aa), color-stop(1, #0066aa));
+	background: -moz-linear-gradient(top, #0066aa 100%, #0066aa 100%);
+	background: -webkit-linear-gradient(top, #0066aa 5%, #0066aa 100%); 
+	background: -o-linear-gradient(top, #0066aa 100%, #0066aa 100%);
+	background: -ms-linear-gradient(top, #0066aa 100%, #0066aa 100%);
+	background: linear-gradient(to bottom, #0066aa 5%, #0066aa 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0066aa', endColorstr='#0066aa',GradientType=0);
+	background-color: #0060aa;
+	color: #ffffff !important; /* forces white font color */
+}
+.homewrapper .myButton:hover {
+	/* changes background color to active blue */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0072be), color-stop(1, #0072be));
+	background:-moz-linear-gradient(top, #0072be 5%, #0072be 100%);
+	background:-webkit-linear-gradient(top, #0072be 5%, #0072be 100%);
+	background:-o-linear-gradient(top, #0072be 5%, #0072be 100%);
+	background:-ms-linear-gradient(top, #0072be 5%, #0072be 100%);
+	background:linear-gradient(to bottom, #0072be 5%, #0072be 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0072be', endColorstr='#0072be',GradientType=0);
+	background-color:#0072be;
+}
+/* COMMON SLIDES STYLES */
+/* HOME SLIDE */
+#home h1 a:link, #home h1 a:visited {
+	color: #FFFFFF !important; /* forces font color white */
+	font-size: 17px; /* reduces font size */
+}
+/* TICKER */
+.homewrapper section.ticker {
+	/* changes gradient color to solid */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ebebeb  ', endColorstr = '#ebebeb  ');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ebebeb  ', endColorstr = '#ebebeb  ')";
+	background-image: -moz-linear-gradient(top, #ebebeb  , #ebebeb  );
+	background-image: -ms-linear-gradient(top, #ebebeb  , #ebebeb  );
+	background-image: -o-linear-gradient(top, #ebebeb  , #ebebeb  );
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ebebeb  ), to(#ebebeb  ));
+	background-image: -webkit-linear-gradient(top, #ebebeb  , #ebebeb  );
+	background-image: linear-gradient(top, #ebebeb  , #ebebeb  );
+}
+#tickeractions .myButton span.cbuttontext {
+    color: white!important;
+}
+/* FOOTER */
+.homewrapper footer a {
+	color: rgb(0,0,0); /* changes font color to black */
+}
+/*---------------------*/
+/* RoyalSlider - /new/stylesheets/rs-custom.css changes  */
+.rsDefault.rsWithThumbsHor .rsThumbsContainer {
+	border-top: none; /* removes top border */
+}
+.rsDefault .rsThumb {
+	/* changes gradient to solid white */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#ffffff');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#ffffff')";
+	background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+	background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+	background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#ffffff));
+	background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+	background-image: linear-gradient(top, #ffffff, #ffffff);
+}
+.rsDefault .rsThumb.rsNavSelected {
+	/* changes gradient to solid iec blue */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#0060aa', endColorstr = '#0060aa');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#0060aa', endColorstr = '#0060aa')";
+	background-image: -moz-linear-gradient(top, #0060aa, #0060aa);
+	background-image: -ms-linear-gradient(top, #0060aa, #0060aa);
+	background-image: -o-linear-gradient(top, #0060aa, #0060aa);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#0060aa), to(#0060aa));
+	background-image: -webkit-linear-gradient(top, #0060aa, #0060aa);
+	background-image: linear-gradient(top, #0060aa, #0060aa);
+}
+.rsDefault .rsTmb {
+	padding-right: 50px; /* increases right padding */
+}
+.homeTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px -50px no-repeat; /* changes background image */
+}
+.workTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px -150px no-repeat; /* changes background image */
+}
+.learnTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px -250px no-repeat; /* changes background image */
+}
+.newsTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px -350px no-repeat; /* changes background image */
+}
+.buyTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px -450px no-repeat; /* changes background image */
+}
+.rsDefault .rsThumb.rsNavSelected .homeTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px 0px no-repeat; /* changes background image */
+}
+.rsDefault .rsThumb.rsNavSelected .workTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px -100px no-repeat; /* changes background image */
+}
+.rsDefault .rsThumb.rsNavSelected .learnTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px -200px no-repeat; /* changes background image */
+}
+.rsDefault .rsThumb.rsNavSelected .newsTmb {
+	background: url(/img/update/tabs-icons-sprite.png) 25px -300px no-repeat; /* changes background image */
+}
+.rsDefault .rsThumb.rsNavSelected .buyTmb {
+	background :url(/img/update/tabs-icons-sprite.png) 25px -400px no-repeat; /* changes background image */
+}
+
+/* + + + + + + + + + + + + + + + + myIEC ONLY + + + + + + + + + + + + + + + + + */ 
+/* #Page Styles - /css/myiec.css changes */
+
+.transparent {
+	background-image: url(/img/update/myiec/breadcrumb-left.png)!important; /* changes background image */
+}
+
+.Breadcrumbs.transparent li a {
+	background-color: transparent; /* remove background color */
+}
+.Breadcrumbs.transparent li.arrow {
+	background-image: url(/img/update/breadcrumb-arrow-transparent.gif); /* changes background image */
+}
+.Breadcrumbs.transparent .right{
+	display: none; /* hide right rounded corner of breadcrumb */
+}
+.left-pane .myiec-top h1 {
+	color: #0066aa !important; /* changes font color to iec blue */
+}
+.myiec-top a.button_primary, .myiec-top a.button_inverse {
+	color: #ffffff !important; /* forces font color to remain white */
+}
+.myiec-top a.button_grey {
+	color: #707070 !important; /* forces font color to remain dark grey */
+}
+.myiec-top a.button_grey:hover {
+	color: #fff !important; /* forces font color to remain white */
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li a.button {
+	height: 21px;
+	text-align: center;
+	font-weight: normal !important; /* removes bold shadow */
+	color: #fff !important; /* maintains original styling */
+	text-shadow: none !important; /* remove text shadow */
+	text-decoration: none;
+	display: block;
+	line-height: 21px;
+	width: 50px !important;
+	background-attachment: scroll;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: right top;
+	margin-top:5px;
+	position: absolute !important;
+	right:10px !important;
+	top:9px !important;
+	margin: 0px !important;
+	padding: 0px 6px 0px 0px !important;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li a.button span {
+	font-size: 12px; /* increases font size */
+	display: block;
+	line-height: 12px !important; /* increases line height */
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-color: transparent !important; /* maintains original styling */
+	padding: 5px 0 5px 6px !important; /* maintains original styling */
+	height: 12px !important; /* increases height */
+	width: 40px !important; /* maintains original styling */
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li a.button:hover {
+	color: #fff;
+	text-shadow: none; /* remove text shadow */
+   	background-position: right 0px; /* resets background position */
+	text-decoration: none;	
+    outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	position: absolute !important;
+	right:10px !important;
+	top:9px !important;
+	margin: 0px !important;
+	padding: 0px 6px 0px 0px !important;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li a.button:hover span {	
+   	background-position: left 0px; /* resets background position */
+	background-color: transparent !important;
+    padding: 5px 0 5px 6px; /* Choose the text position on the button */
+	text-decoration: none;
+	border: none !important;
+	width: 40px !important;
+	position: static !important;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li a.button:active {
+	color: #fff;
+	text-shadow: none; /* remove text shadow */
+   	background-position: right -42px;
+    outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li a.button:active span {
+    background-position: left 0px; /* resets background position */
+    padding: 6px 0 4px 6px; /* Choose the text position on the button */
+	width: 40px !important;
+}
+/* ON-TIME BUTTON */
+#PROJECTDASHBOARD_PROJECTS .actionlist li.ontime a.button {
+	background-image: none;
+	background-color: #0194cb;
+	border: #0184b6 solid 1px;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.ontime a.button span {
+	background-image: none;
+	background-color: #0194cb;
+} 
+#PROJECTDASHBOARD_PROJECTS .actionlist li.ontime a.button:hover {
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+   	background-position: right 0px;
+	background-color: #0184b6;
+	border: #006084 solid 1px;
+	text-decoration: none;	
+    outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	position: absolute !important;
+	right:10px !important;
+	top:9px !important;
+	margin: 0px !important;
+	padding: 0px 6px 0px 0px !important;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.ontime a.button:active {
+	color: #fff;
+	text-shadow: none;
+   	background-position: right 0px;
+	background-color: #006084;
+	border: #024b67 solid 1px;
+	outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	box-shadow: 0 3px 8px rgba(2, 75, 103, .4);
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.ontime a.button:active span {
+    background-position: left 0px; /* resets background position */
+    padding: 6px 0 4px 6px; /* Choose the text position on the button */
+	width: 40px !important;
+}
+/* WARNING BUTTON */
+#PROJECTDASHBOARD_PROJECTS .actionlist li.warning {
+	background-color:#ffe7c8; 
+	border-bottom:#f7c889 solid 1px;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.warning a.button {
+	background-image: none;
+	background-color: #f0ad4e;
+	border: #eea236 solid 1px;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.warning a.button span {
+	background-image: none;
+	background-color: #f0ad4e;
+
+} 
+#PROJECTDASHBOARD_PROJECTS .actionlist li.warning a.button:hover {
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+   	background-position: right 0px;
+	background-color: #ec971f;
+	border: #d58512 solid 1px;
+	text-decoration: none;	
+    outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	position: absolute !important;
+	right:10px !important;
+	top:9px !important;
+	margin: 0px !important;
+	padding: 0px 6px 0px 0px !important;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.warning a.button:active {
+	color: #fff;
+	text-shadow: none;
+   	background-position: right 0px;
+	background-color: #d58512;
+	border: #985f0d solid 1px;
+	outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	box-shadow: 0 3px 8px rgba(152, 95, 13, .4);
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.warning a.button:active span {
+    background-position: left -42px;
+    padding: 6px 0 4px 6px; /* Choose the text position on the button */
+	width: 40px !important;
+}
+/* LATE BUTTON */
+#PROJECTDASHBOARD_PROJECTS .actionlist li.late {
+	background-color:#ffdbdc; 
+	border-bottom:#f79089 solid 1px;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.late a.button {
+	background-image: none;
+	background-color: #d9534f;
+	border: #d43f3a solid 1px;	
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.late a.button span {
+	background-image: none;
+	background-color: #d9534f;
+	color: #fff;
+} 
+#PROJECTDASHBOARD_PROJECTS .actionlist li.late a.button:hover {
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+   	background-position: right 0px;
+	background-color: #c9302c;
+	border: #ac2925 solid 1px;	
+	text-decoration: none;	
+    outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	position: absolute !important;
+	right:10px !important;
+	top:9px !important;
+	margin: 0px !important;
+	padding: 0px 6px 0px 0px !important;
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.late a.button:active {
+	color: #fff;
+	text-shadow: none;
+   	background-position: right 0px;
+	background-color: #ac2925;
+	border: #761c19 solid 1px;	
+	outline: none; /* hide dotted outline in Firefox */	
+	width: 50px !important;
+	box-shadow: 0 3px 8px rgba(118, 28, 25, .4);
+}
+#PROJECTDASHBOARD_PROJECTS .actionlist li.late a.button:active span {
+    background-position: left -42px;
+    padding: 6px 0 4px 6px; /* Choose the text position on the button */
+	width: 40px !important;
+}
+#dash-add-box #newproject-trigger {
+	color: #fff !important; /* maintains original styling */
+}
+#dash-add-box ul.sub-menu li a:link, #dash-add-box ul.sub-menu li a:hover {
+	color: #000000 !important; /* maintains original styling */
+	border-bottom: none !important; /* maintains original styling */
+	padding-bottom: 0px !important; /* maintains original styling */
+}
+#dash-add-box #newproject-trigger:hover, #dash-add-box #newproject .active, #dash-add-box #signup a:hover {
+	border-color: #0079a7 #0079a7 #006084 !important; /* maintains original styling */
+    border-style: solid !important; /* maintains original styling */
+    border-width: 1px 1px 2px 0 !important; /* maintains original styling */
+}
+/* + + + + + + + + + + + + + + + + GLOBAL VISIONS ONLY + + + + + + + + + + + + + + + + + */ 
+/* #Page Styles - /css/gv_layout.css changes */
+.gv_wrapper a {
+	color: #0066aa !important; /* changes font color to iec blue */
+}
+ul#menu > li {
+	background: url(/TESTS/0/img/gv-download-btn.png) no-repeat!important; /* changes background image */
+}
+ul#menu > li.gallery {
+	background: url(/TESTS/0/img/gv-gallery-btn.png) no-repeat!important; /* changes background image */
+}
+ul#menu > li.share {
+	background: url(/TESTS/0/img/gv-share-btn.png) no-repeat!important; /* changes background image */
+}
+/* social media sub menu */
+ul#menu li.share ul.sub-menu a.share-button-facebook {
+	background: url(/TESTS/0/img/gv-social-icons.png) no-repeat 0 0!important; /* changes background image */
+}
+ul#menu li.share ul.sub-menu a.share-button-twitter {
+	background: url(/TESTS/0/img/gv-social-icons.png) no-repeat -35px 0!important; /* changes background image */
+}
+ul#menu li.share ul.sub-menu a.share-button-in {
+	background: url(/TESTS/0/img/gv-social-icons.png) no-repeat -70px 0!important; /* changes background image */
+}
+ul#menu li.share ul.sub-menu a.share-button-email {
+	background: url(/TESTS/0/img/gv-social-icons.png) no-repeat -105px 0!important; /* changes background image */
+}
+/* + + + + + + + + + + + + + + + + NEWSLOG ONLY + + + + + + + + + + + + + + + + + */ 
+/* #Page Styles - /css/newslog.css changes */
+.Content-newsroom div.corner_g, 
+.Content-newsroom div.corner_w {
+	background-image: none !important; /* removes background image */
+}
+.Content-newsroom .video ul li img {
+	border-radius: 0px !important; /* removes rounded corners */
+}
+/* + + + + + + + + + + + + + + + + ACAS e-learning ONLY + + + + + + + + + + + + + + + + + */ 
+/* #Page Styles - /css/acas_elearning.css changes */
+.actionlist li.play a.button.lock span b {
+	margin-top: 2px;  /* vertical alignment adjustment for increased height of button */
+}
+/* + + + + + + + + + + + + + + + + IEC locations ONLY + + + + + + + + + + + + + + + + + */ 
+/* #Page Styles - /about/locations/style/iec_offices.css changes */
+a.button_lil2 {
+    height: 31px !important; /* increases height */
+	font-weight: normal !important; /* removes bold */
+	color: #fff !important; /* forces white font color */
+	text-shadow: none !important; /* removes text shadow */
+	background-image: none !important; /* removes background image */
+	background-color: #0060aa !important; /* changes background color to iec blue */
+	margin-top: 0px !important; /* removes top margin */
+    padding-right: 13px; /* sliding doors padding */
+	border: #004c86 solid 1px !important; /* adds border*/
+}
+a.button_lil2 span {
+    height: 31px; /* increases height */
+	line-height: 31px; /* increases line height */
+	padding: 11px 0 5px 13px !important; /* increases top padding */
+	background-attachment: scroll;
+	background-image: none !important; /* removes background image */
+} 
+a.button_lil2:hover {
+	color: #fff !important; /* forces white font color */
+	text-shadow: none !important; /* removes text shadow */
+    outline: none; /* hide dotted outline in Firefox */	
+	background-color: #004c86 !important; /* adds background color*/
+    border: #003863 solid 1px !important; /* adds border*/
+}
+a.button_lil2:active {
+	color: #fff !important; /* forces white font color */
+	text-shadow: none !important; /* removes text shadow */
+    background-color: #003863 !important; /* adds background color*/
+    border: #022744 solid 1px !important; /* adds border */
+    outline: none; /* hide dotted outline in Firefox */	
+	box-shadow: 0 3px 8px rgba(2, 39, 68, .4); /* adds glow */
+}
+/* + + + + + + + + + + + + + + + + IEC locations ONLY + + + + + + + + + + + + + + + + + */ 
+/* #Page Styles - /css/btn_order.css changes */
+.order_button .myButton {
+	color:#ffffff !important; /* forces white font color */
+}

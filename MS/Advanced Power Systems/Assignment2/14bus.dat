@@ -1,0 +1,44 @@
+% 14bus.dat    Power flow data for IEEE 14 bus test case.
+% Shimy; 17/8/2005; For use with GA-OPF
+% This data was extracted from IEEE Common Data Format
+% (ieee14cdf.txt) on 20-Sep-2004 by cdf2matp, rev. 1.11
+% http://www.ee.washington.edu/research/pstca/
+% For Slack bus: Bus i Slack V Vi Angle Ai
+% Bus i PQ P Pd Q Qd B (p.u on 100 MVA))
+
+% Bus #1 has a load of 0 + j0 as well.
+Bus 1 Slack V 1.06 Angle 0
+Bus 2 PQ P 0.217 Q 0.127
+Bus 3 PQ P 0.942 Q 0.19
+Bus 4 PQ P 0.478 Q -0.039
+Bus 5 PQ P 0.076 Q 0.016
+Bus 6 PQ P 0.112 Q 0.075
+Bus 7 PQ P 0.000 Q 0.000
+Bus 8 PQ P 0.000 Q 0.000
+Bus 9 PQ P 0.295 Q 0.166 B 0.19
+Bus 10 PQ P 0.09  Q 0.058
+Bus 11 PQ P 0.035 Q 0.018
+Bus 12 PQ P 0.061 Q 0.016
+Bus 13 PQ P 0.135 Q 0.058
+Bus 14 PQ P 0.149 Q 0.05
+
+Line 1  2 R 0.01938 X 0.05917 Y 0.0528 MVA 99
+Line 1  5 R 0.05403 X 0.22304 Y 0.0492 MVA 99
+Line 2  3 R 0.04699 X 0.19797 Y 0.0438 MVA 99
+Line 2  4 R 0.05811 X 0.17632 Y 0.0340 MVA 99
+Line 2  5 R 0.05695 X 0.17388 Y 0.0346 MVA 99
+Line 3  4 R 0.06701 X 0.17103 Y 0.0128 MVA 99
+Line 4  5 R 0.01335 X 0.04211 Y 0.0000 MVA 99
+Transformer 4  7  RL 0.000 XL 0.20912 T 0.978 MVA 99
+Transformer 4  9  RL 0.000 XL 0.55618 T 0.969 MVA 99
+Transformer 5  6  RL 0.000 XL 0.25202 T 0.932 MVA 99
+Line 6  11 R 0.09498 X 0.19890 Y 0.0000 MVA 99
+Line 6  12 R 0.12291 X 0.25581 Y 0      MVA 99
+Line 6  13 R 0.06615 X 0.13027 Y 0      MVA 99
+Line 7  8  R 0       X 0.17615 Y 0      MVA 99
+Line 7  9  R 0       X 0.11001 Y 0      MVA 99
+Line 9  10 R 0.03181 X 0.0845  Y 0      MVA 99
+Line 9  14 R 0.12711 X 0.27038 Y 0      MVA 99
+Line 10 11 R 0.08205 X 0.19207 Y 0      MVA 99
+Line 12 13 R 0.22092 X 0.19988 Y 0      MVA 99
+Line 13 14 R 0.17093 X 0.34802 Y 0      MVA 99                 

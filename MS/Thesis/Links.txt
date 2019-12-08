@@ -1,0 +1,92 @@
+saqib@uet.edu.pk Dr. Muhammad Asghar Saqib Advanced Power System Operation and Control
+abdulrahman@uet.edu.pk Dr. Syed Abdul Rahman Kashif Control of Electric Machine Drives
+kmhasan@uet.edu.pk Dr K M Hasan Linear System Theory
+sajid.iqbal@uet.edu.pk Dr. Sajid Iqbal - Nonlinear Dynamical Systems Faculty RoomDepartment of Mechatronics & Control Engineering
+mtahir@uet.edu.pk Muhammad Tahir Room 203, Elect. Eng. Dept. Optimization Theory
+umar.rashid@uet.edu.pk Umar Rashid Room 203, Elect. Eng. Dept. Optimization Theory
+tizhar@gmail.com chairmanee@uet.edu.pk Dr. Tahir Izhar Product Research Lab-Research Center Power Electronic Converters
+ushami@ymail.com  Umar T. Shami Power Electronic Converters Industrial and Power Electronics Lab, GroundFloor,E. E. Depart., U.E.T.
+mkamran@uet.edu.pk Dr. Muhammad Kamran Post Graduate Lab EE Department Power System Planning
+fawan@uet.edu.pk  Dr. Fahim Gohar Awan Office	1st Floor, Room # 1, Research Center Simulation Modeling and Analysis 
+Dr. Muhammad Imran drimran@uet.edu.pk  Renewable Electric Energy Systems
+utshami@uet.edu.pk  Umar T. Shami Industrial and Power Electronics Lab,
+abdulrahman@uet.edu.pk  Dr. Syed Abdul Rahman Kashif (SARK) SARK: Ground Floor EE Department Smart Grids
+kame7970@yahoo.com S. A. Kamran Shah Jafri Wind energy conversion systems (WECS)
+ 
+
+
+
+http://www.engpaper.com/
+https://www.academia.edu/
+https://thesiscommons.org/
+https://www.scribendi.com/advice/free_online_journal_and_research_databases.en.html
+http://www.jpier.org/PIERM/
+
+
+
+Softwares
+Statistics: SPSS, Minitab, Stata
+https://nkloc.wordpress.com/2011/11/11/power-system-simulation-software-list/
+https://www.nextnano.de/nextnanoplus/index.htm
+Company	Software	Adress
+DIgSILENT	                Power Factory	http://www.digsilent.de/
+Manitoba HVDC Research Centre	PSCAD	http://pscad.com/
+NREL	HOMER,                  HYBRID 2	http://www.nrel.gov/homer/
+http://www.ecs.umass.edu/mie/labs/rerl/hy2/intro.htm
+CYME International T&D	PSAF,   CYMDIST	http://www.cyme.com/
+STRI AB	                        SIMPOW	http://www.stri.se/metadot/index.pl?id=2189
+PowerWorld Corporation	        PowerWorld	http://www.powerworld.com/
+DMS Group	                DMS Software	http://www.dmsgroup.co.yu/
+Optimal Technologies	        AEMPFAST	http://www.otii.com/aempfast.html
+SAMsixED	                DEW	http://www.samsix.com/dew.htm
+EDSA Micro Corporation	        EDSA Micro	http://www.edsa.com/
+IPSA Power	                IPSA	http://www.ipsa-power.com/
+Etap	                        Etap	http://www.etap.com/
+ASPEN	OneLiner, Breaker Rating Module, Relay Database, Power Flow, DistriView, Line Constants, Academic Suite	http://www.aspeninc.com/
+Modelica	                ObjectStab	http://www.modelica.org/library/ObjectStab/
+CESI	                        SPIRA	http://www.cesi.it/pagina_2.asp?livello=3&cp=03040000&c2=03040300&c3=03040301&cc=<=IT
+BCP	                        NEPLAN	http://www.neplan.ch/
+Siemens PTI	                PSS/E	http://www.pti-us.com/pti/software/psse/index.cfm
+ECI	                        Quickstab	http://www.scscc-us.com/
+Electrocon	                CAPE	http://www.electrocon.com/
+SKM	                        Power* Tools	http://www.skm.com/index.php3
+Fujitsu	                        DINIS	http://www.dinis.com/
+Energy Computer System	        SPARD	http://www.energyco.com/
+ESA	                        Easy Power	http://www.easypower.com/index.shtml
+Powertech	                DSATools	http://www.dsapowertools.com/
+Advantica	                SynerGEE	http://www.advantica.biz/
+http://www.advantica.biz/Default.aspx?page=323
+Nexant	                        Modelex, Gen-se, Topaz, Flash, Trace	http://www.nexant.com/
+http://www.nexant.com/products/Power_overview.html
+SES	                        CDEGS	http://www.sestech.com/
+DCG	EMTP-RV	http://www.emtp.com/
+Personnal	ATP	http://www.emtp.org/
+Tractebel / EDF-RTE	Eurostag	http://www.eurostag.be/
+http://www.rte-france.com/htm/fr/activites/eurostag.jsp
+V&R Energy System	POM, OPM, BOR …	http://www.vrenergy.com/
+CAI	TRANSMISSION 2000	http://www.cai-engr.com/T2000.htm
+CEPEL	Anacoge, Anafas, Anafin, Anaquali, Anatem, Asloss, …	http://www.cepel.br/servicos/descprog.shtm
+Milsoft	WindMil	http://www.milsoft.com/
+GE Energy	PSLF	http://www.gepower.com/prod_serv/products/utility_software/en/ge_pslf/index.htm
+PRDC	MiPower	http://www.mipowersoftware.com/
+University of British Columbia	Microtran	http://www.microtran.com/
+Siemens	PSS/NETOMAC	http://www.netomac.com/
+The MathWorks	SimPowerSystem	http://www.mathworks.com/products/simpower/
+Cherry Tree Scientific Software	PST	http://www.eagle.ca/~cherry/
+Electrotek Concepts	PQView, PQWeb, SuperHarm, …	http://www.electrotek.com/
+http://www.pqsoft.com/
+Sumatron	Power Engineering EE Helper	http://www.sumatron.com/
+Intellicon	VCCS, CVA, VCPP, THERM, PLSC, PVR, …	http://www.intellicon.biz
+Psap	Psap	http://www.psasp.com.cn/
+EleQuant	AGORA	http://www.elequant.com/products/agora/
+Fractal	WINdis, PowerCAD	http://www.fractal.hr/index_en.htm
+NexGen	EL-PSoft	http://nexgenconsultancy.com/
+PSI	Visual PSA, Visual DSA, Visual CON, Visual EMF	http://www.visualpes.com/
+Free programs
+InterPSS	InterPSS project	http://www.interpss.org/
+Personnal	Power Designer	http://www.baghli.com/
+University of Waterloo	UWPFLOW	http://www.power.uwaterloo.ca/~claudio/software/pflow.html
+University of Texas	PCFLO, PCFLOH	http://www.ece.utexas.edu/~grady/PCFLO.html
+Universidad de Castilla-La Mancha	PSAT	http://thunderbox.uwaterloo.ca/~fmilano
+PSerc	MATPOWER	http://www.pserc.cornell.edu/matpower/
+Personnal	FENDI	http://www.martinole.org/Fendi/
