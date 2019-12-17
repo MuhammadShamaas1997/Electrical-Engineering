@@ -58,4 +58,6 @@ sigma=1-(Lm*Lm)/(Ls*Lr);
 % Ki=2;
 Kp=3;
 Ki=1;
-Ts=1;
+Kf=5;
+Ts=1e-3;
+Tcomp=35;
