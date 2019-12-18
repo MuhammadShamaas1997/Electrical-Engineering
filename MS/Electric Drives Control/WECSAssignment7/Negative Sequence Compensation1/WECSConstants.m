@@ -59,5 +59,5 @@ sigma=1-(Lm*Lm)/(Ls*Lr);
 Kp=3;
 Ki=1;
 Kf=5;
-Ts=5e-5;
-Tcomp=30;
+Ts=1e-3;
+Tcomp=35;

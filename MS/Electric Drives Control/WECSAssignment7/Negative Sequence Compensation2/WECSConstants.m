@@ -60,4 +60,4 @@ Kp=3;
 Ki=1;
 Kf=5;
 Ts=5e-5;
-Tcomp=30;
+Tcomp=1;
