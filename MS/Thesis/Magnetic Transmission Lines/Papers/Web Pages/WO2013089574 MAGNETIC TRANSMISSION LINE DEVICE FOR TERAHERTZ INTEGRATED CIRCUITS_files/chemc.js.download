@@ -1,0 +1,308 @@
+var ChemC = function() {
+
+	var delay = 100, Images = {};
+
+	function waitForEditor(callback) {
+		if (!window.hasOwnProperty('ICEditJS')) {
+			setTimeout(function() {
+				waitForEditor(callback);
+			}, delay);
+		} else {
+			callback();
+		}
+	}
+
+	function setMolct(molct) {
+		waitForEditor(function() {
+			ICEditJS.setMolCt(molct);
+		});
+	}
+
+	function updateStructureQuery() {
+		var sdFile = ICEditJS.getSDCt();
+		$('#chemcForm\\:sdfile').val(sdFile);
+		$('#chemcForm\\:chemicalSearchType').val('SDFILE');
+		$('#chemcForm\\:loadingSSS').css('display', 'block');
+		return true;
+	}
+
+	function resumeSSSQuery() {
+		$('#chemcForm\\:resumeSSS').css('display', 'block');		
+		return true;
+	}
+
+	function resetChemForm() {
+		$('#chemcForm\\:molct').val("");
+		$('#chemcForm\\:sdfile').val("");
+		$('#chemcForm\\:chemicalSearchType').val('MOLCT');
+		ICEditJS.setMolCt("");
+		ICEditJS.setSDCt("");
+	}
+
+	function mousePosition(evt) {
+		var posx = 0, posy = 0;
+		if (evt.pageX || event.pageY) {
+			posx = evt.pageX;
+			posy = evt.pageY;
+		} else if (evt.clientX || evt.clientY) {
+			posx = evt.clientX;
+			posy = evt.clientY;
+		} else if (evt.x || evt.y) {
+			posx = evt.x;
+			posy = evt.y;
+		}
+		return [ posx, posy ];
+	}
+
+	function inchiKeyMatches(inchiKey, value) {
+		return (inchiKey.substr(0, value.length) === value);
+	}
+	
+	function hilight(annotations, searchedKey) {
+		$.each(annotations, function(idx, annotation) {
+			var $annotation = $(annotation);
+			$annotation.css('color', ''); 
+			if (inchiKeyMatches($annotation.data().inchikey, searchedKey)) {
+				$annotation.addClass("chem-searched");
+			} else if(!$annotation.hasClass("chem-searched")){
+				$annotation.addClass("chem-hilight");
+			}
+		});
+	}
+
+	function getImage(inchikey, molct) {
+		if (Images.hasOwnProperty(inchikey)) {
+			return Images[inchikey];
+		} else {
+			var image = ICEditJS.createPngFromCtWithBorder(molct, 5);
+			Images[inchikey] = image;
+			return image;
+		}
+	}
+	
+	function hashify(compounds) {
+		var h = {};
+		$.each(compounds, function(i, compound) {
+			var keys = [];
+			for (key in compound) {
+				keys.push(key);
+			}
+			var inchikey = keys[0];
+			h[inchikey] = compound[inchikey];
+		});
+		return h;
+	}
+
+	function focus(el) {
+		var offset = el.offset();
+		if (!offset) {
+			return;
+		}
+		$('html, body').animate({
+			scrollTop : offset.top - 20
+		}, 2000);
+	}
+
+	function readParams() {
+		var params = {};
+		var paramString = location.href.split('?').length === 2 ? location.href.split('?')[1] : null;
+		if(paramString) {
+			$.each(paramString.split('&'), function(idx, param) { 
+				var pair = param.split('=');
+				var key = pair[0];
+				var value = pair[1];
+				params[key] = value;
+			});			
+		}
+		return params;
+	}
+	
+	function parseQueryString(query) {
+		return query.replace("CHEM%3A%28", "").replace("%29", "").split("+AND+");
+	}
+	
+	function annotate() {
+		var params = readParams(), searchedKeys;
+		
+		if(params.selectedInchikey) {
+			searchedKeys = [ params.selectedInchikey ];
+		} else {
+			searchedKeys = this.searchForInchiKeys;
+		}
+		
+		if(searchedKeys.length === 0) {
+			//console.log("no searching ")
+			return;
+		}
+		//console.log("searching for " + this.searchedKeys)
+				
+		var activeTab = $('#detailMainForm\\:detailTabPanel-value').val()
+		, activeName = activeTab ? activeTab.split(':')[1] : ''
+        , data = this.ChemData['compounds']
+		, annotations = $('.icannotation')
+		, hover = false;
+
+		console.log(this.ChemData);
+		annotations.off();
+		$(searchedKeys).each(function(idx,searchedKey) {
+			hilight(annotations, searchedKey);
+		});
+		focus($('.chem-searched:first'));
+		annotations.hover(function(evt) {
+			if (hover) {
+				return false;
+			}
+			hover = true;
+			var $annotation = $(this);
+
+			var props = $annotation.data();
+			var inchikey = props.inchikey;
+			var metadata = data[inchikey];
+			if (!metadata) {
+				console.warn('no key in data', inchikey, data);
+			} else {
+				var inn = metadata.hasOwnProperty('inn') ? metadata.inn : "";
+				var molct = metadata.molfile;
+				var image = getImage(inchikey, molct);
+				var position = mousePosition(evt);
+				var x = position[0];
+				var y = position[1];
+				var container = $(window);
+				var w = container.innerWidth();
+				var h = container.innerHeight();
+				var st = container.scrollTop();
+				var offset = 20;
+				var img = $('#chem-tooltip img').attr('src', image);
+				var tt = $('#chem-tooltip').show();
+				var imgW = img[0].clientWidth;
+				var imgH = img[0].clientHeight;
+
+				if (x + imgW > w) {
+					x -= (offset + imgW);
+				} else {
+					x += 10;
+				}
+				var dy = imgH + 2 * offset;
+				if (y + imgH > h && !(y - dy < st)) {
+					y -= dy;
+				} else {
+					y += offset;
+				}
+				$('#chem-tooltip p').html(inn);
+				tt.css({
+					left : x,
+					top : y
+				});
+			}
+		}, function(evt) {
+			$('#chem-tooltip').hide();
+			$('#chem-tooltip p').html('');
+			hover = false;
+		});
+	}
+
+	function createImage(molct) {
+		if (!ICEditJS)
+			return;
+		var oldMolct = ICEditJS.getMolCt();
+		ICEditJS.setMolCt(molct);
+		var rosdal = ICEditJS.getRosdal(), image = ICEditJS
+				.createPngFromRosdal(rosdal);
+		ICEditJS.setMolCt(oldMolct);
+		// console.log(image);
+		return image;
+	}
+
+	
+	/**
+	 * Compounds Panel
+	 */
+	//called in Tabpanel "compounds"
+	function activateHover() {
+	    $(".OneCompound").hover(function() {
+	        $(this).css({'z-index' : '100'});
+	        var ik = $(this).find('input').val();
+	        var category = $(this).parent().attr('id');
+	        var target = category.replace('cc', '')
+	        $(this).find('img').unbind('click');
+	        $(this).find('img').click(function(){
+	            try {   
+	            	setInchIKey(ik);
+	            } catch (ex) { 
+	                alert (ex);
+	            }
+	        });        
+	        $(this).find('div').addClass("hover").stop()
+	        .animate({
+	            marginTop: '5px',
+	            marginLeft: '5px',
+	            top: '-80%',
+	            left: '-25%',
+	            width: '205px',
+	            height: '225px',            
+	        }, 200);        
+	        $(this).find('img').addClass("hover_img").stop()
+	        .animate({
+	            width: '200px',
+	            height: '200px',                        
+	        }, 200);
+	        $(this).find('.collapsed').hide();
+	        $(this).find('.expanded').show();
+
+	    } , function() {
+	        $(this).css({'z-index' : '0'});
+	        $(this).find('#molecule').unbind('click');
+	        $(this).find('div').removeClass("hover").stop()
+	        .animate({
+	            marginTop: '0',
+	            marginLeft: '0',
+	            top: '0',
+	            left: '0',
+	            width: '110px',
+	            height: '120px',//            
+	        }, 400);        
+	        $(this).find('img').removeClass("hover_img").stop()
+	        .animate({
+	            width: '100px',
+	            height: '100px',//            
+	        }, 400);
+	        $(this).find('.expanded').hide();
+	        $(this).find('.collapsed').show();
+	    });
+	}
+
+	function setInchIKey(inchikey) {
+		$('#selectedInchikey').val(inchikey);	
+		console.log($('#selectedInchikey').val());
+	}
+
+	//for drawing multiple structures
+	function setSDFile(sdfile) {
+		waitForEditor(function() {
+			ICEditJS.setSDFile(sdfile);
+		});
+	}
+	
+	function selectAllSubstructureHits() {
+		$('.sssSelection').prop('checked', true);		
+	}
+
+	function clearAllSubstructureHits() {
+		$('.sssSelection').prop('checked', false);
+		$('#chemcForm\\:sssError').text("");		
+	}
+	
+	return {
+		setMolct : setMolct,		
+		updateStructureQuery : updateStructureQuery,
+		resetChemForm : resetChemForm,		
+		annotate : annotate,
+		createImage : createImage,
+		activateHover: activateHover,
+		setSDFile : setSDFile,
+		resumeSSSQuery : resumeSSSQuery,
+		selectAllSubstructureHits : selectAllSubstructureHits,
+		clearAllSubstructureHits : clearAllSubstructureHits
+	};
+
+}();

@@ -1,0 +1,581 @@
+2-D plot axes labels,1,0
+:=,1,4
+absolute potential, meaning of,1,8
+absolute potential,4,12
+addition of vectors,1,28
+Ampere's force law,1,32
+Ampere's law,4,36
+amperian contour,2,52
+angle of transmission,1,60
+Animate command,1,64
+annotate, electronic book,1,68
+antenna,5,72
+Appendix B,2,92
+Argand diagram,1,100
+arguments of functions,1,104
+array pattern factor,1,108
+array subscript,1,112
+array,1,116
+arrow buttons,1,120
+arrow operator, symbolic evaluation,1,124
+asterisk sign,1,128
+attenuation constant,5,132
+axes labels, 2-D plots,1,152
+B field,13,156
+bar magnet,1,208
+basis functions,2,212
+battery,2,220
+binoculars button,1,228
+Biot-Savart law,6,232
+blank worksheet,1,256
+blue arrow buttons,1,260
+bold vectors,1,264
+book, electronic,4,268
+bound charge,2,284
+bound current density,1,292
+boundary conditions,9,296
+Brewster angle, parallel-pol,1,332
+buttons,1,336
+c button,1,340
+capacitance, per-unit-length,3,344
+capacitance,2,356
+capacitor,2,364
+cartesian coordinate system,7,372
+cavity resonator,1,400
+characteristic equation, TM modes,2,404
+characteristic resistance, TL,3,412
+circular loops,1,424
+circular polarization,1,428
+circulation of H,1,432
+coaxial cable,2,436
+coil,1,444
+comments, electronic book,1,448
+commutative, dot product,1,452
+commutator, split,1,456
+complex conjugation,1,460
+complex power,1,464
+complex Poynting vector,1,468
+conducting spheres,2,472
+conduction current,1,480
+conductivity,2,484
+conjugation,1,492
+conservative E field,1,496
+constitutive equation,4,500
+contents,1,516
+context menu,1,520
+continuation of equations,1,524
+convergence study,1,528
+converting vectors, cartesian to cylindrical,1,532
+converting vectors, cartesian to spherical,1,536
+converting vectors, cylindrical to cartesian,1,540
+copyright,1,544
+Coulomb's law,1,548
+cover region,2,552
+credits,1,560
+cross product of vectors,1,564
+cross product operator in Mathcad,1,568
+curl, definition of,1,572
+curl, numerical computation of,1,576
+curl, physical meaning of,1,580
+curl, plot of,1,584
+curl, symbolic calculation of,1,588
+curl,2,592
+current density, bound,1,600
+current filament, infinite,1,604
+current loop,3,608
+current, dipole antenna,2,620
+current,5,628
+cutoff frequency,4,648
+cylindrical coordinate system,6,664
+D field,3,688
+dc generator,1,700
+derivation comment,2,704
+dielectric sphere,2,712
+dielectric waveguide,2,720
+dipole antenna,3,728
+dipole moment,1,740
+dipole, electric,2,744
+disk, uniformly charged,1,752
+dispersion,1,756
+displacement current,1,760
+dissipated power,3,764
+divergence, definition of,1,776
+divergence, numerical computation of,1,780
+divergence, physical meaning of,1,784
+divergence, plot of,1,788
+divergence, symbolic calculation of,1,792
+divergenceless B field,2,796
+divergence,2,804
+dominant mode,3,812
+dot product operator in Mathcad,1,824
+dot product,2,828
+double-stub tuner,1,836
+E field and equipotential surfaces,1,840
+E field, from square plate,1,844
+E field, physical meaning,1,848
+E field,22,852
+earth's magnetic field,1,940
+edge effect,1,944
+editing tables in Mathcad,2,948
+electric dipole moment,1,956
+electric dipole,1,960
+electric field and equipotential surfaces,1,964
+electric field, from square plate,1,968
+electric field, physical meaning,1,972
+electric field,20,976
+electrical distance,1,1056
+electromagnetic waves,3,1060
+electronic book,4,1072
+electrostatic energy,1,1088
+electrostatic force,1,1092
+elements of vectors in Mathcad,1,1096
+elliptical polarization,1,1100
+emf, motional,1,1104
+emf, transformer,1,1108
+emf,5,1112
+energy density,2,1132
+energy, stored in electrostatic field,1,1140
+energy, stored in magnetostatic field,1,1144
+energy,2,1148
+engine, Mathcad,1,1156
+equations of lines,1,1160
+equations of motion,1,1164
+equations, multiple-line continuation of,1,1168
+equipotential surface,2,1172
+errors, reporting,1,1180
+Example 2.3,1,1184
+Example 2.11,1,1188
+Example 3.6,1,1192
+Example 3.15,1,1196
+Example 3.24,1,1200
+Example 4.8,1,1204
+Example 4.10,1,1208
+Example 4.12,1,1212
+Example 4.15,1,1216
+Example 4.20,1,1220
+Example 5.2,1,1224
+Example 5.8,1,1228
+Example 6.8,1,1232
+Example 7.2,1,1236
+Example 7.3,1,1240
+Example 7.5,1,1244
+Example 8.1,1,1248
+Example 8.3,1,1252
+Example 8.8,1,1256
+Example C.7,1,1260
+Example C.11,1,1264
+external stored energy, coax,1,1268
+far field,2,1272
+Faraday disk generator,1,1280
+Faraday generator,1,1284
+Faraday's law,5,1288
+FDTD,3,1308
+feedback, electronic book,1,1320
+field lines,1,1324
+finite difference time domain method,3,1328
+flavors of Mathcad,1,1340
+flux linkage,1,1344
+flux,6,1348
+force field,1,1372
+force,3,1376
+forward propagating wave,2,1388
+free charge,1,1396
+free current,1,1400
+free surface charge density,1,1404
+free volume charge,1,1408
+fringing fields,2,1412
+functions in Mathcad,1,1420
+functions, argument of,1,1424
+gap voltage,1,1428
+Gauss' law,4,1432
+gaussian surface,1,1448
+generalized reflection coefficient,4,1452
+generator, dc,1,1468
+generator, Faraday,1,1472
+generator,2,1476
+good conductor,1,1484
+gradient, numerical computation of,1,1488
+gradient, physical meaning of,1,1492
+gradient, plot of,1,1496
+gradient, symbolic calculation of,1,1500
+gradient,4,1504
+gravitational potential,1,1520
+grazing incidence,1,1524
+grounded dielectric slab waveguide,2,1528
+H field,9,1536
+half space,3,1572
+heat,2,1584
+Helmholtz coils,1,1592
+hertzian dipole,2,1596
+home button,1,1604
+house button,1,1608
+hyperlink,1,1612
+if statement in Mathcad,7,1616
+impedance, intrinsic,3,1644
+incident wave,2,1656
+induced charge,1,1664
+inductance, per-unit-length,3,1668
+inductance,1,1680
+infinite series,1,1684
+input impedance,6,1688
+input reflection coefficient,1,1712
+insertion loss,1,1716
+integration, symbolic,1,1720
+interference,8,1724
+internal stored energy, coax,1,1756
+intrinsic impedance,3,1760
+iron filings,1,1772
+Joule's law,1,1776
+keywords, symbolic evaluation,1,1780
+Laplace's equation,1,1784
+left-handed polarization,1,1788
+length of vector,1,1792
+length, shorted stub,2,1796
+line charge,1,1804
+line integrals, numerical integration,1,1808
+line integrals,2,1812
+linear coil,1,1820
+linear polarization,1,1824
+lines, equations of,1,1828
+linfit, Mathcad function,1,1832
+literal subscript,1,1836
+load reflection coefficient,5,1840
+long dipole antenna,3,1860
+long monopole antenna,1,1872
+longitudinal wavenumber,5,1876
+loop, rotating,1,1896
+loops,1,1900
+Lorentz force equation,1,1904
+loss, insertion,1,1908
+lossless media,3,1912
+lossy media,2,1924
+lossy TL,1,1932
+low-loss TL,1,1936
+lowest-ordered mode,2,1940
+M vector field,2,1948
+magnet, B field,1,1956
+magnetic energy,1,1960
+magnetic field,7,1964
+magnetic flux,5,1992
+magnetization density,2,2012
+magnetized sphere,1,2020
+magnet,1,2024
+magnitude operator in Mathcad,1,2028
+matching network,3,2032
+math styles in Mathcad,1,2044
+Mathcad arrow operator,1,2048
+Mathcad functions,1,2052
+Mathcad program,2,2056
+Mathcad, subscripts,1,2064
+Mathcad,1,2068
+Mathsoft, Inc.,1,2072
+McGraw-Hill, Inc.,1,2076
+menu commands,1,2080
+menu, context,1,2084
+method of moments,3,2088
+mismatch,1,2100
+mixed product of vectors,1,2104
+modes,5,2108
+moment method,3,2128
+monopole antenna,1,2140
+motion of charged particle,1,2144
+motional emf,1,2148
+multimode distortion,1,2152
+mutual inductance,1,2156
+National Science Foundation,1,2160
+navigating, electronic book,1,2164
+near field,1,2168
+Neumann formula,1,2172
+Newton's law of gravitation,1,2176
+Newton's third law,1,2180
+noncommutative, cross product,1,2184
+normal incidence,3,2188
+normalized input impedance,1,2200
+normalized load impedance,1,2204
+null, electric field,3,2208
+null, radiation pattern,2,2220
+numerical differentiation,1,2228
+numerical integration, line integrals,1,2232
+numerical integration,10,2236
+oblique incidence,1,2276
+original version of book,1,2280
+outward flux of D,1,2284
+overview, electronic book,1,2288
+P field,2,2292
+pad, resistive,1,2300
+parallel-plate capacitor,2,2304
+parallel-plate waveguide,2,2312
+parallel-polarized UPW,1,2320
+pattern factor,3,2324
+pattern multiplication,1,2336
+per-unit-length capacitance,3,2340
+per-unit-length inductance,3,2352
+perfect conductor,6,2364
+perfect standing wave,3,2388
+perpendicularly-polarized UPW,1,2400
+phase constant,7,2404
+phasor,1,2432
+phrase index,1,2436
+physical meaning of curl,1,2440
+physical meaning of divergence,1,2444
+physical meaning of electric field,1,2448
+physical meaning of gradient,1,2452
+point charge in a dielectric sphere,1,2456
+point charge,1,2460
+point dipole,2,2464
+polarization density,2,2472
+polarization of a dielectric material,1,2480
+polarization of waves,1,2484
+polarization,2,2488
+position vectors,8,2496
+potential, meaning of,1,2528
+potential,4,2532
+power flow, time average,1,2548
+power flow, time-average,2,2552
+power flow,5,2560
+power, dissipated,2,2580
+power, time-average,3,2588
+power, to input of TL,2,2600
+power, to load on TL,3,2608
+power,1,2620
+Poynting vector, time-average ,1,2624
+Poynting vector,4,2628
+primary and secondary potential,1,2644
+Problem 2.4.2,1,2648
+Problem 2.5.5,1,2652
+Problem 2.6.1,1,2656
+Problem 2.8.1,1,2660
+Problem 2.10.4,1,2664
+Problem 2.12.4,1,2668
+Problem 3.3.4,1,2672
+Problem 3.6.1,1,2676
+Problem 3.6.4,1,2680
+Problem 3.7.3,1,2684
+Problem 3.8.1,1,2688
+Problem 4.2.4,1,2692
+Problem 4.3.4,1,2696
+Problem 4.3.5,1,2700
+Problem 4.7.2,1,2704
+Problem 5.1.1,1,2708
+Problem 5.7.6,1,2712
+Problem 5.9.6,1,2716
+Problem 6.5.2,1,2720
+Problem 6.7.3,1,2724
+Problem 6.10.1,1,2728
+Problem 7.2.4,1,2732
+Problem 7.3.1,1,2736
+Problem 7.3.9,1,2740
+Problem 7.4.2,1,2744
+Problem 8.3.8,1,2748
+Problem 8.4.6,1,2752
+Problem 8.5.6,1,2756
+Problem 9.2.3,1,2760
+Problem 9.3.6,1,2764
+Problem 9.3.7,1,2768
+Problem 9.4.1,1,2772
+Problem B.5,1,2776
+Problem C.1.1,1,2780
+Problem C.4.9,1,2784
+Problem C.4.13,1,2788
+product solution,1,2792
+professional, Mathcad,1,2796
+program,2,2800
+propagation constant,2,2808
+propagation velocity,3,2816
+propagation constant,1,2828
+pulsating electric field,1,2832
+pulsating TL voltage,3,2836
+pulsating wave,1,2848
+p,1,2852
+quasi-static,3,2856
+questions, electronic book,1,2868
+R number,2,2872
+radiation pattern,2,2880
+radiation resistance,1,2888
+radiation,1,2892
+ramp voltage source,1,2896
+random polarization,1,2900
+ratio, standing wave,1,2904
+rectangular coordinate system,7,2908
+rectangular waveguide,2,2936
+reflected power,1,2944
+reflected wave,2,2948
+reflection coefficient, generalized,4,2956
+reflection coefficient, input,1,2972
+reflection coefficient, load,3,2976
+reflection coefficient, parallel-pol,1,2988
+reflection coefficient, source,1,2992
+reflection coefficient,6,2996
+relative reflected power,1,3020
+resistive pad,1,3024
+resonant frequency,1,3028
+resonator,1,3032
+resource center,2,3036
+restore,1,3044
+reverse propagating wave,2,3048
+right-handed polarization,1,3056
+ripple,2,3060
+rkfixed,1,3068
+rms voltage,1,3072
+root finding,2,3076
+root, Mathcad function,2,3084
+roots,1,3092
+rotating loop,1,3096
+rotation of a vector field,1,3100
+round wire,1,3104
+Runga-Kutta method,1,3108
+saving changes,1,3112
+scalar field,2,3116
+searchable phrase index,1,3124
+secondary and primary potential,1,3128
+Section 2.4,1,3132
+Section 2.5,1,3136
+Section 2.6,1,3140
+Section 2.8,2,3144
+Section 2.10,2,3152
+Section 2.12,2,3160
+Section 3.3,1,3168
+Section 3.4,1,3172
+Section 3.6.2,1,3176
+Section 3.6.3,2,3180
+Section 3.7,1,3188
+Section 3.8,1,3192
+Section 3.9,1,3196
+Section 4.2,1,3200
+Section 4.3,2,3204
+Section 4.4,1,3212
+Section 4.7.1,1,3216
+Section 5.1,1,3220
+Section 5.4,1,3224
+Section 5.7,1,3228
+Section 5.9,1,3232
+Section 6.2.1,1,3236
+Section 6.2.2,1,3240
+Section 6.5,1,3244
+Section 6.7,1,3248
+Section 6.9.2,1,3252
+Section 6.10.1,1,3256
+Section 7.2,1,3260
+Section 7.3,1,3264
+Section 7.3.3,1,3268
+Section 7.4,1,3272
+Section 8.3.1,1,3276
+Section 8.3.2,1,3280
+Section 8.4.2,1,3284
+Section 9.2.1,2,3288
+Section 9.3,3,3296
+Section 9.4,1,3308
+Section C.1,1,3312
+Section C.4.2,1,3316
+Section C.4.4,1,3320
+short TL,1,3324
+shorted stub,2,3328
+simplify, keyword,1,3336
+single-stub tuner,1,3340
+skin depth,1,3344
+slab region,2,3348
+slab,1,3356
+small current loop,1,3360
+Smith chart,4,3364
+solenoidal B field,2,3380
+solenoid,1,3388
+source boundary condition, TL,2,3392
+source reflection coefficient,1,3400
+source-field relationship,4,3404
+space quadrature,4,3420
+sphere, magnetized,1,3436
+spheres, conducting,2,3440
+spherical coordinate system,5,3448
+spherical wave,1,3468
+split commutator,1,3472
+spreading out of a vector field,1,3476
+square loop of current,1,3480
+square plate, uniformly charged,1,3484
+square-plate capacitor,1,3488
+standard, Mathcad,1,3492
+standing wave ratio,1,3496
+standing wave, perfect,1,3500
+standing wave,6,3504
+steady state,1,3528
+student, Mathcad,1,3532
+styles, math,1,3536
+subscripts in Mathcad,1,3540
+sunlight,1,3544
+support,1,3548
+surface charge density, bound,2,3552
+surface charge density, free,1,3560
+surface wave,1,3564
+survey form,1,3568
+symbolic calculation of curl,1,3572
+symbolic calculation of divergence,1,3576
+symbolic calculation of gradient,1,3580
+symbolic integration,2,3584
+symmetry,8,3592
+table of contents,2,3624
+tables, editing in Mathcad,2,3632
+TE modes,3,3640
+technical support,1,3652
+tightly-wound approximation,1,3656
+time quadrature,1,3660
+time-average power, to input of TL,2,3664
+time-average power, to load on TL,3,3672
+time-average power,14,3684
+time-average Poynting vector,2,3740
+TL,8,3748
+TM modes,4,3780
+total field,1,3796
+Trace command,3,3800
+trajectory of charged particle,1,3812
+transformer emf,1,3816
+transmission angle,1,3820
+transmission coefficient,3,3824
+transmission line,8,3836
+transmission-line analogy,1,3868
+transmitted wave,2,3872
+transverse attenuation constant,2,3880
+transverse wavenumber,7,3888
+traveling wave,2,3916
+tutorial,1,3924
+uniform plane wave,9,3928
+uniform surface charge,1,3964
+uniformly charged disk,1,3968
+unipolar voltage,1,3972
+unit vector,1,3976
+unit-step voltage source,1,3980
+UPW,9,3984
+using, electronic book,1,4020
+vector field, curl of,1,4024
+vector field, divergence of,1,4028
+vector field,5,4032
+vector notation in Mathcad,1,4052
+vectors, addition of,1,4056
+vectors, bold,1,4060
+vectors, conversion from cartesian to cylindrical,1,4064
+vectors, conversion from cartesian to spherical,1,4068
+vectors, conversion from cylindrical to cartesian,1,4072
+vectors, cross product of,1,4076
+vectors, dot product of,1,4080
+vectors, length of,1,4084
+vectors, mixed product of,1,4088
+vectors,4,4092
+version,1,4108
+Visual Electromagnetics for Mathcad,1,4112
+voltage propagation, TL,2,4116
+voltage ripple,2,4124
+voltage standing wave ratio,4,4132
+voltage, meaning of,1,4148
+voltage,1,4152
+volume charge density, bound,2,4156
+volume charge density, free,1,4164
+volume charge in a dielectric sphere,1,4168
+VSWR,4,4172
+waveguide,6,4188
+wavelength,4,4212
+wavenumber,5,4228
+waves, electromagnetic,3,4248
+work,1,4260
+world wide web,1,4264
+www,1,4268
+yellow arrow buttons,1,4272
+yields statement,2,4276
+Zoom command,2,4284

@@ -1,0 +1,620 @@
+body,div,td,span,li,input,formLabel,formPanel,a ,h1,h2,h3,h4{
+	font-family: Arial,Geneva,Verdana,Helvetica,Meiryo,MS PGothic,sans-serif;
+	font-size: 9pt;
+	padding:0;
+	margin:0;
+}
+
+h1,h2{
+	font-size: 21px;
+}
+
+/* Prevent v-scrollbar from shifting content of the page to the left*/
+html{
+	overflow: auto;
+/* 	margin-left: calc(100vw - 100%); */
+/* 	margin-right: 0; */
+} 
+
+body {
+	text-align: center;	
+}
+
+
+th {
+	font-size: 14;
+}
+li.ipc_MAINCLASS {margin-left:4px;padding-left:10px;}
+li.ipc_CLASS {margin-left:4px;padding-left:10px;}
+li.ipc_SUBCLASS {margin-left:4px;padding-left:10px;}
+li.ipc_GROUP {margin-left:4px;padding-left:10px;}
+li.ipc_elt {margin-left:4px;padding-left:10px;}
+ul.ipc {margin-left:10px;padding-left:6px;list-style-position:outside;}
+
+
+tr.ipc_MAINCLASS {margin-left:4px;padding-left:10px;}
+tr.ipc_CLASS {margin-left:14px;padding-left:20px;}
+tr.ipc_SUBCLASS {margin-left:24px;padding-left:30px;}
+tr.ipc_GROUP {margin-left:34px;padding-left:40px;}
+tr.ipc_elt {margin-left:44px;padding-left:50px;}
+div.decal {margin-left:5px;padding-left:5px;padding-bottom:0;padding-top:0;font-size:10px;}
+.ipctxt {
+    margin-left:0px;
+    margin-right: 96px;
+    text-align:left;
+    font-size:10px;
+}
+.ipccod {
+    margin-left: -16px;
+    margin-right: 0px;
+    text-align:right;
+    direction:rtl;
+
+    font-weight:bold;
+    border: 1px solid #9aafe5;
+}
+.ipccod_interm {
+	margin-left: -16px;
+    margin-right: 0px;
+    text-align:right;
+    direction:rtl;
+
+    font-style:italic;
+    border: 0px solid #9aafe5;
+}
+
+
+
+.langLink {
+	font-size: 10px;
+	color: #1b82d7;
+}
+
+#siteIdentifier {
+    background-color:#7e91a3;
+    left: 0;
+    letter-spacing: 2px;
+    padding-left: 0;
+    text-align: left;
+    text-transform: uppercase;
+    
+    width: 100%;
+    height:15px;
+    z-index: 255;
+}
+
+.col1LoginForm{
+	width: 64%;
+}
+
+.col2LoginForm{
+	width: 36%;
+}
+
+.col1Test {
+	vertical-align: top;
+}
+.col2Test {
+	vertical-align: top;
+}
+
+.firstColTranslate {
+	width: 50%;
+	text-align: left;
+}
+
+.secondColTranslate {
+	width: 20%;
+	text-align: right;
+}
+
+.thirdColTranslate {
+	width: 30%;
+	text-align: right;
+}
+
+.formLabel {
+	font-family:Arial,Geneva,Verdana,Helvetica,Meiryo,MS PGothic,sans-serif;
+	font-weight: normal;
+	font-size: 9pt;
+	font-weight:bold;
+}
+
+.ncDetailLabel {
+	width:150px;
+	font-weight: bold;
+}
+
+.ncDetailText {
+	min-width:150px;
+}
+
+a {
+	text-decoration: none;
+	text-align:inherit;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+em {
+	_width: 0.8em;
+	_cursor: hand;
+	font-style: normal;
+	margin: 0;
+	padding: 0.1em 0.5em;
+	background: #CCF;
+}
+
+td {
+	text-align: left;
+}
+
+.formUserError {
+	color: #FF0000;
+	font-weight: bolder;
+}
+.formUserWarning {
+	color: #330099;
+	font-weight: bolder;
+}
+
+.patentScopeHeader {
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-image: url(../images/patentscope.gif);
+	background-position: 0px 15px;
+	margin: 0px 20px 0px 0px;
+	position: relative;
+	padding: 0px 10px 0px 0px;
+	width: 100%;
+}
+
+th.sortable a,th.sortable_l a {
+	background-image: url(../images/arrow_off.png);
+}
+
+th.order1 a {
+	background-image: url(../images/arrow_down.png);
+}
+
+th.order2 a {
+	background-image: url(../images/arrow_up.png);
+}
+
+.patentScopeHeaderZA {
+	background-repeat: no-repeat;
+	background-image: url(../images/TopLogoZA.gif);
+	margin: 0px 20px 0px 0px;
+	position: relative;
+	padding: 0px 0px 0px 0px;
+}
+
+.patentScopeHeaderZA h1 {
+	border-top: 1px solid #333;
+	float: left;
+	text-align: right;
+	margin-left: 145;
+	padding: 3px 2px 2px 0px !important;
+	color: #333;
+	font-size: 16px;
+}
+
+.patentScopeHeader h1,.patentScopeHeader h2,.patentScopeHeader h3,.patentScopeHeader h4,.patentScopeHeader h5,.patentScopeHeader h6,.patentScopeHeader p,.patentScopeHeader div
+	{
+	margin-left: 25px;
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+	width: 900px;
+}
+
+@media screen and (max-width: 800px) {
+    .center {
+    	margin-right: auto;
+		margin-left: auto;
+    }
+}
+
+#navigation {
+	margin: 5px 3px;
+}
+
+#navigation ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+#navigation ul li {
+	display: inline;
+}
+
+#navigation ul li a {
+	color: #999;
+	margin: 3px;
+	text-decoration: none;
+}
+
+#navigation ul li a:hover {
+	color: #009;
+	text-decoration: underline;
+}
+
+.navigation-separator{
+	color: #999999 /* grey */
+}
+
+.patentScopeHeader h1 {
+	border-top: 1px solid #333;
+	float: left;
+	margin: 39px 0px 5px 93px !important;
+	margin-left: 46px;
+	text-align: right;
+	padding: 3px 2px 2px 0px !important;
+	padding-bottom: 10px;
+	color: #333;
+	font-size: 16px;
+}
+
+.patentScopeHeader p {
+	clear: both;
+	margin: 0px 3px 0px 25px !important;
+	margin-top: 8px;
+	padding: 15px 0px 5px 0px !important;
+	padding: 0px 0px 5px 0px;
+}
+
+.patentScopeHeaderZA p {
+	clear: both;
+	margin: 0px 3px 0px 25px !important;
+	margin-top: 8px;
+	padding: 15px 0px 5px 0px !important;
+	padding: 0px 0px 5px 0px;
+}
+
+.patentScopeHeader ul.dropDown {
+	float: right;
+	margin: 0;
+	margin-top: -25px;
+}
+
+.patentScopeHeader h2 {
+	margin-bottom: 5px;
+	padding-bottom: 0px;
+}
+
+.pagination {
+	padding: 0px;
+}
+
+.pagination ul {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	/*Set to "right" to right align pagination interface*/
+	font-size: 16px;
+}
+
+.pagination li {
+	list-style-type: none;
+	display: inline;
+	padding-bottom: 1px;
+}
+
+.pagination a,.pagination a:visited {
+	padding: 0 5px;
+	border: 1px solid #9aafe5;
+	text-decoration: none;
+	color: #2e6ab1;
+}
+
+.pagination a:hover,.pagination a:active {
+	border: 1px solid #2b66a5;
+	color: #000;
+	background-color: #FFFF80;
+}
+
+.pagination a.currentpage {
+	background-color: #2e6ab1;
+	color: #FFF;
+	border-color: #2b66a5;
+	font-weight: bold;
+	cursor: default;
+}
+
+.pagination a.disablelink,.pagination a.disablelink:hover {
+	background-color: white;
+	cursor: default;
+	color: #929292;
+	border-color: #929292;
+	font-weight: normal !important;
+}
+
+.permaLink {
+	float: right;
+}
+
+pre.code {
+	background-color: #B0C4DE;
+	margin-left: 2em;
+	font-size: 110%;
+	margin-right: 2em;
+	padding: 0.5em;
+	font-weight: bold;
+}
+
+.code {
+	color: #0000EE;
+	background-color: #B0C4DE;
+	margin-left: 2em;
+	margin-right: 2em;
+	padding: 0.3em;
+	font-weight: bold;
+}
+
+.code:visited {
+	color: #0000EE;
+	background-color: #B0C4DE;
+	margin-left: 2em;
+	margin-right: 2em;
+	padding: 0.3em;
+	font-weight: bold;
+}
+
+
+.help body {
+	font-family: Arial,Geneva,Verdana,Helvetica,Meiryo,MS PGothic,sans-serif !important;
+	font-size-adjust: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-size: 9pt;	
+}
+
+.help h1,h2,h3,h4,h5,h6 {
+	font-family: Arial,Geneva,Verdana,Helvetica,Meiryo,MS PGothic,sans-serif !important;
+	font-size: 9pt;
+	font-weight: bold;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+}
+
+#english td, tr,h2{
+	font-family:Arial,Geneva,Verdana,Helvetica,Meiryo,MS PGothic,sans-serif;
+    border-width: 1px;
+     vertical-align: top; 
+    text-align:left;
+    padding-left:10px;
+    
+}
+input[type="text"], textarea[type="textarea"],select,button
+{
+	font-family: Arial,Geneva,Verdana,Helvetica,Meiryo,MS PGothic,sans-serif !important;
+	font-size: 9pt !important;
+}
+
+div#mytable  .trans-section,.notranslate
+{
+	font-family: Arial,Geneva,Verdana,Helvetica,Meiryo,MS PGothic,sans-serif !important;
+	border-width: 1px;
+}
+
+#hitmap  {
+      text-align:left;
+      line-height:30%;
+ }
+
+#hitmap  a{
+   font-size:0.2em;
+}
+	
+#hitmap  h4{
+   font-size:0.2em;
+	margin-bottom:0em;
+	margin-top:0em;
+ }
+#hitmap  h3{
+  font-size:0.2em;
+	padding: 0px;
+	margin-bottom:0em;
+	margin-top:0em;
+ }
+#hitmap  h2{
+    font-size:0.2em;
+	margin-bottom:0em;
+	margin-top:0em;
+}
+#hitmap  .pContent{
+    font-size:0.2em;
+}
+#hitmap  .pNum{
+   font-size:0.5em;
+}
+#hitmap .hitmap_a {
+      font-size:3em;
+}
+
+
+.hitmap td{
+	font-size:0.2em
+}
+.hitmap .bold{
+	font-size:0.2em
+}
+
+.hitmap a
+{
+	background-color:#99CCCC !important;
+	text-decoration: none;
+	font-size:3em;
+}
+.hitmap_a 
+{
+	background-color:#99CCCC !important;
+	text-decoration: none;
+}
+
+.labelItalic{
+	font-style:italic;
+}
+
+#contentWrapper { background-color: #FFF;font-family: "Arial Unicode MS"}
+#contentWrapper .pContent { margin-left: 60px; margin-right: 20px ;font-family: "Arial Unicode MS";font-size:9pt;font-weight: normal;}
+#contentWrapper a{text-decoration: underline;font-family: "Arial Unicode MS";font-size:10pt;font-weight: normal;};
+#contentWrapper .disclosure, #contentWrapper h2, #contentWrapper h3, #contentWrapper h4 { font-family: "Arial Unicode MS"; clear: both }
+ 			
+		
+		#contentWrapper a, #contentWrapper a:visited, #contentWrapper a:active, #contentWrapper a:link, #contentWrapper a:hover { color: #00f }
+		#contentWrapper h2 { text-align: center; font-size: 135%; margin: 1em 0 0 0; font-weight: bold }
+		#contentWrapper h3 { font-weight: bold; font-size: 125%; margin: 0.75em 0 0.75em 0.5em } 
+		#contentWrapper h4 { font-weight: bold; font-size: 115%; margin: 1em 0 1em 1.5em; margin-left: 2em } 
+		#contentWrapper .paragraph, #contentWrapper .claim, #contentWrapper .drawing, #contentWrapper .figure, #contentWrapper .amendClaim { clear: both; padding: 0.5em 0 0.5em 0 } 
+		#contentWrapper .pNum {float: left; margin-right: -60px }
+		#contentWrapper #toc { background-color: #eee; padding: 10px 15px 8px 8px }
+		#contentWrapper { margin-top: 0 }
+		#contentWrapper p { text-indent: 1em ;}
+		#contentWrapper img.inline { display: inline }
+		#contentWrapper img.newline { vertical-align: top }
+		#contentWrapper #Highlights { margin-top: 10px }
+    
+    td.zipsize: {text-align:right; }
+
+/* Fix for content displayed within an HTML a element */
+a[name=DESCRIPTION], a[name=CLAIMS] {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	pointer-events: none;
+	cursor: default;
+}
+
+/*********************** Advanced search component ******************/
+/********************************************************************/
+
+.divAdvSearch {
+	position:relative;
+}
+.advq-ok, 
+.advq-err {
+	display: none;
+	position: absolute; 
+	left: 6px; 
+	top: 6px;
+}
+
+.validationResult {
+    background-color: #fcf8e3;
+    border-radius: 3px;
+    border: 1px solid #fbeed5; 
+    padding: 5px;
+    position: absolute;
+    top: -21px;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
+    display: none;
+    height: 12px;
+}
+
+.advancedSearchInput {
+	min-height: 25px;
+	height: 25px;
+	width: 100%; 
+	box-sizing: border-box;
+	resize: vertical; /* Not supported by IE */
+	overflow: auto;
+	padding-left: 26px;	
+}
+
+ul.ui-menu.ui-widget.ui-widget-content.ui-autocomplete.ui-front.advancedSearch {
+    display: block;
+    position: relative;
+    top: -133.188px;
+    left: 275px;
+    width: 556px;
+    list-style-type: none;
+    background: white;
+    padding: 0px 25px;
+    z-index: 99; /* Make sure it doesn't overlap */
+    text-align: left;
+}
+
+.ui-autocomplete.advancedSearch li.ui-menu-item {
+    background: white;
+}
+
+.ui-autocomplete.advancedSearch li.ui-menu-item div.ui-menu-item-wrapper {
+    background: white;
+}
+
+.ui-autocomplete.advancedSearch li.ui-menu-item div.ui-menu-item-wrapper.ui-state-active {
+    border:none;
+    font-size: 15px;
+}
+
+/****************************** End Advanced search component *******/
+/********************************************************************/
+
+.reportContentOrientation {
+	direction: ltr;
+	text-align:left;
+}
+
+.reportContentOrientation_ar {
+	direction: rtl;
+	text-align:right;
+}
+
+.reportContentOrientation_ar td {
+	text-align:right;
+}
+
+#ReportContent a {
+	text-decoration: none;
+	color: #000000;
+}
+
+#ReportContent a[href] {
+	color: #0000ff;
+}
+
+#ReportContent a[href]:hover {
+	text-decoration: underline;
+	color: #FF5555;
+}
+
+#ReportContent .reportTitle {
+	color: #0078D0;
+}
+
+/* ===================== gentle sorted table highlight ==================== */
+
+.smooth-sort-highlight.ui-state-active {
+	background: #dfeffc;
+	color: #2e6e9e;
+	border-color: #c5dbec;
+}
+
+.smooth-sort-highlight.ui-state-active .ui-icon {
+	background-image: url(/search/javax.faces.resource/images/ui-icons_6da8d5_256x240.png.jsf?ln=primefaces-redmond);
+}
+
+.vertical-header {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}
+
+td.align-cell-text-right {
+	text-align:right
+}
+
+td.align-cell-text-center {
+	text-align:center
+}
+
+.term-highlight {
+	background-color:#99CCCC
+}

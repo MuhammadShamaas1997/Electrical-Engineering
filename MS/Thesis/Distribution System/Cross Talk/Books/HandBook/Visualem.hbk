@@ -1,0 +1,140 @@
+;Visual Electromagnetics for Mathcad. A Mathcad Electronic Book.
+;Copyright (c) 1998 by The McGraw-Hill Companies, Inc. All rights reserved.
+;
+;Version 1.0
+;rev 12/3/97
+;
+;Written by:  Keith W. Whites
+;             Department of Electrical Engineering
+;             University of Kentucky
+;             453 Anderson Hall
+;             Lexington, KY 40506-0046
+;             E-mail: whites@engr.uky.edu
+;             Voice:  (606) 257-1768
+;             FAX:    (606) 257-3092
+;             WWW:    http://www.engr.uky.edu/~whites
+;
+.version 7.0
+.titleVisual Electromagnetics for Mathcad
+;
+; Main Entry Point
+SPLASH      vemsplsh.mcd     : Visual Electromagnetics
+TOC         vemtoc.mcd       : Table of Contents
+overview    overview.mcd     : Overview of This Electronic Book
+navigate    navebk.mcd       : Navigating This Electronic Book
+using       using.mcd        : Using This Electronic Book
+comments    comments.mcd     : Questions, Comments and Feedback
+credits     credits.mcd      : Credits
+;
+;Chapter 2 worksheets
+;
+ch2toc      vemc2toc.mcd     : Chapter 2 Worksheet Contents
+ch2_010     vem02010.mcd     : Cylindrical to Cartesian Conversion
+ch2_020     vem02020.mcd     : Cartesian to Cylindrical Conversion
+ch2_030     vem02030.mcd     : Cartesian to Spherical Conversion
+ch2_040     vem02040.mcd     : Dot, Cross and Mixed Vector Products
+ch2_050     vem02050.mcd     : Gradient of a Scalar Field
+ch2_060     vem02060.mcd     : Symbolic Calculation of Gradient
+ch2_070     vem02070.mcd     : Line Integrals
+ch2_080     vem02080.mcd     : Divergence of a Vector Field
+ch2_090     vem02090.mcd     : Symbolic Calculation of Divergence
+ch2_100     vem02100.mcd     : Curl of a Vector Field
+ch2_110     vem02110.mcd     : Symbolic Calculation of Curl
+;
+;Chapter 3 worksheets
+;
+ch3toc      vemc3toc.mcd     : Chapter 3 Worksheet Contents
+ch3_010     vem03010.mcd     : Force Field of a Line Charge
+ch3_020     vem03020.mcd     : Electric Field of a Uniformly-Charged Plate
+ch3_030     vem03030.mcd     : Gauss' Law
+ch3_040     vem03040.mcd     : Potential of a Uniformly-Charged Disk
+ch3_050     vem03050.mcd     : Potential and Electric Field of a Dipole
+ch3_060     vem03060.mcd     : Point Charge in a Dielectric Sphere
+ch3_070     vem03070.mcd     : Volume Charge in a Dielectric Sphere
+ch3_080     vem03080.mcd     : Two Concentric, Conducting Spheres
+ch3_090     vem03090.mcd     : Stored Energy of Two Conducting Spheres
+ch3_100     vem03100.mcd     : Numerical Solution for the Parallel-Plate Capacitor
+ch3_110     vem03110.mcd     : Product Solution to Laplace's Equation
+;
+;Chapter 4 worksheets
+;
+ch4toc      vemc4toc.mcd     : Chapter 4 Worksheet Contents
+ch4_010     vem04010.mcd     : Ampère's Force Law and Two Coaxial Current Loops
+ch4_020     vem04020.mcd     : Biot-Savart Law and Helmholtz Coils
+ch4_030     vem04030.mcd     : Trajectory of a Charged Particle
+ch4_040     vem04040.mcd     : B Field of a Square Current Loop
+ch4_050     vem04050.mcd     : Ampère's Law
+ch4_060     vem04060.mcd     : A Linear Coil and the "Tightly Wound" Approximation
+ch4_070     vem04070.mcd     : B Field of a Small Circular Loop of Current
+ch4_080     vem04080.mcd     : B Field of a Rectangular Bar Magnet
+ch4_090     vem04090.mcd     : Magnetic Fields of a Magnetized Sphere
+ch4_100     vem04100.mcd     : Mutual Inductance of Two Coaxial, Circular Loops
+ch4_110     vem04110.mcd     : Stored Magnetic Energy in a Coaxial Cable
+;
+;Chapter 5 worksheets
+;
+ch5toc      vemc5toc.mcd     : Chapter 5 Worksheet Contents
+ch5_010     vem05010.mcd     : Faraday's Law and Induced Gap Voltage
+ch5_020     vem05020.mcd     : A Rotating Loop in a Magnetic Field
+ch5_030     vem05030.mcd     : Displacement Current and the Parallel-Plate Capacitor
+ch5_040     vem05040.mcd     : Boundary Conditions
+ch5_050     vem05050.mcd     : Poynting Vector and a Long Round Wire
+ch5_060     vem05060.mcd     : Poynting Vector and Time-Average Power Dissipation
+;
+;Chapter 6 worksheets
+;
+ch6toc      vemc6toc.mcd     : Chapter 6 Worksheet Contents
+ch6_010     vem06010.mcd     : Propagating Electromagnetic Waves in Lossless Media
+ch6_020     vem06020.mcd     : Propagating Electromagnetic Waves in Lossy Media
+ch6_030     vem06030.mcd     : Polarization of Electromagnetic Waves
+ch6_040     vem06040.mcd     : UPW Normally Incident on a Lossy Half Space
+ch6_050     vem06050.mcd     : UPW Normally Incident on a Lossless Half Space
+ch6_060     vem06060.mcd     : Parallel-Polarized UPW Obliquely Incident ...
+ch6_070     vem06070.mcd     : Perpendicularly-Polarized UPW Obliquely Incident ...
+;
+;Chapter 7 worksheets
+;
+ch7toc      vemc7toc.mcd     : Chapter 7 Worksheet Contents
+ch7_010     vem07010.mcd     : Numerical Solution for the Voltage Propagation on a TL
+ch7_020     vem07020.mcd     : Propagation of Voltage Pulse and Ramp Waveforms on a TL
+ch7_030     vem07030.mcd     : Transient Voltage and Current at the Terminals of a TL
+ch7_040     vem07040.mcd     : Sinusoidal Voltage and Current Waves on a Lossless TL
+ch7_050     vem07050.mcd     : Lossless Transmission Line Calculator
+ch7_060     vem07060.mcd     : Terminal Voltages and Power Delivered to a Load
+ch7_070     vem07070.mcd     : Voltage Variation and Power Flow on a Low-Loss TL
+;
+;Chapter 8 worksheets
+;
+ch8toc      vemc8toc.mcd     : Chapter 8 Worksheet Contents
+ch8_010     vem08010.mcd     : The Fields of TM Modes in a Parallel-Plate Waveguide
+ch8_020     vem08020.mcd     : The Fields of TE Modes in a Parallel-Plate Waveguide
+ch8_030     vem08030.mcd     : The Fields of TM Modes in a Rectangular Waveguide
+ch8_040     vem08040.mcd     : The Fields of TE Modes in a Rectangular Waveguide
+ch8_050     vem08050.mcd     : The Fields of TE Modes in a Rectangular Cavity Resonator
+ch8_060     vem08060.mcd     : TM Fields of a Grounded Dielectric Slab Waveguide
+ch8_070     vem08070.mcd     : Time-Average Power Flow for TM Modes in a Grounded ...
+;
+;Chapter 9 worksheets
+;
+ch9toc      vemc9toc.mcd     : Chapter 9 Worksheet Contents
+ch9_010     vem09010.mcd     : Animated Electric Fields of the Hertzian Dipole
+ch9_020     vem09020.mcd     : Behavior of the E and H Fields of the Hertzian Dipole
+ch9_030     vem09030.mcd     : Numerical Solution for the Current on a Dipole Antenna
+ch9_040     vem09040.mcd     : Radiation Pattern of a Dipole Antenna
+ch9_050     vem09050.mcd     : Radiation Resistance of a Dipole Antenna
+ch9_060     vem09060.mcd     : Radiation Pattern of a Two-Element Array of Monopoles
+;
+;Appendix B worksheets
+;
+apbtoc      vemabtoc.mcd     : Appendix B Worksheet Contents
+apb_010     vemab010.mcd     : Faraday Generator
+apb_020     vemab020.mcd     : DC Generator
+;
+;Appendix C worksheets
+;
+apctoc      vemactoc.mcd     : Appendix C Worksheet Contents
+apc_010     vemac010.mcd     : The Smith Chart
+apc_020     vemac020.mcd     : Single-Stub Tuner Calculator
+apc_030     vemac030.mcd     : Double-Stub Tuner Calculator
+apc_040     vemac040.mcd     : Resistive Pad Design and Performance
+apc_050     vemac050.mcd     : A Uniform Plane Wave Normally Incident on a Slab

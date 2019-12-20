@@ -1,30 +1,137 @@
-saqib@uet.edu.pk Dr. Muhammad Asghar Saqib Advanced Power System Operation and Control
+Dr. Muhammad Asghar Saqib
+saqib@uet.edu.pk  
+EE 504: Advanced Power Systems
+Room No. 104, Ground Floor
+EE Department
+Monday - Thursday
+02:00 pm – 03:00 pm
+
+
+
+EE 505: Optimization Theory
+Instructor	Muhammad Tahir	Contact	mtahir@uet.edu.pk
+Office	Director ORIC, UET Lahore	Office Hours	Monday 14:00 – 15:00,
+Wednesday 10:00 – 11:00
+
+
+Course Title	Antenna Theory & Design	Couse Code	EE 528
+Instructor	Dr-Ing. Farooq Mukhtar	Contact	mukhtar.farooq@uet.edu.pk 
+Fri: 4:30-6:00	Office Schedule	Through appointment
+
+
+EE 545: Power System Quality
+Instructor	Dr. Muhammad Kamran	Contact	mkamran@uet.edu.pk 
+Office	Post Graduate Lab
+EE Department	Office Hours	
+
+EE546: Renewable Electric Energy Systems
+Instructor	Dr. Muhammad Imran	Contact	drimran@uet.edu.pk 
+			Tel. (Office): 042-9902 9229
+Office	Electrical Engineering Department	Office Hours	Monday - Thursday
+12:00 pm – 0:00 pm
+
+
+EE 547: Advanced Power Electronics
+Instructor Umar T. Shami Contact utshami@uet.edu.pk
+Office
+Industrial and Power
+Electronics Lab, Ground
+Floor,
+E. E. Depart., U.E.T.
+Office Hours Tuesday and Thursday
+16:00pm
+
+
+EE 535    Smart Grids
+Instructor(s)	Dr. Syed Abdul Rahman Kashif (SARK)	Contact	abdulrahman@uet.edu.pk 
+Office	SARK: Ground Floor EE Department	Office Hours	SARK: Thursday, 10:00 – 11:00
+
+
+EE599d: Switch Mode Power Supplies
+Instructor	Dr. Tahir Izhar	Contact	tizhar@gmail.com
+Offices	Chairman Office	Office Hours	With appointment
+
+
+EE 599d: Wind energy conversion systems (WECS)
+Instructor	S. A. Kamran Shah Jafri	Contact	kame7970@yahoo.com
+Mobile:03363865066
+
+EE - 599o: Micro-Electro-Mechanical-Systems
+Instructor Dr. Farooq Ahmad Contact ahmad123farooq@gmail.com
+drfarooq_mems@uet.edu.pk
+Office Office Hours Wednesday: 4:00 pm to 7:00 pm
+Tuesday: 7:00 pm to 9:00 pm
+
+
+EE-599D: Meta-heuristic optimization
+algorithms in power systems
+salmanfakhar.uet@gmail.com ,
+salmanfakhar@uet.edu.pk
+
+
+EE 641: Advanced Power System Operation and Control
+Instructor	Dr. Muhammad Asghar Saqib	Contact	saqib@uet.edu.pk 
+			Tel. (Office): 042-9902 9423 (HV Eng. Lab)
+Office	HV Eng. Lab, Old/Main Block, Opposite New Auditorium Building	Office Hours	Monday - Thursday
+02:00 pm – 03:00 pm
+
+
+EE 535    Control of Electric Machine Drives
+Instructor(s)	Dr. Syed Abdul Rahman Kashif	Contact	abdulrahman@uet.edu.pk 
+Office	Ground Floor, EED	Office Hours	Monday 12:00 to 1:00 PM
+Tuesday 12:00 to 1:00 PM
+
+
+EE503	Linear System Theory
+Instructor	Dr K M Hasan	Contact	kmhasan@uet.edu.pk
+Office	SUPCON-UET Automation Laboratory	Office Hours	02:00 p.m to 04:00 p.m
+SUPCON-UET Automation Lab.
+or by appointment
+
+
+EE 543: Power System Planning
+Instructor	Dr. Muhammad Kamran	Contact	mkamran@uet.edu.pk 
+Office	Post Graduate Lab
+EE Department	Office Hours	7:00 pm to 7:30 pm every Tuesday and Thursday
+
+
+saqib@uet.edu.pk Dr. Muhammad Asghar Saqib          Advanced Power System Operation and Control
 abdulrahman@uet.edu.pk Dr. Syed Abdul Rahman Kashif Control of Electric Machine Drives
-kmhasan@uet.edu.pk Dr K M Hasan Linear System Theory
-sajid.iqbal@uet.edu.pk Dr. Sajid Iqbal - Nonlinear Dynamical Systems Faculty RoomDepartment of Mechatronics & Control Engineering
-mtahir@uet.edu.pk Muhammad Tahir Room 203, Elect. Eng. Dept. Optimization Theory
+kmhasan@uet.edu.pk Dr K M Hasan                     Linear System Theory
+sajid.iqbal@uet.edu.pk Dr. Sajid Iqbal -            Nonlinear Dynamical Systems Faculty RoomDepartment of Mechatronics & Control Engineering
 umar.rashid@uet.edu.pk Umar Rashid Room 203, Elect. Eng. Dept. Optimization Theory
 tizhar@gmail.com chairmanee@uet.edu.pk Dr. Tahir Izhar Product Research Lab-Research Center Power Electronic Converters
-ushami@ymail.com  Umar T. Shami Power Electronic Converters Industrial and Power Electronics Lab, GroundFloor,E. E. Depart., U.E.T.
+ushami@ymail.com  Umar T. Shami                     Power Electronic Converters Industrial and Power Electronics Lab, GroundFloor,E. E. Depart., U.E.T.
 mkamran@uet.edu.pk Dr. Muhammad Kamran Post Graduate Lab EE Department Power System Planning
 fawan@uet.edu.pk  Dr. Fahim Gohar Awan Office	1st Floor, Room # 1, Research Center Simulation Modeling and Analysis 
-Dr. Muhammad Imran drimran@uet.edu.pk  Renewable Electric Energy Systems
+Dr. Muhammad Imran drimran@uet.edu.pk               Renewable Electric Energy Systems
 utshami@uet.edu.pk  Umar T. Shami Industrial and Power Electronics Lab,
 abdulrahman@uet.edu.pk  Dr. Syed Abdul Rahman Kashif (SARK) SARK: Ground Floor EE Department Smart Grids
-kame7970@yahoo.com S. A. Kamran Shah Jafri Wind energy conversion systems (WECS)
+kame7970@yahoo.com S. A. Kamran Shah Jafri          Wind energy conversion systems (WECS)
  
+IEC
+https://www.iec.ch/dyn/www/f?p=103:6:0
 
-
+IEEE
+https://www.techstreet.com/ieee/standards/ieee-145-2013?product_id=1874218
+https://ieeexplore.ieee.org/search/searchresult.jsp?sortType=newest&highlight=true&returnFacets=ALL&returnType=SEARCH&refinements=ContentType:Standards
 
 http://www.engpaper.com/
 https://www.academia.edu/
 https://thesiscommons.org/
 https://www.scribendi.com/advice/free_online_journal_and_research_databases.en.html
-http://www.jpier.org/PIERM/
 
+
+https://www.mathworks.com/matlabcentral/fileexchange/32983-space-vector-pulse-width-modulation-based-three-phase-rectifier
+https://www.mathworks.com/help/examples.html
+https://www.mathworks.com/help/physmod/sps/examples.html?category=index
 
 
 Softwares
+- IP based Protocols
+- BAC net Protocol
+- Modbus Protocol
+- LonTalk Protocol
 Statistics: SPSS, Minitab, Stata
 https://nkloc.wordpress.com/2011/11/11/power-system-simulation-software-list/
 https://www.nextnano.de/nextnanoplus/index.htm

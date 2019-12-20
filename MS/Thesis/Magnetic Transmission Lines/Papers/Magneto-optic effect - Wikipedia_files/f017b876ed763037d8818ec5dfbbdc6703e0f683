@@ -1,9 +1,0 @@
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="2.091ex" height="2.176ex" style="vertical-align: -0.338ex;" viewBox="0 -791.3 900.5 936.9" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-<title id="MathJax-SVG-1-Title">{\displaystyle \mathbf {H} }</title>
-<defs aria-hidden="true">
-<path stroke-width="1" id="E1-MJMAINB-48" d="M400 0Q376 3 226 3Q75 3 51 0H39V62H147V624H39V686H51Q75 683 226 683Q376 683 400 686H412V624H304V388H595V624H487V686H499Q523 683 673 683Q824 683 848 686H860V624H752V62H860V0H848Q824 3 674 3Q523 3 499 0H487V62H595V326H304V62H412V0H400Z"></path>
-</defs>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use xlink:href="#E1-MJMAINB-48" x="0" y="0"></use>
-</g>
-</svg>
