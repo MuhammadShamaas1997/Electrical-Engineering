@@ -30,9 +30,8 @@ Tin=1/(2*fc);
 Kin=0.65*(Vdc/Vcm);
 
 subplot(2,1,1);hold on; % Divides the figure to two subplots
-plot(iqs.time,iqs.data/Ib); grid on;%axis([0 5 1.56 1.57]);% This would plot the current
-%plot(iqs_k.time,iqs_k.data/Ib); grid on;%axis([2.498 2.512 0.5 2.5]);% This would plot the current
-%plot(vqs.time,vqs.data); grid on;%axis([2.498 2.512 0.5 2.5]);% This would plot the current
+%plot(iqs.time,iqs.data); grid on;%axis([0 5 1.56 1.57]);% This would plot the current
+plot(iqs_k.time,iqs_k.data/Ib); grid on;%axis([2.498 2.512 0.5 2.5]);% This would plot the current
 xlabel('Time (s)'); ylabel('iqs (p.u.)');
 
 subplot(2,1,2);hold on;

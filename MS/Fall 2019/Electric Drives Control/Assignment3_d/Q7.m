@@ -29,14 +29,10 @@ Kb=(P/2)*(Kt/Bt)*(Ls*If);
 Tin=1/(2*fc);
 Kin=0.65*(Vdc/Vcm);
 
-subplot(2,1,1);
-hold on; % Divides the figure to two subplots
-% plot(Teref.time,Teref.data,'r');
-% plot(Te.time,Te.data); grid on;%axis([0 5 1.56 1.57]);% This would plot the current
-plot(iqsref.time,iqsref.data,'r');
+subplot(2,1,1); % Divides the figure to two subplots
 plot(iqs.time,iqs.data); grid on;%axis([0 5 1.56 1.57]);% This would plot the current
 xlabel('Time (s)'); ylabel('iqs (A)');
 
 subplot(2,1,2);
-plot(wr.time,wr.data/wb); grid on;
-xlabel('Time (s)'); ylabel('Speed (p.u.)');
+plot(wr.time,wr.data); grid on;
+xlabel('Time (s)'); ylabel('Speed (rad/s)');
