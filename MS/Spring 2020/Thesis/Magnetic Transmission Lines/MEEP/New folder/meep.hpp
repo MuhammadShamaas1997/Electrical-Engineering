@@ -1287,7 +1287,7 @@ public:
   bool locate_component_point(component *, ivec *, std::complex<double> *) const;
   void am_now_working_on(time_sink);
   void finished_working();
-;
+;}
 
 
 
