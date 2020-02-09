@@ -22,4 +22,10 @@ plot(A1,A);
 subplot(3,1,2)
 plot(A1,B);
 subplot(3,1,3)
-plot(A1,B./A);
+C=B./A;
+for i=1:length(C)
+    if (C(i)>1)
+        C(i)=0;
+    end
+end
+plot(A1,C);
