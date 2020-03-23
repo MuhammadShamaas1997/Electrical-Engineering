@@ -1,10 +1,16 @@
 clc;clear all;
 Costs=ones(9,3).*inf;
-f2=ones(9,9).*inf;
 demands=ones(9,9).*inf;
+
+f2=ones(9,9).*inf;
 F2=ones(18,9).*inf;
 F2min=ones(18,1).*inf;
 P2min=zeros(18,1);
+
+f3=ones(9,9).*inf;
+F3=ones(18,9).*inf;
+F3min=ones(18,1).*inf;
+P3min=zeros(18,1);
 
 Powers=[0;50;75;100;125;150;175;200;225];
 Costs=[inf inf inf;
@@ -35,11 +41,27 @@ end
 for r=1:9
     for c=1:9
         F2(r+c,c)=f2(r,c);
-        D12(r+c,1)=Powers(r)+Powers(c);
         F2min(r+c,1)=min(F2(r+c,:));
         if (f2(r,c)==min(F2(r+c,:)))&&(f2(r,c)~=inf)
+            D12(r+c,1)=Powers(r)+Powers(c);
             P2min(r+c,1)=Powers(c,1);
         end
     end
 end
 
+for r=1:length(F2min)
+    for c=i3min:i3max
+        f3(r,c)=F2min(r,1)+Costs(c,3);
+    end
+end
+
+for r=1:length(F2min)
+    for c=2:7
+        F3(r+c,c)=f3(r,c);        
+        F3min(r+c,1)=min(F3(r+c,:));
+        if (f3(r,c)==min(F3(r+c,:)))&&(f3(r,c)~=inf)
+            P3min(r+c,1)=Powers(c,1);
+            D123(r+c,1)=D12(r)+Powers(c,1);
+        end
+    end
+end
