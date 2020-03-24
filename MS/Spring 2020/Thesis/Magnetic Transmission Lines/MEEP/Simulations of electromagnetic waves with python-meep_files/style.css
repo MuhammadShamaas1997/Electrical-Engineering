@@ -1,0 +1,44 @@
+body		{font-family:georgia; font-size:14pt; background:lightgray; counter-reset: questcounter;}
+p		{text-align:justify; }
+p.downloadbox	{text-align:center; width:80%; margin:auto; padding:10px; border:1px solid grey; font-weight: bold;
+		line-height:160%}
+
+body { counter-reset: h2counter; text-align: justify; }
+h2:before { content: counter(h2counter) ".\0000a0\0000a0"; counter-increment: h2counter; }
+h2 { counter-reset: h3counter; }
+h3:before { content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0"; counter-increment: h3counter; }
+
+table		{text-align:left; padding:0px; margin:auto}
+td		{border:1px solid grey; padding:5px; }
+table.main	{border:none; background:white; padding:0px; width:1000px; margin:auto}
+td.main		{border:none; width:100%; padding:10px; vertical-align:top}
+td.header	{border:none; width:100%; height:185px; vertical-align:bottom;}
+table.businesscard {border:none; height:120px; width:820px; border:0px dotted green; background:#f8f8f8}
+
+h1.header	{text-shadow: 2px -2px 3px white, -2px 2px 3px white;  margin:15px}
+h2		{font-weight:bold;  font-size:25pt; margin-bottom:5pt; border-bottom:2px solid lightgray}
+h2.section	{}
+div.to_index	{text-align:right; margin:0px; padding-right:10px; height:0px; position:relative; bottom:22%;}
+p.fig		{text-align:center; font-style:italic}
+img.fig		{margin-left:auto; margin-right:auto}
+
+code		{font-size:12pt;}
+pre		{font-size:10pt; overflow:auto; max-width:100%}
+pre.bash	{background:#ddeeff}
+pre.python	{background:#ffeedd}
+pre.c		{background:#eeffdd}
+
+
+table.topic 	{color:#000000; margin-bottom: 12px; border:none; width:100%}
+table.topic:hover {color:#226688}
+td.topicicon	{border:none; width:200px; }
+td.topicdesc	{border:none; padding-left:12px; text-position:top; vertical-align: top;}
+p.topicname	{margin:0pt; margin-top:-5pt; font-weight:bold; font-size:20pt;}
+p.topicnameX	{margin:0pt; margin-top:-5pt; font-weight:bold; font-size:20pt; color:grey;}
+p.topiccmnt	{margin:0pt; margin-top:0pt; text-align:justify; color:#444444}
+
+
+a.oversize { text-decoration: none; }
+div.color { position: relative; display: block; }
+div.color img + img { position: absolute; left: 0; }
+a.oversize:hover img + img { z-index: -1; }
