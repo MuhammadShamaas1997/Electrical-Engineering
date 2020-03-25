@@ -1,0 +1,9 @@
+Si (infrared)
+Dielectric function model
+500
+1500
+1/cm
+W.Theiss
+21.11.1995
+Model adjusted to reflectance and transmittance measurements (done by J.Sturm) on a silicon wafer polished on both sides. Uses weak Brendel oscillators for multiphonon contributions and Si-O and Si-C vibrational modes. Discussion in W.Theiﬂ, habilitation thesis, RWTH Aachen 1995.
+Attention: the Si-O and Si-C contributions may vary from wafer to wafer depending on preparation.

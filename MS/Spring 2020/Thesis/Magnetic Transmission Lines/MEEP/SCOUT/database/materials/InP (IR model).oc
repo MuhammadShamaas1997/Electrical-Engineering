@@ -1,0 +1,8 @@
+InP (IR model)
+Master model
+400
+4000
+1/cm
+W.Theiss
+15.11.2000
+Master model with carrier concentration as master parameter, controlling the Drude model. Dielectric background and harmonic oscillator in addition.

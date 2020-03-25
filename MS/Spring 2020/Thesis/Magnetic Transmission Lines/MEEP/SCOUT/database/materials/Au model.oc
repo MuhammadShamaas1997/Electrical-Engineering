@@ -1,0 +1,8 @@
+Au model
+Dielectric function model
+1.1
+6
+eV
+W.Theiss
+14.06.2002
+Model representing the literature data, see the entry Au (J. & C., L. & H.) in this database. The original data have been used to compute 4 spectra of a 10 nm thick free standing layer of Au (R and T, 0 deg, R and T, 60 deg, s-pol). The model (Drude model, several Brendel oscillators) has then be fitted to reproduce these spectra.

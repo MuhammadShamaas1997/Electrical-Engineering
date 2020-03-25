@@ -1,0 +1,8 @@
+Si (Vis-UV, Brendel model)
+Dielectric function model
+9000
+50000
+1/cm
+W.Theiss
+13.09.1996
+Parameters adjusted to fit reflectance spectrum of a silicon wafer. No removal of native oxide!

@@ -1,0 +1,8 @@
+Pt model
+Dielectric function model
+9000
+50000
+1/cm
+W.Theiss
+21.11.1995
+Data obtained by parameter fit (SCOUT_94) to a reflectance spectrum in the visible (Perkin Elmer Lambda 2 spectrometer). A volume fraction of 85% of BaTiO2 was assumed and used in the Looyenga formula. More details  can be found in a local report written for Prof. Waser's group.

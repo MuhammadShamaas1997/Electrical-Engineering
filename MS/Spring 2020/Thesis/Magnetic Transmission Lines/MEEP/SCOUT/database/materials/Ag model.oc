@@ -1,0 +1,8 @@
+Ag model
+Dielectric function model
+2000
+50000
+1/cm
+W.Theiss
+08.06.2004
+adjusted to the DF from Johnson and Christy, separates clearly the free electron susceptibility (Drude model) from the interband contributions

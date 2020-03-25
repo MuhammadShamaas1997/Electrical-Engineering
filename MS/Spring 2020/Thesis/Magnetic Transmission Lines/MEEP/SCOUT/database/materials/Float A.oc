@@ -1,0 +1,8 @@
+Float A
+Imported dielectric function
+ 2.00000000000000E+0002
+ 2.50000000000000E+0003
+nm
+W.Theiss
+03.06.2004
+Computed from R and T of Float A with DirectDF, using a thickness of 5 mm

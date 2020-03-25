@@ -1,0 +1,12 @@
+GaAs (infrared model)
+Dielectric function model
+100
+500
+1/cm
+W.Theiss
+10.08.1998
+Simple model with dielectric background, harmonic oscillator (phonon) and Drude model for charge carriers.
+
+Taken from:
+B.Heinz, 'Optische Konstanten von Halbleiter-Mehrschichtsystemen', Dissertation, RWTH Aachen 1991,
+p. 65 (in German)

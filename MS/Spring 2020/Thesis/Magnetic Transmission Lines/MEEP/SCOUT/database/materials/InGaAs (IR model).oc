@@ -1,0 +1,8 @@
+InGaAs (IR model)
+Master model
+1
+4000
+1/cm
+W.Theiss
+13.09.2000
+Infrared model with indium content as master parameter. Uses a dielectric background, a harmonic oscillator for the optical phonon, a Drude model for free carriers and a Campi-Coriasse interband transition model. Most model parameters shift with the indium content.

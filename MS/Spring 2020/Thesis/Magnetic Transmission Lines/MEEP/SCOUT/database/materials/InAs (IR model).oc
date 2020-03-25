@@ -1,0 +1,8 @@
+InAs (IR model)
+Dielectric function model
+1
+4000
+1/cm
+W.Theiss
+13.09.2000
+ Obtained from O. Kappertz (private communication). Based on Campi-Coriasso interband model, harmonic oscillator for the optical phonon, and a Drude model fro free carriers.

@@ -1,0 +1,11 @@
+SiC (MIR)
+Dielectric function model
+500
+1500
+1/cm
+W.Theiss
+10.08.1998
+Simple model with dielectric background and one harmonic oscillator (phonon).
+
+Taken from:
+T.eickhoff, 'Messung und Simulation der diffusen Reflexion inhomogener Materialien', Dissertation, RWTH Aachen 1990, p. 59 (in German)

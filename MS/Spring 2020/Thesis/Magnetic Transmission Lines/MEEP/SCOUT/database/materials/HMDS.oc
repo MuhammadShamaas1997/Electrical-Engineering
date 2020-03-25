@@ -1,0 +1,10 @@
+HMDS
+Dielectric function model
+1000
+2000
+1/cm
+W.Theiss
+17.07.1997
+Fit to a transmission spectrum scanned from the Sadtler handbook of IR spectra.
+Sample thickness and other experimental details unknown.
+Band positions ok, oscillator strengths not reliable.
