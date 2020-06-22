@@ -44,14 +44,18 @@ hold on;
 
 subplot(2,1,1)
 hold on;
-plot(PermeanceVm.time,PermeanceVm.signals.values);
+plot(Vin.time,Vin.signals.values);
+plot(Vout.time,Vout.signals.values,'r');
 xlabel('Time (s)');
-ylabel('Permeance Voltage (A.t)');
-axis([0.2499 0.25 0 1.5e4]);
+ylabel('Voltage (V)');
+legend('Input','Output')
+axis([0.2 0.25 -500 500]);
 
 subplot(2,1,2)
 hold on;
-plot(PermeanceIm.time,PermeanceIm.signals.values);
+plot(Iprimary.time,Iprimary.signals.values);
+plot(Ioup.time,Ioup.signals.values,'r');
 xlabel('Time (s)');
-ylabel('Permeance Current (V)');
-axis([0.2499 0.25 -3 2]);
+ylabel('Current (A)');
+legend('Input','Output')
+axis([0.2 0.25 -500 500]);
