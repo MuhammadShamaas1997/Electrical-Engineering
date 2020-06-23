@@ -42,21 +42,21 @@ hold on;
 % axis([0.24997 0.25 14.92 14.94]);
 
 
-%subplot(2,1,1)
+subplot(2,1,1)
 hold on;
-plot(((Vinput.time)*1000)-249.92,Vinput.signals.values);
-plot(((Iprimary.time)*1000)-249.92,Iprimary.signals.values,'r');
+plot(Vin.time,Vin.signals.values);
+plot(Iprimary.time,Iprimary.signals.values,'r');
 xlabel('Time (ms)');
 ylabel('Input Voltage (V)/ Input Current (A)');
 legend('Voltage','Current')
-axis([0 250-249.92 -200 200]);
+%axis([0 250-249.92 -200 200]);
 grid('on')
 
-% subplot(2,1,2)
-% hold on;
-% plot(Iprimary.time,Iprimary.signals.values);
-% plot(Ioup.time,Ioup.signals.values,'r');
-% xlabel('Time (s)');
-% ylabel('Current (A)');
-% legend('Input','Output')
-% axis([0.2 0.25 -500 500]);
+subplot(2,1,2)
+hold on;
+plot(Vout.time,Vout.signals.values);
+plot(Ioup.time,Ioup.signals.values,'r');
+xlabel('Time (s)');
+ylabel('Current (A)');
+legend('Input','Output')
+%axis([0.2 0.25 -500 500]);
