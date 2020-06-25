@@ -43,20 +43,33 @@ hold on;
 
 
 %subplot(2,1,1)
-hold on;
-plot(MMF.signals.values,PermeanceFlux.signals.values);
+% hold on;
+% plot(MMF.signals.values,PermeanceFlux.signals.values);
 %plot(Iprimary.time,Iprimary.signals.values,'r');
-xlabel('Magnetic Voltage (A.t)');
-ylabel('Magnetic Flux (V.s)');
+% xlabel('Magnetic Voltage (A.t)');
+% ylabel('Magnetic Flux (V.s)');
 %legend('Voltage','Current')
 %axis([0 250-249.92 -200 200]);
-grid('on')
+% grid('on')
 
+% subplot(2,1,1)
+% hold on;
+% plot(PermeanceVm.time-0.2499,PermeanceVm.signals.values);
+% xlabel('Time (s)');
+% ylabel('Permeance Voltage (A)');
+% axis([0.2499-0.2499 0.25-0.2499 -1000 1000]);
+% 
 % subplot(2,1,2)
 % hold on;
-% plot(Vout.time,Vout.signals.values);
-% plot(Ioup.time,Ioup.signals.values,'r');
+% plot(PermeanceIm.time-0.2499,PermeanceIm.signals.values,'r');
 % xlabel('Time (s)');
-% ylabel('Current (A)');
-% legend('Input','Output')
-%axis([0.2 0.25 -500 500]);
+% ylabel('Permeance Current (V)');
+% axis([0.2499-0.2499 0.25-0.2499 -50 50]);
+
+
+hold on;
+plot(MMF.signals.values(24.001e5:24.0025e5),PermeanceFlux.signals.values(24.001e5:24.0025e5));
+xlabel('Magnetic Voltage (A)');
+ylabel('Magnetic Flux (V)');
+grid('on')
+%axis([0.2499-0.2499 0.25-0.2499 -1000 1000]);
