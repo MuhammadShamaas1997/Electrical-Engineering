@@ -33,13 +33,13 @@ MF5='PL':'trimf',[2 4 6]
 
 [Output1]
 Name='Duty'
-Range=[-1 1]
+Range=[0 1]
 NumMFs=5
-MF1='NL':'trimf',[-1.5 -1 -0.5]
-MF2='NS':'trimf',[-1 -0.5 0]
-MF3='ZE':'trimf',[-0.5 0 0.5]
-MF4='PS':'trimf',[0 0.5 1]
-MF5='PL':'trimf',[0.5 1 1.5]
+MF1='NL':'trimf',[-0.25 0 0.25]
+MF2='NS':'trimf',[0 0.25 0.5]
+MF3='ZE':'trimf',[0.25 0.5 0.75]
+MF4='PS':'trimf',[0.5 0.75 1]
+MF5='PL':'trimf',[0.75 1 1.25]
 
 [Rules]
 1 1, 1 (1) : 1
