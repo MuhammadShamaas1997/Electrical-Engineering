@@ -1,0 +1,8 @@
+%%buck
+D=0.99;VDCGSC=1000;
+D=0.50;
+D=0.01;
+
+%%boost
+
+%%BuckBoost

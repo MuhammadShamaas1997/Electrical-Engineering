@@ -1,0 +1,10 @@
+%%buck
+D=0.99;VDCGSC=1000;IACpeak=2000;
+D=0.50;VDCGSC=500;IACpeak=1500;
+D=0.01;VDCGSC=0;IACpeak=1750;
+
+%%boost
+D=0.01;VDCGSC=0;IACpeak=1500;
+D=0.5;VDCGSC=0;IACpeak=1500;
+D=0.99;VDCGSC=0;IACpeak=2000;
+%%BuckBoost
