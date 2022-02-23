@@ -1,108 +1,93 @@
-Abdullah    03086164204
-Abdullah Azhar 03217206046
-
-Abdullah khan 03219478974
-
-Ahmed       03074545929
-
-Airas Akhtar 03349983725
-
-Ali Jon         03235861214
-
-Ali Mustajab 03464560020
-
-Amaar        03314716176	03309343239	03114039178	
-
-Ammarah Azmat Bajwa 03244014452
-
-Arqum        03316358940   03116807557
-
+Abdullah	03086164204
+Abdullah Azhar	03217206046
+Abdullah Atif
+Abdullah khan	03219478974
+Adil Jamshad
+Ahmed		03074545929
+Ahsan Latif
+Airas Akhtar	03349983725
+Ali Jon		03235861214
+Ali Mustajab	03464560020
+Amaar		03314716176	03309343239	03114039178	
+Ammarah Azmat	03244014452
+Arqum		03316358940	03116807557
+Arslan		03344050906
+Awais
 Baig            03334446579
-
-Arslan         03344050906
-
+Bilal
 Bin Zaid	03337697169
-
 Dad             03225155997
-
-Danish        03324913006
-
-Fiza              03059706432
-
-Furqan        03314074700
-
-Hamza        03464522292
-
-Hira             03201431385   03234578284
-
-Home          03225155997
-
-                     04235414441
-
-Ibrahim       03234111568
-
-Ichra            04235244486
-
-Junaid         03063373304
-
-Sir Kamran Shah	03363865066
-
-Karamat      03365737212
-
-Kohinoor Energy Limited	04235392318	04235392317
-
-Moheet      03164129948 
-
-Mom           03201429927
-
+Danish		03324913006
+Farhan Naeem
+Fiza		03059706432
+Furqan		03314074700
+Hamza		03464522292
+Hira            03201431385	03234578284
+Home		03225155997	04235414441
+Ibrahim		03234111568
+Ireez Shabkhez
+Ichra		04235244486
+Ikram Ullah
+Jamshed Afzal
+Junaid		03063373304
+Saad Latif
+Karamat		03365737212
+Khalid Hasan
+Kohinoor Energy	04235392318	04235392317
+M Aafia Adnan
+M Haneela Shahid
+M Humaira Kamran
+M Farida Shahid
+M Uzma Rizwan
+M Alia Farooqui
+M Ghashia Rauf
+Moazam Ijaz
+Moheet      	03164129948
+Mohsin Hussain 
+Mom           	03201429927
+Muhammad faiq
+Mudassar Mehdi
+Nafay Ali
 LSPA            03218423484
-
-RA                03200437320
-
-Raza             03155005194	03046108458 
-
-Saad Afzal   03458488837
-
+Qasim Khan
+RA              03200437320
+Raza            03155005194	03046108458 
+Saad Afzal	03458488837
 Saad Masood	03200520323	03357409607
-
-Saqib	03310144157
-
-Seyyam       03324346806
-
-Sir Imran     03370481932
-
+Saqib		03310144157
+Seyyam       	03324346806
+Sharjeel Shahab
+Sheikh Asher
+Sir Imran     	03370481932
 Sir. Tariq      03008429478
-
-Sir Wasif     03336480649
-
-Subhan       03348152834
-
+Sir Wasif     	03336480649
+Sir Saghir Saqib
+Sir Nasir Hussain
+Sir Naveed Niaz
+Sir Kamran Shah	03363865066
+Sir Shahid Suleman
+Sir Qaisar Haroon
+Sir Mohsin
+Sir Ahmed Butt
+Sir Asghar Saqib
+Subhan       	03348152834
 Taha            03344235048
-
-Taya             03326528974
-
-Tetra Pak     04235989152
-
-UET	03006007125	04236821444
-
-Umair	03208453753
-
+Taya            03326528974
+Tetra Pak     	04235989152
+UET		03006007125	04236821444
+Umar Farooq
+Umair		03208453753
 Umer Arshad	03124649611
-
-Uzair            03216706424
-
-Wajahat      03334774966
-
-Yooshaa      03114037557
-
-Zarmeen     03310148301    03024589629
-
-Zaryab         03214318939
-
+Usman Amjad
+Uzair           03216706424
+Wajahat      	03334774966
+Yooshaa     	03114037557
+Zain Imran
+Zarmeen     	03310148301	03024589629
+Zaryab         	03214318939
+Zaryab Abbas
 Zawar Hasan	03361462121
-
 Zong            03160146282
-
 Zuraiz          03224605958
 
 

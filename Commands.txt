@@ -1,5 +1,7 @@
 git add . && git commit -m "V1" && git push -u origin master
+
 git pull 
+
 git reset --hard HEAD~n
 
 git pull 
