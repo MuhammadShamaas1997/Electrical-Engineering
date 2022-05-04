@@ -265,6 +265,11 @@ Mom 33100-0561550-0
 
 
 
+Virtual University
+ID: mc220204248
+Password: m4K{vwks
+Zimbabwe@1
+
 Your UET Smart University credentials are as under.
 Identity: 2018msee004
 Password: DS40M
