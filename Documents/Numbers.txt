@@ -1,3 +1,38 @@
+Aamir Raza
+Aaraj Habib
+Abdullah Khan
+Abdullah Siddiqui
+Abdullah Tanvir Khan
+Abdul Majeed
+Abdul Basit
+Abdul Bary Baig
+Abdur Rafay Javed
+Abuzar Ahmed
+Adil Masood
+Adil Jamshad
+Ahad Malik
+Ahmad Butt
+Ahmad Raza
+Ahmad Sohail
+Ahsan Rana
+Ali Ahmad Alvi
+Ali Arif
+Ali Gohar
+Ali Irtaza
+Ali Mustajab
+Ali Mrf
+Ali Rao
+Ali Raza
+Ameer Hamza
+Anees Rehman
+Asad Masood
+Asad Saleem
+Asadullah Awan
+Attique Tahir Ch
+Aun Ali
+Awais Raza
+Awais Tanoli
+Azlaan Qaiser
 Abdullah	03086164204
 Abdullah Azhar	03217206046
 Abdullah Atif
@@ -13,27 +48,93 @@ Ammarah Azmat	03244014452
 Arqum		03316358940	03116807557
 Arslan		03344050906
 Awais
+Babak Shahid
+Bilal Ahmed
+Bilal Hamid
+Bilal Ali
 Baig            03334446579
 Bilal
-Bin Zaid	03337697169
+Muhammad Bin Zaid		03337697169
+Danish Amjad
+Danish Ali
+Daniyal Tallat
+Daniyal Zaman
 Dad             03225155997
 Danish		03324913006
+Faaz Farooq
+Fahad Ahmad
+Faraz Naseer
+Farzam Asad
+Faizan Rahim
+Faizan Zafar
+Fouzan Ijaz
+Fran Ahmad
+Furqan Ahmed
 Farhan Naeem
 Fiza		03059706432
 Furqan		03314074700
+Haider Mustafa
+Hammas Saeed
+Hamdoon Malik
+Hamza Haasan
+Hamza Haneef
+Hamza Mehmood
+Hamza Tahir
+Hannan ur Rehman
+Haris Chaudhary
+Hassan Akmal
+Hassan Anwaar
+Hassan Bashir
+Hassan Wiqar
+Hasnain Shah
+Hayyan Ghani
+Hussanin Ahmad Ali
+Hussanin Riaz
 Hamza		03464522292
 Hira            03201431385	03234578284
 Home		03225155997	04235414441
+Ibrahim Rashid
+Imam Bakas
+Imran Aasaf
+Inzi Ali
+Irtaza Mehdi
+Irzum Malik
 Ibrahim		03234111568
 Ireez Shabkhez
 Ichra		04235244486
 Ikram Ullah
 Jamshed Afzal
 Junaid		03063373304
-Saad Latif
+Junaid Abdullah
+Khurram Abbas
 Karamat		03365737212
 Khalid Hasan
 Kohinoor Energy	04235392318	04235392317
+Mahad Inam
+Manan Haseeb
+Mamoon Ahmed
+Mehroz Khan
+Mian Hamza Ali
+Mian Hasan Shafiq
+Moazam Ijaz
+Mohsin Hussain
+Muhammad Afrasiab
+Muhammad Abdullah
+Muhammad Awais
+Muhammad Ayaz
+Muhammad Bilal
+Muhammad Farhan
+Muhammad Haider Amin
+Muhammad Hashir
+Muhammad Junaid Khan
+Muhammad Junaid Raza
+Muhammad Kashif
+Muhammad Khalil Yousaf
+Muhammad Khizer
+Muhammad Mujtaba
+Muhammad Qasim
+Muhammad Talha
+Mustafa Malik
 M Aafia Adnan
 M Haneela Shahid
 M Humaira Kamran
@@ -48,11 +149,21 @@ Mom           	03201429927
 Muhammad faiq
 Mudassar Mehdi
 Nafay Ali
+Naqi Abbas
+Osama Shafqat
+Osama Qureshi
 LSPA            03218423484
 Qasim Khan
+Qasim Sardar
+Rai Muhammad Ahmad
+Rana Akif Khan
+Rana Zeeshan
+Raza Adeel Agha
+Rehan Younas
 RA              03200437320
 Raza            03155005194	03046108458 
 Saad Afzal	03458488837
+Saad Latif
 Saad Masood	03200520323	03357409607
 Saqib		03310144157
 Seyyam       	03324346806
@@ -71,6 +182,36 @@ Sir Mohsin
 Sir Ahmed Butt
 Sir Asghar Saqib
 Subhan       	03348152834
+Saad Afzal
+Saad Chughtai
+Saad Khan
+Saad Qureshi
+Saad Latif
+Saim Iqbal
+Salman Arif
+Salman Asim Bajwa
+Salman Malik
+Salman Manzoor
+Salman Qadeer
+Salman Shakeel
+Shahid Karim
+Shahroz
+Shahryar Tanvir
+Sharjeel Shahid
+Sharoon Ilyas
+Shehryar Khan
+Sheikh Asher
+Sohaib Akhtar
+Sohaib Sarmad
+Somair Khan
+Syed Inzamam
+Syed Munib Abbas
+Taha Moaz
+Taha Nadeem
+Talha Ahmed
+Talha Khan
+Tahir Raza
+Talha Shehzad
 Taha            03344235048
 Taya            03326528974
 Tetra Pak     	04235989152
@@ -80,7 +221,18 @@ Umair		03208453753
 Umer Arshad	03124649611
 Usman Amjad
 Uzair           03216706424
+Umar Farooq
+Umer Butt
+Usama Daood
+Usman Amjad
+Usman Akmal
+Usman Farooq 
+Uzair Ahmed
 Wajahat      	03334774966
+Wasay Ashraf
+Wasiq Ahmad
+Waqas Maqsood
+Yasir Noor
 Yooshaa     	03114037557
 Zain Imran
 Zamik Shahid
@@ -90,7 +242,9 @@ Zaryab Abbas
 Zawar Hasan	03361462121
 Zong            03160146282
 Zuraiz          03224605958
-
+Zain Irfan
+Zarar Hafeez
+Zaryab Abbas
 
 
 Amaar 33102-9673964-9
