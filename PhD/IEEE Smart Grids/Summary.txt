@@ -1,0 +1,167 @@
+Placement and Implementation of Grid-Forming and Grid-Following Virtual Inertia and Fast Frequency Response
+In this paper we considered the problem of low-inertia power systems equipped with grid-following or grid-forming VI implementations using power electronic interfaced renewable energy sources. We modeled these two implementations as dynamic feedback control loops that provide virtual inertia and damping. A system norm-based optimization approach was used to study the problem of optimal placement and tuning of these devices. For a range of disturbances both types of virtual inertia implementations improved the system resilience.
+
+
+Coordinated Restoration of Transmission and Distribution System Using Decentralized Scheme
+A decentralized restoration scheme, which contains the decentralized decision-making framework and the  three loop ATC decentralized optimization method, is designed to achieve the coordinatedrestoration.With the decentralized decision-making framework, the coupled TS-DS restoration system can be coordinated by independent optimization of subsystems and simple information interaction between TSO and DSOs. distributed or decentralized algorithms include i) the Lagrangian relaxation based methods such as the analytical target cascading (ATC) alternating direction method of multipliers (ADMM) and auxiliary problem principle (APP) ; ii) the Karush–Kuhn–Tucker (KKT) conditions based methods such as optimality condition decomposition (OCD) and heterogeneous decomposition (HGD) and iii)the benders decomposition(BD)method
+
+
+
+Distributed Secondary Control Strategy for Microgrid Operation with Dynamic Boundaries 
+ A secondary control strategy designed for dynamic inverter-based MG operation under both islanded and grid-connected mode is proposed in this paper. Besides constant system frequency/voltage regulation, the proposed control strategy is able to guarantee seamless system transition for dynamic MG boundary variations and proportional power sharing among connected DGs when no recon?guration is requested. The concept of minMG is introduced and utilized as the basic building block that constructs dynamic MGs. Detailed controller designs are presented, along with the corresponding communication systems that enable system dynamic management and information exchange. The proposed control strategy is designed using fully distributed control approach to avoid single point of failure. No centralized controller and dedicated communication network is needed. The proposed control strategy is able to guarantee a seamless system transition so that the system resiliency could be signi?cantly improved.
+
+
+
+
+Distribution System Restoration With Microgrids Using Spanning Tree Search
+The proposed algorithm identi?es an optimal solution with minimum switching operations and picks up loads as much as possible without violations of operational constraints. The microgrids in distribution system are modeled as virtual feeders in GRIDLAB-D. The simulation results demonstrate that microgrids enhance the recovery capability of a distribution system. The performance of proposed spanning tree search algorithm is compared with a mixedintegernon-linearprogramming(MINLP)algorithmimplementedbyWSUbasedonanapproachsimilartothatof[11] and a rule-based system using heuristic search reported in [5].
+
+
+
+
+
+Dynamic Modeling of Sequential Service Restoration in Islanded Single Master Microgrids 
+ we presented a sequential service restoration formulation with emphasis on switch timing derivation and optimization for use in black start restoration of single master operationmicrogrids.WederivedthefrequencyresponseofsynchronousmachineDGswithisochronousgovernorandincorporatedthisresponseintooptimizationformulationforrestoration. The problem of dealing with load unbalance in autonomous microgrids was resolved by the use of single-phase controlled PQ inverter based DGs for unbalance load compensation. The proposed method was used to generate restoration solution for the modi?ed IEEE 123 node test feeder.
+ An EMTP simulation in PSCAD of the formed microgrids was used to validate the accuracy of the dynamic and steady-state characteristics of the resulting systems.  There is an elaborate communication infrastructure in the ADS. 2) The load models are assumed as constant PQ load in the restorationmodel 3) BlackstartDGsareassumedtobedieselenginegenerators andoperableinisochronousmode.Theisochronousmode of operation is necessary for DGs operating as masters in islanded microgrids. 4) Non-black start DGs are assumed to be dispatchable single phased controlled PQ inverters operating in the grid following mode. These DGs are assumed to have battery interface between the microsources and their inverters.
+
+
+
+
+
+
+
+Frequency Dynamics Constrained Unit Commitment with Wind Plants  
+we proposed a frequency dynamic constrained UC model with wind plants. A multi-stage integrated strategy is proposed considering temporary response and persistent response of wind plants. And the UC model with piecewise linearized frequency constraints is formulated. The numerical study validates the proposed method and shows that with the rise of wind power, only SG participating in the frequency regulation will cost much and restrict to the integration of wind, while involving wind plants into the frequency regulation with the proposed strategy will be benefit to its integration, with only a little increase in operation cost. 
+
+
+
+
+
+Optimal self-healing strategy for microgrid islanding
+The islanding problem is formulated and linearised into an MIQP problem. Different scenarios considering the variability of renewable generation are discussed. The paper also extends the self-healing strategy to the multi-microgrid environment, and discusses the importance of coordination among multiple microgrids. Simulation results demonstrate the efficiency of the self-healing strategy to minimise costs of load shedding and generation in both single and multiple microgrid cases.  Four distributed generator types are photovoltaic (PV), microturbine (MT), fuel cell/MT combine cycle, and wind turbine (WT).
+
+
+
+
+
+Microgrids for Service Restoration to Critical Load in a Resilient Distribution System 
+ the stability of microgrids, limits on frequency deviation, and limits on transient voltage and current of DGs are incorporated as constraints of the critical load restoration problem. The limits on the amount of generation resources within microgrids are also considered. By introducing the concepts of restoration tree and load group, restoration of critical loads is transformed into a maximum coverage problem, which is a linear integer program (LIP). The restoration paths and actions are determined for critical loads by solving the LIP. The proposed algorithm is implemented in MATLAB and GridLAB-D. The simulation results demonstrate that it is important to consider dynamic constraints for feasibility evaluation of restoration schemes with microgrids. 
+
+
+
+
+
+Multi-Time Step Service Restoration for Advanced Distribution Systems and Microgrids 
+ a multi-time step service restoration methodology is proposed to optimally generate a sequence of control actions for controllable switches, ESSs, and dispatchable DGs to assist the system operator with decision making. The restoration sequence is determined to minimize the unserved customers by energizing the system step by step without violating operational constraints at each time step. The proposed methodology is formulated as a mixed-integer linear programming model and can adapt to various operation conditions. The proposed method is validated through several case studies that are performed on modi?ed IEEE 13-node and IEEE 123-node test feeders. The proposed DSR methodology can generate a feasible control sequence, which can fully coordinate the operation of DGs, ESS, RCSs, and loads under CLPU conditions over a planned time horizon. The proposed DSR methodology can also incorporate different initial conditions to enable the rolling-horizon-based decision making to adapt to changing operating conditions during the restoration process. OpenDSS
+
+
+
+
+
+
+
+Resilient Distribution System by Microgrids Formation After Natural Disasters
+ a mixed-integer linear program is formulated to maximize the critical loads to be picked up while satisfying the self-adequacy and operation constraints for the microgrids formation problem by controlling the ON/OFF status of the remotely controlled switch devices and DG. A distributed multiagent coordination scheme is designed via local communications for the global information discovery as inputs of the optimization, which is suitable for autonomous communication requirements after the disastrous event.  we design the distributed multiagent coordination for the global information discovery based on the distributed communication network assumed, which is suitable for the dynamic features of the communications regarding a disastrous event.  A distributed multiagent coordination scheme was designed to achieve global information discovery via only local communications, which is suitable for resilient communication requirements after a natural disaster
+
+
+
+
+
+
+
+
+Self-Healing Resilient Distribution Systems BasedonSectionalizationIntoMicrogrids 
+operation and self-healing strategy for a distribution system with both dispatchable and nondispatchable distributed generators (DGs). In the normal operation mode, the control objective of the system is to minimize the operation costs and maximize the revenues. A rolling-horizon optimization method is used to schedule the outputs of dispatchable DGs based on forecasts. In the self-healing mode,theon-outageportionofthedistributionsystemwillbeoptimallysectionalizedintonetworkedself-suppliedmicrogrids(MGs) soastoprovidereliablepowersupplytothemaximumloadscontinuously. The outputs of the dispatchable DGs will be rescheduled accordingly too. In order to take into account the uncertaintiesofDGoutputsandloadconsumptions,weformulatetheproblems as a stochastic program. A scenario reduction method is appliedtoachieveatradeoffbetweentheaccuracyofthesolutionand thecomputationalburden. Case studies on the modi?ed IEEE 123-bus system show that the proposed comprehensive operation and self-healing technique can assist theconstructionofasmartandresilientdistributionsystem. .MonteCarlosimulation(MCs)isrunbasedontheforecastedpoweranduncertain predictionerrorstogeneratescenariosforDGoutputs
+
+
+
+
+
+
+
+Sequential Service Restoration for Unbalanced Distribution Systems and Microgrids 
+,asequentialservicerestoration(SSR)frameworkisproposedtogeneraterestorationsolutionsfordistributionsystemsand microgrids in the event of large-scale power outages. The restoration solution contains a sequence of control actions that properly coordinate switches, distributed generators, and switchable loads to form multiple isolated microgrids. The SSR can be applied for three-phase unbalanced distribution systems and microgrids and can adapt to various operation conditions. Mathematical models areintroducedforthree-phaseunbalancedpower?ow,voltageregulators, transformers, and loads. The SSR problem is formulated asamixed-integerlinearprogrammingmodel,anditseffectiveness is evaluated via the modi?ed IEEE 123 node test feeder.  The outage management system (OMS) collects data from various types of entities such as the customer information system (CIS), interactive voice response (IVR), advanced metering infrastructure (AMI), and the ?eld measurements (e.g., protective relays, fault indicators, switchgears) through the supervisory control and data acquisition (SCADA) system. OpenDSS
+
+
+
+
+
+
+
+
+
+Switching Device-Cognizant Sequential Distribution System Restoration 
+Wedevelopanovelmulti-phasemethodto?ndtheoptimal sequentialoperationofvariousswitchingdevicesandrepairfaulted areas. We consider circuit breakers, reclosers, sectionalizers, load breaker switches, and fuses. The switching operation problem is decomposed into two mixed-integer linear programming (MILP) subproblems. The ?rst subproblem determines the optimal network topology and estimates the number of steps to reach that topology, while the second subproblem generates a sequence of switching operations to coordinate the switches. For repairing the faults, we design an MILP model that dispatches repair crews to clear faults and replace melted fuses. After clearing a fault, we update the topology of the network by generating a new sequence of switching operations, and the process continues until all faults are cleared. To improve the computational ef?ciency, a network reduction algorithm is developed to group line sections, such that only switchable sections are present in the reduced network. The proposed method is validated on the IEEE 123-bus and 8500-bus systems. The resulting switching operations highlight the importance of including the characteristics of the switches, as without them the switching sequence would be inapplicable in practice
+
+
+
+
+
+
+
+
+
+
+
+
+Toward a MILP Modeling Framework for Distribution System Restoration 
+This paper introduces a DSR modeling framework, which can generate optimal switching sequences and estimated time of restoration in the presence of remotely controllable switches, manually operated switches, and dispatchable DGs. Two mathematical models, a variable time step model and a ?xed time step model, are presented and compared. The proposed models areformulatedasamixed-integerlinearprogrammingmodel,and their effectiveness is evaluated via the IEEE 123 node test feeder. Discussandcomparetheproposed Variable Time Step and Fixed Time Step models, as well as summarize their potential applications.  Case study results show that the VTS model achieved the same energization sequence solution as the FTS model with much less computation time.However,theinter-temporaloperationalconstraintscanbe easilyformulatedintheFTSmodelwhilenotintheVTSmodel
+
+
+
+
+
+
+
+Value of Distribution Network Recon?guration inPresenceofRenewableEnergyResources 
+analyzetheworthinessofthehourlyrecon?gurationinthepresence ofrenewableenergyresources.Fordoingso,amathematicalmodel isdevisedtominimizedailynetworklossesviaapplyinghourlyrecon?gurations. The model is a mixed integer second-order cone programmingproblemandissolvedviaMOSEKsolver.Theelectrical demand variations as well as renewable power generation ?uctuations during a day are taken into account.  The study takes into account the hourly load variations, renewable generation ?uctuations, and switching cost. Different types of loads (residential, commercial and industrial) are considered. The recon?guration problem is modeled as a MICP problem; and as a result, reliable sensitivity analyses can be conducted. The sensitivity analyses on renewable penetration, wind and load correlation, switching cost and wind prediction error are conducted. The study reveals that recon?guration becomes more bene?cial when the renewable penetration increases. The switching cost analysis provides the answer of how much loss reduction is achievable via limited switching operations. To investigate the effect of wind prediction error, a probabilistic recon?guration problem is solved.
+ 
+
+
+
+
+
+
+Zonal Inertia Constrained Generator Dispatch Considering Load Frequency Relief 
+ This paper develops a formulation of zonal inertia constrained generator dispatch for power systems with a diversi?ed generator portfolio including synchronous generators,synchronous condensers,inverter-interfaced generators and energy storages. Zonal inertia constraints are formulated in unit commitment and optimal power ?ow to limit the rate of change of frequency (RoCoF) in the event of network separation.Load frequency relief is also considered to reduce the ramp rate requirement of primary reserve. The proposed formulation canreducetheaveragecostofprimaryreserveandmaintainzonal inertia adequacy to constrain RoCoF in case of the trip of the interconnector(s).  Apart from the system inertia constraint, zonal inertia constraints are formulated for unit commitment(UC) and AC optimal power ?ow (OPF)to maintain adequate inertia within each zone to avoid large RoCoF in case of network separation. Moreover, this paper introduced LFR to reduce the ramping burden of generators/storages, thus allowing more generators/storages to participate in the primary reserve market so as to bring down the cost.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
