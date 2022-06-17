@@ -6,8 +6,6 @@ git reset --hard HEAD~n
 
 git pull 
 
-git add . && git commit -m "V1" && git push -u origin main
-
 git reset --hard HEAD~n
 
 git remote remove origin
@@ -22,4 +20,3 @@ git config user.name MuhammadShamaas1997
 
 GridLAB-D 4.1.0-17823 (Lugo [0753b96c:release/RC4.1:ModƒE) 64-bit WINDOWS RELEASE
 
-a
